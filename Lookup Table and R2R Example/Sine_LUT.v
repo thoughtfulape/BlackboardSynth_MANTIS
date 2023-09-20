@@ -53,8 +53,8 @@ module lutSin(
 
     //Table counter - creates index value for case statment
     always@(posedge divclk) begin
-        if(table_count == 8'd36)begin
-            table_count <= 8'd1;
+        if(table_count == 8'd360)begin
+            table_count <= 8'd0;
         end
         else begin
             table_count <= table_count + 1'd1;
