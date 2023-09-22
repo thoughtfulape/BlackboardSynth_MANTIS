@@ -51,16 +51,7 @@ module clk_div(
             11'b00000000010: divis <= 24'd354;
             11'b00000000001: divis <= 24'd316;
             default: divis <= divis;
-        endcase
-/*        
-        //octave controller
-        //BTN2 = octave up
-        //BTN3 = octave down
-        case(octave)
-            2'b10: divis <= divis / 24'd2;
-            2'b01: divis <= divis * 24'd2;
-            default: divis <= divis;
-        endcase   */  
+        endcase  
     end
     
     always @(posedge clk) begin   
