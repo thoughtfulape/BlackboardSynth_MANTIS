@@ -54,8 +54,8 @@ module clk_div(
     
     always @(posedge clk) begin  
 	//octave controler
-	//BTN3 = octave up
-	//BTN2 = octave down
+	//BTN3 = octave down
+	//BTN2 = octave up
        case(octave)
             2'b10: terminal <= divis / 24'd2;
             2'b01: terminal <= divis * 24'd2;
