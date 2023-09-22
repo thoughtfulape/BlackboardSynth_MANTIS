@@ -57,8 +57,8 @@ module clk_div(
 	//BTN3 = octave down
 	//BTN2 = octave up
        case(octave)
-            2'b10: terminal <= divis / 24'd2;
-            2'b01: terminal <= divis * 24'd2;
+            2'b10: terminal <= divis * 24'd2;
+            2'b01: terminal <= divis / 24'd2;
             default: terminal <= divis;
         endcase    
      end
