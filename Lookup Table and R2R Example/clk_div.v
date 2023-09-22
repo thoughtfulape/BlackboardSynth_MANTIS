@@ -24,9 +24,7 @@ module clk_div(
 	output div_clk
 	);
 
-	//localparam a = 2 ** (1/2);
-
-	//define 24-bit wide register for a clock divider
+    //define 24-bit wide register for a clock divider
     reg [23:0] counter = 24'd0; 
 
     //define divisor value to divide input clock by
@@ -54,7 +52,10 @@ module clk_div(
         endcase  
     end
     
-    always @(posedge clk) begin   
+    always @(posedge clk) begin  
+	//octave controler
+	//BTN3 = octave up
+	//BTN2 = octave down
        case(octave)
             2'b10: terminal <= divis / 24'd2;
             2'b01: terminal <= divis * 24'd2;
