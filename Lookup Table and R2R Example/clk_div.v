@@ -31,47 +31,50 @@ module clk_div(
 
     //define divisor value to divide input clock by
     //divis == 631 -> 220Hz
-    reg [23:0] divis, div_mod;
-    wire [23:0] divisor;
+    reg [23:0] divis, terminal;
 
     reg divclk = 1'b0;
-    
-    localparam a = 24'd2 ** (24'd1 / 24'd12);
 
     always @(posedge clk) begin
+        //half-step controller
+        case(sw)
+            11'b00000000000: divis <= 24'd631;
+            11'b10000000000: divis <= 24'd596;
+            11'b01000000000: divis <= 24'd562;
+            11'b00100000000: divis <= 24'd531;
+            11'b00010000000: divis <= 24'd501;
+            11'b00001000000: divis <= 24'd473;
+            11'b00000100000: divis <= 24'd446;
+            11'b00000010000: divis <= 24'd421;
+            11'b00000001000: divis <= 24'd398;
+            11'b00000000100: divis <= 24'd375;
+            11'b00000000010: divis <= 24'd354;
+            11'b00000000001: divis <= 24'd316;
+            default: divis <= divis;
+        endcase
+/*        
         //octave controller
         //BTN2 = octave up
         //BTN3 = octave down
         case(octave)
-            2'b10: divis <= 24'd631 / 24'd2;
-            2'b01: divis <= 24'd631 * 24'd2;
-            default: divis <= 24'd631;
-        endcase
-        
-        //half-step controller
-        case(sw)
-            11'b00000000000: div_mod <= 24'd1 / (a ** 24'd0);
-            11'b10000000000: div_mod <= 24'd1 / (a ** 24'd1);
-            11'b01000000000: div_mod <= 24'd1 / (a ** 24'd2);
-            11'b00100000000: div_mod <= 24'd1 / (a ** 24'd3);
-            11'b00010000000: div_mod <= 24'd1 / (a ** 24'd4);
-            11'b00001000000: div_mod <= 24'd1 / (a ** 24'd5);
-            11'b00000100000: div_mod <= 24'd1 / (a ** 24'd6);
-            11'b00000010000: div_mod <= 24'd1 / (a ** 24'd7);
-            11'b00000001000: div_mod <= 24'd1 / (a ** 24'd8);
-            11'b00000000100: div_mod <= 24'd1 / (a ** 24'd9);
-            11'b00000000010: div_mod <= 24'd1 / (a ** 24'd10);
-            11'b00000000001: div_mod <= 24'd1 / (a ** 24'd11);
-            default: div_mod <= div_mod;
-        endcase
+            2'b10: divis <= divis / 24'd2;
+            2'b01: divis <= divis * 24'd2;
+            default: divis <= divis;
+        endcase   */  
     end
     
-    assign divisor = divis * div_mod;
+    always @(posedge clk) begin   
+       case(octave)
+            2'b10: terminal <= divis / 24'd2;
+            2'b01: terminal <= divis * 24'd2;
+            default: terminal <= divis;
+        endcase    
+     end
 
 	//clock divider
     always @(posedge clk)
     begin
-        if (counter == divisor) begin
+        if (counter == terminal) begin
             divclk <= ~divclk;
             counter <= 24'd0;
         end

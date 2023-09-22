@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Sine_LUT.v" \
+"../../../../../Square_LUT.v" \
+"../../../../../Tri_LUT.v" \
+"../../../../../clk_div.v" \
+"../../../../../synth_wrapper.v" \
+"../../../../../wav_sel.v" \
+"../../../../mantis_synth.srcs/sources_1/new/synth_wrapper_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Sep 21 10:50:28 2023
+# Process ID: 19728
+# Current directory: D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.sim/sim_1/behav/xsim/xsim.dir/synth_wrapper_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Libraries/Documents/School/MANTY/local_code/Lookup -notrace

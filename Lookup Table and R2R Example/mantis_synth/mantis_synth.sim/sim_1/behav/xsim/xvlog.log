@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/Sine_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lutSin
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/Square_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lutSqr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/Tri_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lutTri
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/clk_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/synth_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synth_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/wav_sel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wav_sel
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.srcs/sources_1/new/synth_wrapper_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synth_wrapper_tb
