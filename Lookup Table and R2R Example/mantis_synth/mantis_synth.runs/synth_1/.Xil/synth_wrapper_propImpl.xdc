@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/MANTIS_synth_constraint.xdc} rfile:../../../../MANTIS_synth_constraint.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/Lookup Table and R2R Example/MANTIS_synth_constraint.xdc} rfile:../../../../MANTIS_synth_constraint.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }];
 set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]

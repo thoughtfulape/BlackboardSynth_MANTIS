@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.runs/impl_1/synth_wrapper.tcl"
+  variable script "D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/Lookup Table and R2R Example/mantis_synth/mantis_synth.runs/impl_1/synth_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,8 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -122,22 +124,24 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 4
+  set_param synth.incrementalSynthesisCache C:/Users/gfish/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-22852-GaryPC/incrSyn
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z007sclg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir {D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.cache/wt} [current_project]
-  set_property parent.project_path {D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.xpr} [current_project]
+  set_property webtalk.parent_dir {D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/Lookup Table and R2R Example/mantis_synth/mantis_synth.cache/wt} [current_project]
+  set_property parent.project_path {D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/Lookup Table and R2R Example/mantis_synth/mantis_synth.xpr} [current_project]
   set_property ip_output_repo {{D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.runs/synth_1/synth_wrapper.dcp}}
+  add_files -quiet {{D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/Lookup Table and R2R Example/mantis_synth/mantis_synth.runs/synth_1/synth_wrapper.dcp}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/MANTIS_synth_constraint.xdc}}
+  read_xdc {{D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/Lookup Table and R2R Example/MANTIS_synth_constraint.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

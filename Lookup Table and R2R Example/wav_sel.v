@@ -31,7 +31,7 @@ module wav_sel(
     localparam S4 = 3'b110;
     localparam S5 = 3'b100;
 
-    reg [1:0] PS, NS = S0;
+    reg [2:0] PS, NS = S0;
 
     always @(posedge clk) begin
     	case(PS)

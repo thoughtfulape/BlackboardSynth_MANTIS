@@ -29,7 +29,7 @@ module lutTri(
     reg [15:0] table_count =8'd0; 
     
     //table_val is an intermediary register before writing to PMOD output 
-    reg [7:0] table_val = 8'd0;
+    reg [7:0] table_val;
     
     
     reg divclk = 1'b0;

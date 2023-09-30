@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.runs/synth_1'
+HD_PWD='D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/Lookup Table and R2R Example/mantis_synth/mantis_synth.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
