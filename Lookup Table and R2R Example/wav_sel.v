@@ -63,14 +63,14 @@ module wav_sel(
     	   PS <= S0;
         else PS <= NS;
 
-    	case(PS)
-    	S0: wav <= sine_in;
-    	S1: wav <= triangle_in;
-    	S2: wav <= triangle_in;
-    	S3: wav <= square_in;
-    	S4: wav <= square_in;
-    	S5: wav <= sine_in;
-    	endcase
+        case(PS)
+        S0: wav <= sine_in;
+        S1: wav <= triangle_in;
+        S2: wav <= triangle_in;
+        S3: wav <= square_in;
+        S4: wav <= square_in;
+        S5: wav <= sine_in;
+        endcase
     end
 
 endmodule

@@ -4,6 +4,7 @@ verilog xil_defaultlib  \
 "../../../../../Square_LUT.v" \
 "../../../../../Tri_LUT.v" \
 "../../../../../clk_div.v" \
+"../../../../../debounce_1.v" \
 "../../../../../synth_wrapper.v" \
 "../../../../../wav_sel.v" \
 "../../../../mantis_synth.srcs/sources_1/new/synth_wrapper_tb.v" \

@@ -49,7 +49,7 @@ module synth_wrapper_tb();
         rst = 1;
         en = 0;
         
-        #10 rst = 0;
+        #50 rst = 0;
         #10 en = 1;
         
         #2000000 btn = 2'b01;

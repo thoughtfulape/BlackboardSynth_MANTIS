@@ -19,29 +19,14 @@
 
 module lutSqr(
     input en, clk, rst,
+    input [15:0] table_count,
     output [7:0]square //In the constraints file, these 8-bits are connected to PMOD pins.
     );
-
-    //define 24-bit wide register for a clock divider
-    reg [23:0] counter = 24'd0; 
-    
-    //define look up table increments. This is what I will keep track of to step through the "array" of lookup table values.
-    reg [15:0] table_count =8'd0; 
     
     //table_val is an intermediary register before writing to PMOD output 
     reg [7:0] table_val;
 
     assign square = table_val;
-
-    //Table counter - creates index value for case statment
-    always@(posedge clk) begin
-        if(table_count == 16'd360)begin
-            table_count <= 16'd0;
-        end
-        else begin
-            table_count <= table_count + 1'd1;
-        end
-    end
 
     //LUT
     always@(posedge clk) begin
