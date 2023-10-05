@@ -74,7 +74,7 @@ module synth_wrapper(
 	   .table_count(tbl_count)
 	);
 	
-	debounce_1 sel_db(
+	db_1 sel_db(
 	   .rst(rst),
 	   .clk(db_clk),
 	   .data(sel),

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module debounce_1(
+module db_1(
 
     input data, clk, rst,
     output db
@@ -14,7 +14,7 @@ module debounce_1(
     
     reg [1:0] PS, NS;
     
-    always @(*) begin
+    always @(posedge clk) begin
         case(PS)
         S0: if(data) NS = S1;
             else     NS = S0;
