@@ -31,8 +31,8 @@ module lutSqr(
     //LUT
     always@(posedge clk) begin
         if (en && ~rst) begin
-            if(table_count <= 16'd180) table_val <= 8'b11111111;
-            else if(table_count > 16'd180) table_val <= 8'b00000000;
+            if(table_count < 16'd180) table_val <= 8'b11111111;
+            else if(table_count >= 16'd180) table_val <= 8'b00000000;
         end else begin
             table_val <= 8'd0;
         end

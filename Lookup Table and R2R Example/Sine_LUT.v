@@ -394,7 +394,6 @@ module lutSin(
             16'd357: table_val <= 8'b01111001;
             16'd358: table_val <= 8'b01111100;
             16'd359: table_val <= 8'b01111110;
-            16'd360: table_val <= 8'b10000000;
             default: table_val <= 8'd0;
             endcase
         end else begin

@@ -10,7 +10,7 @@
 // Target Devices: Blackboard
 // Tool Versions: 
 // Description: 
-//      look-up table generator for output to Blackboard PMOD 
+//      State machine to select desired waveform (sine, triangle, square) 
 // Dependencies: 
 // 
 // Revision: 0

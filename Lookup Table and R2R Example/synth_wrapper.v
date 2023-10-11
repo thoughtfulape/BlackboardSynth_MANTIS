@@ -10,7 +10,7 @@
 // Target Devices: Blackboard
 // Tool Versions: 
 // Description: 
-//      look-up table generator for output to Blackboard PMOD 
+//      MANTIS Digital Synthesizer Wrapper 
 // Dependencies: 
 // 
 // Revision: 0
@@ -98,7 +98,7 @@ module table_count(
     
     //Table counter - creates index value for case statment
     always@(posedge clk) begin
-        if(table_count == 16'd360)begin
+        if(table_count == 16'd359)begin
             table_count <= 16'd0;
         end
         else begin

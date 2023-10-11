@@ -10,7 +10,7 @@
 // Target Devices: Blackboard
 // Tool Versions: 
 // Description: 
-//      look-up table generator for output to Blackboard PMOD 
+//      Clock divider to generate desired output audio frequency 
 // Dependencies: 
 // 
 // Revision: 0
