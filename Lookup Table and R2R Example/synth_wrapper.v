@@ -24,7 +24,7 @@ module synth_wrapper(
 	output [7:0] wav
 	);
 
-	wire [7:0] sine, triangle, square;
+	wire [7:0] sine, triangle, square, saw;
 	wire [15:0] tbl_count;
 	wire div_clk, db_clk, w_sel;
 
@@ -52,12 +52,21 @@ module synth_wrapper(
 		.table_count(tbl_count)
 	);
 	
+	lutSaw saw_gen(
+		.en(en),
+		.rst(rst),
+		.clk(div_clk),
+		.saw(saw),
+		.table_count(tbl_count)
+	);
+	
 	wav_sel wav_sel(	
 	   .clk(clk),
 	   .rst(rst),
 	   .sine_in(sine),
 	   .triangle_in(triangle),
 	   .square_in(square),
+	   .saw_in(saw),
 	   .inc(w_sel),
 	   .wav(wav)
 	);
