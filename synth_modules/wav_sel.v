@@ -20,7 +20,7 @@
 module wav_sel(
 	input clk,
 	input [7:0] sine_in, triangle_in, square_in, saw_in,
-	input x, rst,
+	input inc_in, rst,
 	output reg [7:0] wav
 	);
 
@@ -61,38 +61,8 @@ module wav_sel(
     push_detect pd(
         .clk(clk),
         .rst(rst),
-        .x(x),
-        .inc(inc)
+        .x(inc_in),
+        .rise(inc)
     );
-
-endmodule
-
-module push_detect(
-    input clk, x, rst,
-    output inc
-    );
-
-    localparam S0 = 3'b00;
-    localparam S1 = 3'b01;
-    localparam S2 = 3'b10;
-
-    reg [1:0] PS, NS = S0;
-
-    always @(posedge clk) begin
-        case(PS)
-        S0: if(x)   NS = S1;
-            else    NS = S0;
-        S1:         NS = S2;
-        S2: if(x)   NS = S2;
-            else    NS = S0;
-        endcase
-    end
-
-    always @(posedge clk, posedge rst) begin
-        if(rst) PS <= S0;
-        else    PS <= NS;
-    end
-
-    assign inc = PS[0];
 
 endmodule

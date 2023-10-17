@@ -21,20 +21,21 @@ module synth_wrapper(
 	input clk, en, rst, sel,
 	input [11:1] sw,
 	input [1:0] btn,
-	output [7:0] wav
+	output [7:0] wav,
 	
-	/*
+	
 	//signals used for simulation debugging
 	output wire [7:0] sine, triangle, square, saw,
 	output wire [15:0] tbl_count,
 	output wire div_clk
-	*/
+	
 	
 	);
 
-	wire [7:0] sine, triangle, square, saw;
-	wire [15:0] tbl_count;
-	wire div_clk, db_clk, w_sel;
+	//wire [7:0] sine, triangle, square, saw;
+	//wire [15:0] tbl_count;
+	//wire div_clk;
+	wire db_clk, w_sel;
 
 	lutSin sin_gen(
 		.en(en),
@@ -75,14 +76,15 @@ module synth_wrapper(
 	   .triangle_in(triangle),
 	   .square_in(square),
 	   .saw_in(saw),
-	   .x(w_sel),
+	   .inc_in(w_sel),
 	   .wav(wav)
 	);
 
 	clk_div freq_sel(
 	    .sw(sw),
-		.octave(btn[1:0]),
+		.btn(btn[1:0]),
 		.clk(clk),
+		.rst(rst),
 		.div_clk(div_clk)
 	);
 	
@@ -109,20 +111,22 @@ endmodule
 
 module table_count(
     input clk, rst,
-    output reg [15:0]table_count
+    output [15:0] table_count
 );
-    
+    reg [15:0] table_count_r = 16'd0;
     //Table counter - creates index value for case statment
     always@(posedge clk) begin
-        if(rst) table_count <= 16'd0;
+        if(rst) table_count_r <= 16'd0;
         else
-        if(table_count == 16'd359)begin
-            table_count <= 16'd0;
+        if(table_count_r == 16'd359)begin
+            table_count_r <= 16'd0;
         end
         else begin
-            table_count <= table_count + 1'd1;
+            table_count_r <= table_count_r + 1'd1;
         end
     end
+    
+    assign table_count = table_count_r;
 
 endmodule
 

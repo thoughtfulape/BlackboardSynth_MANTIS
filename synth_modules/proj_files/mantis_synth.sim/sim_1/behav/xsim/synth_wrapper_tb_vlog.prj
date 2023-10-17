@@ -6,6 +6,7 @@ verilog xil_defaultlib  \
 "../../../../../Tri_LUT.v" \
 "../../../../../clk_div.v" \
 "../../../../../db_1.v" \
+"../../../../../push_detect.v" \
 "../../../../../synth_wrapper.v" \
 "../../../../../wav_sel.v" \
 "../../../../mantis_synth.srcs/sources_1/new/synth_wrapper_tb.v" \

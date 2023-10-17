@@ -26,15 +26,23 @@ module synth_wrapper_tb();
     reg [1:0] btn;
     reg [10:0] sw;
     wire [7:0] wav;
-    //wire [7:0] sine, triangle, square, saw;
-    //wire [15:0] tbl_count;
-    //wire div_clk;
+    wire [7:0] sine, triangle, square, saw;
+    wire [15:0] tbl_count;
+    wire div_clk;
     
     synth_wrapper CUT (
         .clk(clk),
         .rst(rst),
         .en(en),
         .btn(btn),
+        
+        .div_clk(div_clk),
+        .tbl_count(tbl_count),
+        .sine(sine),
+        .triangle(triangle),
+        .square(square),
+        .saw(saw),
+                
         .sw(sw),
         .wav(wav),
         .sel(sel)
@@ -51,8 +59,8 @@ module synth_wrapper_tb();
         rst = 1;
         en = 0;
         
-        #20000 rst = 0;
-        #10 en = 1;
+        #1000000 rst = 0;
+        #100000 en = 1;
         
         #2000000 btn = 2'b01;
         #1000000 btn = 2'b00;
