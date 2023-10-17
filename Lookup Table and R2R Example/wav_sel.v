@@ -20,65 +20,79 @@
 module wav_sel(
 	input clk,
 	input [7:0] sine_in, triangle_in, square_in, saw_in,
-	input inc, rst,
+	input x, rst,
 	output reg [7:0] wav
 	);
 
-	localparam S0 = 3'b000;
-    localparam S1 = 3'b001;
-    localparam S2 = 3'b011;
-    localparam S3 = 3'b010;
-    localparam S4 = 3'b110;
-    localparam S5 = 3'b111;
-    localparam S6 = 3'b101;
-    localparam S7 = 3'b100;
+    wire inc;
 
-    reg [2:0] PS, NS = S0;
+	localparam S0 = 3'b00;
+    localparam S1 = 3'b01;
+    localparam S2 = 3'b11;
+    localparam S3 = 3'b10;
+
+    reg [1:0] PS, NS = S0;
 
     always @(posedge clk) begin
     	case(PS)
-    	//sin
-    	//move to S1 on inc
-    	S0: if(inc) NS = S1;
-    		else	NS = S0;
-        //hold on inc
-    	S1: if(inc) NS = S1;
-    		else	NS = S2;
-    	//tri
-    	//move to S3 on inc
-    	S2: if(inc)	NS = S3;
-    		else	NS = S2;
-    	//hold on inc
-    	S3: if(inc) NS = S3;
-    	    else    NS = S4;
-    	//sqr
-    	S4: if(inc) NS = S5;
-    	    else    NS = S4;
-    	//hold on inc
-    	S5: if(inc) NS = S5;
-    	    else    NS = S6;
-    	//saw
-    	S6: if(inc) NS = S7;
-    	    else    NS = S5;
-    	//hold on inc
-    	S7: if(inc) NS = S7;
-    	    else    NS = S0;
+        S0: if(inc) NS = S1;
+            else    NS = S0;
+        S1: if(inc) NS = S2;
+            else    NS = S1;
+        S2: if(inc) NS = S3;
+            else    NS = S2;
+        S3: if(inc) NS = S0;
+            else    NS = S3;
     	endcase
     end
 
     always @(posedge clk, posedge rst) begin
-    	if(rst)
-    	   PS <= S0;
-        else PS <= NS;
+    	if(rst) PS <= S0;
+        else    PS <= NS;
 
         case(PS)
         S0: wav <= sine_in;
         S1: wav <= triangle_in;
-        S2: wav <= triangle_in;
+        S2: wav <= saw_in;
         S3: wav <= square_in;
-        S4: wav <= square_in;
-        S5: wav <= saw_in;
         endcase
     end
+
+    push_detect pd(
+        .clk(clk),
+        .rst(rst),
+        .x(x),
+        .inc(inc)
+    );
+
+endmodule
+
+module push_detect(
+    input clk, x, rst,
+    output inc
+    );
+
+    localparam S0 = 3'b00;
+    localparam S1 = 3'b01;
+    localparam S2 = 3'b10;
+
+    reg [1:0] PS, NS = S0;
+
+    always @(posedge clk) begin
+        case(PS)
+        S0: if(x)   NS = S1;
+            else    NS = S0;
+        S1:         NS = S2;
+        S2: if(x)   NS = S2;
+            else    NS = S0;
+        endcase
+    end
+
+    always @(posedge clk, posedge rst) begin
+        if(rst) PS <= S0;
+        else    PS <= NS;
+    end
+
+    assign inc = PS[0];
 
 endmodule

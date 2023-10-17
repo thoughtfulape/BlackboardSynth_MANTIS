@@ -25,8 +25,6 @@ module lutSin(
     
     //table_val is an intermediary register before writing to PMOD output 
     reg [7:0] table_val;    
-    
-    reg divclk = 1'b0;
 
     assign sine = table_val;
 

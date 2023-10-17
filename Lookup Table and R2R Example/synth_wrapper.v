@@ -22,6 +22,14 @@ module synth_wrapper(
 	input [11:1] sw,
 	input [1:0] btn,
 	output [7:0] wav
+	
+	/*
+	//signals used for simulation debugging
+	output wire [7:0] sine, triangle, square, saw,
+	output wire [15:0] tbl_count,
+	output wire div_clk
+	*/
+	
 	);
 
 	wire [7:0] sine, triangle, square, saw;
@@ -67,7 +75,7 @@ module synth_wrapper(
 	   .triangle_in(triangle),
 	   .square_in(square),
 	   .saw_in(saw),
-	   .inc(w_sel),
+	   .x(w_sel),
 	   .wav(wav)
 	);
 
@@ -80,6 +88,7 @@ module synth_wrapper(
 	
 	table_count tbl_cntr(
 	   .clk(div_clk),
+	   .rst(rst),
 	   .table_count(tbl_count)
 	);
 	
@@ -99,14 +108,14 @@ module synth_wrapper(
 endmodule
 
 module table_count(
-    input clk,
+    input clk, rst,
     output reg [15:0]table_count
 );
-
-    //reg [15:0] table_count = 8'd0; 
     
     //Table counter - creates index value for case statment
     always@(posedge clk) begin
+        if(rst) table_count <= 16'd0;
+        else
         if(table_count == 16'd359)begin
             table_count <= 16'd0;
         end

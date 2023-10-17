@@ -1,10 +1,11 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../../Saw_LUT.v" \
 "../../../../../Sine_LUT.v" \
 "../../../../../Square_LUT.v" \
 "../../../../../Tri_LUT.v" \
 "../../../../../clk_div.v" \
-"../../../../../debounce_1.v" \
+"../../../../../db_1.v" \
 "../../../../../synth_wrapper.v" \
 "../../../../../wav_sel.v" \
 "../../../../mantis_synth.srcs/sources_1/new/synth_wrapper_tb.v" \

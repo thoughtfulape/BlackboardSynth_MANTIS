@@ -1,6 +1,6 @@
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vitis/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 1c9c11b7b96a4199bfefea5e4513ae00 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot synth_wrapper_tb_behav xil_defaultlib.synth_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Programs/Utility/Vivado/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 1c9c11b7b96a4199bfefea5e4513ae00 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot synth_wrapper_tb_behav xil_defaultlib.synth_wrapper_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -11,10 +11,12 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.lutSin
 Compiling module xil_defaultlib.lutTri
 Compiling module xil_defaultlib.lutSqr
+Compiling module xil_defaultlib.lutSaw
+Compiling module xil_defaultlib.push_detect
 Compiling module xil_defaultlib.wav_sel
 Compiling module xil_defaultlib.clk_div
 Compiling module xil_defaultlib.table_count
-Compiling module xil_defaultlib.debounce_1
+Compiling module xil_defaultlib.db_1
 Compiling module xil_defaultlib.conf_div
 Compiling module xil_defaultlib.synth_wrapper
 Compiling module xil_defaultlib.synth_wrapper_tb

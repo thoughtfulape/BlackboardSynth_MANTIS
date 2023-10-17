@@ -61,18 +61,18 @@ module clk_div(
             2'b01: terminal <= divis / 24'd2;
             default: terminal <= divis;
         endcase    
-     end
+    end
 
 	//clock divider
     always @(posedge clk)
     begin
-        if (counter == terminal) begin
+        if (counter >= terminal) begin
             divclk <= ~divclk;
             counter <= 24'd0;
         end
         else begin
             divclk <= divclk;
-            counter <= counter + 1'd1;
+            counter <= counter + 1'b1;
         end
     end
 
