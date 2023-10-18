@@ -35,14 +35,14 @@ module synth_wrapper_tb();
         .rst(rst),
         .en(en),
         .btn(btn),
-        
+        /*
         .div_clk(div_clk),
         .tbl_count(tbl_count),
         .sine(sine),
         .triangle(triangle),
         .square(square),
         .saw(saw),
-                
+        */      
         .sw(sw),
         .wav(wav),
         .sel(sel)
@@ -63,9 +63,23 @@ module synth_wrapper_tb();
         #100000 en = 1;
         
         #2000000 btn = 2'b01;
-        #1000000 btn = 2'b00;
+        #10      btn = 2'b00;
+        #1000000 btn = 2'b01;
+        #10      btn = 2'b00;
+        #1000000 btn = 2'b01;
+        #10      btn = 2'b00;
         #1000000 btn = 2'b10;
-        #1000000 btn = 2'b00;
+        #10      btn = 2'b00;
+        #1000000 btn = 2'b10;
+        #10      btn = 2'b00;
+        #1000000 btn = 2'b10;
+        #10      btn = 2'b00;
+        #2000000 btn = 2'b10;
+        #10      btn = 2'b00;
+        #1000000 btn = 2'b10;
+        #10      btn = 2'b00;
+        #2000000 btn = 2'b10;
+        #10      btn = 2'b00;
         
         #100000 sel = 1;
         #500000 sel = 0;

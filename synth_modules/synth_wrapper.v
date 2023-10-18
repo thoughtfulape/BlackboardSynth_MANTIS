@@ -21,20 +21,21 @@ module synth_wrapper(
 	input clk, en, rst, sel,
 	input [11:1] sw,
 	input [1:0] btn,
-	output [7:0] wav,
+	output [7:0] wav
 	
 	
+	/*,
 	//signals used for simulation debugging
 	output wire [7:0] sine, triangle, square, saw,
 	output wire [15:0] tbl_count,
-	output wire div_clk
+	output wire div_clk*/
 	
 	
 	);
 
-	//wire [7:0] sine, triangle, square, saw;
-	//wire [15:0] tbl_count;
-	//wire div_clk;
+	wire [7:0] sine, triangle, square, saw;
+	wire [15:0] tbl_count;
+	wire div_clk;
 	wire db_clk, w_sel;
 
 	lutSin sin_gen(
