@@ -18,11 +18,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module prog_synth_wrapper(
-	input clk, rst,
+	input clk, rst, en,
 	input [23:0] freq_offset,
-	input [1:0] wave_en,
 	input [1:0] wave_sel,
-	output [7:0] wav
+	output reg [7:0] wav
 
 	/*,
 	//signals used for simulation debugging
@@ -38,7 +37,7 @@ module prog_synth_wrapper(
 	wire db_clk, w_sel;
 
 	lutSin sin_gen(
-		.en(wave_en == 0),
+		.en(en),
 		.rst(rst),
 		.clk(div_clk),
 		.sine(sine),
@@ -46,7 +45,7 @@ module prog_synth_wrapper(
 	);
 
 	lutTri tri_gen(
-		.en(wave_en == 1),
+		.en(en),
 		.rst(rst),
 		.clk(div_clk),
 		.triangle(triangle),
@@ -54,7 +53,7 @@ module prog_synth_wrapper(
 	);
 
 	lutSqr sqr_gen(
-		.en(wave_en == 2),
+		.en(en),
 		.rst(rst),
 		.clk(div_clk),
 		.square(square),
@@ -62,48 +61,60 @@ module prog_synth_wrapper(
 	);
 	
 	lutSaw saw_gen(
-		.en(wave_en == 3),
+		.en(en),
 		.rst(rst),
 		.clk(div_clk),
 		.saw(saw),
 		.table_count(tbl_count)
 	);
 	
-	output_sel output_sel(
-	   .clk(clk),
+	/*output_sel output_sel(
+	   .en(en),
 	   .sel(wave_sel),
 	   .sin_in(sine),
 	   .tri_in(triangle),
 	   .sqr_in(square),
 	   .saw_in(saw),
 	   .wav(wav)
-	);
-
-    
+	);*/
+	
 	prog_clk_div freq_sel(
 	   .offset(freq_offset),
+	   .en(en),
 	   .clk(clk),
 	   .rst(rst),
 	   .div_clk(div_clk)
 	);
-	
 	
 	table_count tbl_cntr(
 	   .clk(div_clk),
 	   .rst(rst),
 	   .table_count(tbl_count)
 	);
+	
+	always @(*) begin
+        if(!en) wav <= 8'd0;
+        else 
+        case(wave_sel) 
+            2'b00: wav <= sine;
+            2'b01: wav <= triangle;
+            2'b10: wav <= saw;
+            2'b11: wav <= square;
+        endcase
+    end
 
 endmodule
 
 module output_sel(
-    input clk,
+    input clk, en,
     input [1:0] sel,
     input [7:0] sin_in, tri_in, sqr_in, saw_in,
     output reg [7:0] wav
     );
     
     always @(posedge clk) begin
+        if(!en) wav <= 8'd0;
+        else 
         case(sel) 
             2'b00: wav <= sin_in;
             2'b01: wav <= tri_in;

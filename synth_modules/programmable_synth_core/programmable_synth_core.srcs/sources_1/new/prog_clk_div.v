@@ -19,17 +19,20 @@
 
 module prog_clk_div(
     input [23:0] offset,
-	input clk, rst,
+	input clk, rst, en,
 	output div_clk
 	);
     
-    /*
+    //define 24-bit wide register for a clock divider
+    reg [23:0] counter = 24'd0; 
+    reg divclk = 1'b0;
+    
 	//clock divider
     always @(posedge clk)
     begin
         if(rst) divclk <= 24'd0;
         else
-        if (counter >= terminal) begin
+        if (counter >= offset) begin
             divclk <= ~divclk;
             counter <= 24'd0;
         end
@@ -38,9 +41,8 @@ module prog_clk_div(
             counter <= counter + 1'b1;
         end
     end
-
-    assign div_clk = divclk;
     
-    */
+    assign div_clk = divclk & en;
+
 
 endmodule
