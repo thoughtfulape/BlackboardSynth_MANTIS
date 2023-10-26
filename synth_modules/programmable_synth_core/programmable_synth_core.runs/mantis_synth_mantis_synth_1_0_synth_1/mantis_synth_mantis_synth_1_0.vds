@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Oct 26 12:25:44 2023
+# Process ID: 13048
+# Current directory: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1
+# Command line: vivado.exe -log mantis_synth_mantis_synth_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mantis_synth_mantis_synth_1_0.tcl
+# Log file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1/mantis_synth_mantis_synth_1_0.vds
+# Journal file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source mantis_synth_mantis_synth_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MANTY/BlackboardSynth_MANTIS/synth_modules/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Utility/Vivado/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.cache/ip 
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP mantis_synth_mantis_synth_1_0, cache-ID = c392b6a46809adb3.
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 26 12:26:06 2023...

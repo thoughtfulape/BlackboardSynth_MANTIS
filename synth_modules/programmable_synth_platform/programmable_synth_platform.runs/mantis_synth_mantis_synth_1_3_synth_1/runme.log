@@ -1,4 +1,0 @@
-
-*** Running vivado
-    with args -log mantis_synth_mantis_synth_1_3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mantis_synth_mantis_synth_1_3.tcl
-
