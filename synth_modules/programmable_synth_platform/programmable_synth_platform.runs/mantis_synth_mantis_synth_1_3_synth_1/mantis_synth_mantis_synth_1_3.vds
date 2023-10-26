@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Oct 25 17:52:33 2023
+# Process ID: 21856
+# Current directory: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_platform/programmable_synth_platform.runs/mantis_synth_mantis_synth_1_3_synth_1
+# Command line: vivado.exe -log mantis_synth_mantis_synth_1_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mantis_synth_mantis_synth_1_3.tcl
+# Log file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_platform/programmable_synth_platform.runs/mantis_synth_mantis_synth_1_3_synth_1/mantis_synth_mantis_synth_1_3.vds
+# Journal file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_platform/programmable_synth_platform.runs/mantis_synth_mantis_synth_1_3_synth_1\vivado.jou
+#-----------------------------------------------------------
+source mantis_synth_mantis_synth_1_3.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/ip_repo/mantis_synth_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_platform/programmable_synth_platform.cache/ip 
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP mantis_synth_mantis_synth_1_3, cache-ID = 3fc69c25746d582c.
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 17:52:36 2023...
