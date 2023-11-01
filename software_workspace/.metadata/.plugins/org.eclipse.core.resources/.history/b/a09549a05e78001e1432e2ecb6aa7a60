@@ -1,0 +1,10 @@
+#include "synth.h"
+#include "frequencies.h"
+
+void enable_core1(void){
+	SYNTH_CORE1 = 1;
+}
+
+void enable_core2(void){
+
+}

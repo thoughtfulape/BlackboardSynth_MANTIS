@@ -10,3 +10,20 @@
 18:30:15 INFO  : Result from executing command 'getPlatforms': 
 18:31:27 INFO  : Result from executing command 'getProjects': mantis_synth
 18:31:27 INFO  : Result from executing command 'getPlatforms': mantis_synth|D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/mantis_synth.xpfm
+19:11:56 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Libraries\Documents\School\MANTY\BlackboardSynth_MANTIS\software_workspace\temp_xsdb_launch_script.tcl
+19:12:03 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+19:12:03 INFO  : Platform repository initialization has completed.
+19:12:06 INFO  : Registering command handlers for Vitis TCF services
+19:12:14 INFO  : XSCT server has started successfully.
+19:12:39 INFO  : plnx-install-location is set to ''
+19:12:39 INFO  : Successfully done setting XSCT server connection channel  
+19:12:39 INFO  : Successfully done query RDI_DATADIR 
+19:12:39 INFO  : Successfully done setting workspace for the tool. 
+19:21:38 INFO  : Result from executing command 'getProjects': mantis_synth
+19:21:38 INFO  : Result from executing command 'getPlatforms': 
+19:21:39 INFO  : Checking for BSP changes to sync application flags for project 'mantis_software'...
+19:25:05 INFO  : Checking for BSP changes to sync application flags for project 'mantis_software'...
+19:28:18 INFO  : Checking for BSP changes to sync application flags for project 'mantis_software'...

@@ -1850,3 +1850,132 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 
 !ENTRY com.xilinx.sdk.utils 0 0 2023-10-25 18:32:01.255
 !MESSAGE XSCT command with result: [::hsi::utils::closehw C:/Users/gfish/AppData/Local/Temp/hwspec_mantis_synth1106241027145981911/mantis_synth.xsa], Result: [null, ]. Thread: main
+!SESSION 2023-10-31 19:10:59.001 -----------------------------------------------
+eclipse.buildId=2021.1
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2023-10-31 19:11:49.166
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-10-31 19:12:07.251
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-10-31 19:12:07.251
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2023-10-31 19:12:07.252
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:14.524
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:14.524
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:14.524
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:39.733
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:39.733
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:39.817
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:39.817
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:39.841
+!MESSAGE XSCT Command: [setws D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace], Thread: Thread-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:39.842
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, D:/Vitis/Vitis/2021.1/data]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:12:39.882
+!MESSAGE XSCT command with result: [setws D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace], Result: [null, ]. Thread: Thread-27
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:39.969
+!MESSAGE XSCT Command: [::hsi::utils::openhw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa], Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:41.556
+!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa], Result: [null, ]. Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:41.593
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss ], Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:41.597
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:41.598
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:41.604
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.5",
+}]. Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-10-31 19:21:41.605
+!MESSAGE Generating MD5 hash for file: D:\Libraries\Documents\School\MANTY\BlackboardSynth_MANTIS\software_workspace\mantis_synth\export\mantis_synth\sw\mantis_synth\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:41.628
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:21:41.630
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2023-10-31 19:21:42.335
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:25:05.374
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss ], Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:25:05.378
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:25:05.378
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:25:05.386
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.5",
+}]. Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-10-31 19:25:05.386
+!MESSAGE Generating MD5 hash for file: D:\Libraries\Documents\School\MANTY\BlackboardSynth_MANTIS\software_workspace\mantis_synth\export\mantis_synth\sw\mantis_synth\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:25:05.388
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:25:05.390
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:28:18.282
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss ], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:28:18.285
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:28:18.286
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:28:18.293
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/hw/mantis_synth.xsa D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.5",
+}]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-10-31 19:28:18.293
+!MESSAGE Generating MD5 hash for file: D:\Libraries\Documents\School\MANTY\BlackboardSynth_MANTIS\software_workspace\mantis_synth\export\mantis_synth\sw\mantis_synth\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:28:18.294
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-10-31 19:28:18.296
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_synth/export/mantis_synth/sw/mantis_synth/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-5: Build Project
