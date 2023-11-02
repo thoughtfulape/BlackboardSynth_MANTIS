@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  1 20:08:30 2023" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov  1 21:18:02 2023" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="mantis_synth" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -175,7 +175,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="3" FULLNAME="/mantis_synth_0" HWVERSION="1.0" INSTANCE="mantis_synth_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mantis_synth" VLNV="xilinx.com:user:mantis_synth:1.0">
+    <MODULE COREREVISION="4" FULLNAME="/mantis_synth_0" HWVERSION="1.0" INSTANCE="mantis_synth_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mantis_synth" VLNV="xilinx.com:user:mantis_synth:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI" NAME="S_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -364,7 +364,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="3" FULLNAME="/mantis_synth_1" HWVERSION="1.0" INSTANCE="mantis_synth_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mantis_synth" VLNV="xilinx.com:user:mantis_synth:1.0">
+    <MODULE COREREVISION="4" FULLNAME="/mantis_synth_1" HWVERSION="1.0" INSTANCE="mantis_synth_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mantis_synth" VLNV="xilinx.com:user:mantis_synth:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S_AXI" NAME="S_AXI_reg" RANGE="4096" USAGE="register"/>

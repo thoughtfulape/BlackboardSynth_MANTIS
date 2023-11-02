@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Nov  1 20:10:29 2023
-# Process ID: 16344
-# Current directory: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1
+# Start of session at: Wed Nov  1 21:18:47 2023
+# Process ID: 7532
+# Current directory: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1
 # Command line: vivado.exe -log mantis_synth_mantis_synth_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mantis_synth_mantis_synth_1_0.tcl
-# Log file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1/mantis_synth_mantis_synth_1_0.vds
-# Journal file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1\vivado.jou
+# Log file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1/mantis_synth_mantis_synth_1_0.vds
+# Journal file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.runs/mantis_synth_mantis_synth_1_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source mantis_synth_mantis_synth_1_0.tcl -notrace
