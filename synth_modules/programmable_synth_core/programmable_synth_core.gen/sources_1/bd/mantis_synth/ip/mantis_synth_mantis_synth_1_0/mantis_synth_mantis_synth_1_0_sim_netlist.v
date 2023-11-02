@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Thu Oct 26 12:25:28 2023
+// Date        : Wed Nov  1 20:10:12 2023
 // Host        : FishelHPLaptop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top mantis_synth_mantis_synth_1_0 -prefix
 //               mantis_synth_mantis_synth_1_0_ mantis_synth_mantis_synth_0_0_sim_netlist.v
@@ -12,9 +12,794 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-module mantis_synth_mantis_synth_1_0_lutSin
+module mantis_synth_mantis_synth_1_0_lutSaw
    (SR,
-    \table_count_r_reg_rep[6]__1 ,
+    D,
+    \table_count_r_reg_rep[6] ,
+    \table_count_r_reg_rep[3] ,
+    \table_count_r_reg_rep[4] ,
+    \table_count_r_reg_rep[4]_0 ,
+    \table_count_r_reg_rep[6]_0 ,
+    \table_count_r_reg_rep[6]_1 ,
+    \table_count_r_reg_rep[6]_2 ,
+    \table_count_r_reg_rep[6]_3 ,
+    \table_count_r_reg_rep[6]_4 ,
+    \table_count_r_reg_rep[6]_5 ,
+    \table_count_r_reg_rep[6]_6 ,
+    \table_count_r_reg_rep[6]_7 ,
+    \table_count_r_reg_rep[6]_8 ,
+    \table_count_r_reg_rep[6]_9 ,
+    \table_count_r_reg_rep[6]_10 ,
+    \table_count_r_reg_rep[6]_11 ,
+    \table_count_r_reg_rep[6]_12 ,
+    \table_count_r_reg_rep[6]_13 ,
+    \table_count_r_reg_rep[6]_14 ,
+    \table_count_r_reg_rep[6]_15 ,
+    \table_count_r_reg_rep[7] ,
+    \table_count_r_reg_rep[5] ,
+    \table_val_reg[7]_0 ,
+    Q,
+    \wav_reg[7] ,
+    \wav_reg[7]_0 ,
+    \wav_reg[7]_1 ,
+    \wav_reg[0] ,
+    \table_val_reg[6]_0 ,
+    \table_val_reg[7]_1 ,
+    \table_val_reg[0]_0 );
+  output [0:0]SR;
+  output [7:0]D;
+  output \table_count_r_reg_rep[6] ;
+  output \table_count_r_reg_rep[3] ;
+  output \table_count_r_reg_rep[4] ;
+  output \table_count_r_reg_rep[4]_0 ;
+  output \table_count_r_reg_rep[6]_0 ;
+  output \table_count_r_reg_rep[6]_1 ;
+  output \table_count_r_reg_rep[6]_2 ;
+  output \table_count_r_reg_rep[6]_3 ;
+  output \table_count_r_reg_rep[6]_4 ;
+  output \table_count_r_reg_rep[6]_5 ;
+  output \table_count_r_reg_rep[6]_6 ;
+  output \table_count_r_reg_rep[6]_7 ;
+  output \table_count_r_reg_rep[6]_8 ;
+  output \table_count_r_reg_rep[6]_9 ;
+  output \table_count_r_reg_rep[6]_10 ;
+  output \table_count_r_reg_rep[6]_11 ;
+  output \table_count_r_reg_rep[6]_12 ;
+  output \table_count_r_reg_rep[6]_13 ;
+  output \table_count_r_reg_rep[6]_14 ;
+  output \table_count_r_reg_rep[6]_15 ;
+  output \table_count_r_reg_rep[7] ;
+  output \table_count_r_reg_rep[5] ;
+  input [0:0]\table_val_reg[7]_0 ;
+  input [0:0]Q;
+  input [7:0]\wav_reg[7] ;
+  input [7:0]\wav_reg[7]_0 ;
+  input [1:0]\wav_reg[7]_1 ;
+  input \wav_reg[0] ;
+  input [7:0]\table_val_reg[6]_0 ;
+  input [7:0]\table_val_reg[7]_1 ;
+  input \table_val_reg[0]_0 ;
+
+  wire [7:0]D;
+  wire [0:0]Q;
+  wire [0:0]SR;
+  wire \table_count_r_reg_rep[3] ;
+  wire \table_count_r_reg_rep[4] ;
+  wire \table_count_r_reg_rep[4]_0 ;
+  wire \table_count_r_reg_rep[5] ;
+  wire \table_count_r_reg_rep[6] ;
+  wire \table_count_r_reg_rep[6]_0 ;
+  wire \table_count_r_reg_rep[6]_1 ;
+  wire \table_count_r_reg_rep[6]_10 ;
+  wire \table_count_r_reg_rep[6]_11 ;
+  wire \table_count_r_reg_rep[6]_12 ;
+  wire \table_count_r_reg_rep[6]_13 ;
+  wire \table_count_r_reg_rep[6]_14 ;
+  wire \table_count_r_reg_rep[6]_15 ;
+  wire \table_count_r_reg_rep[6]_2 ;
+  wire \table_count_r_reg_rep[6]_3 ;
+  wire \table_count_r_reg_rep[6]_4 ;
+  wire \table_count_r_reg_rep[6]_5 ;
+  wire \table_count_r_reg_rep[6]_6 ;
+  wire \table_count_r_reg_rep[6]_7 ;
+  wire \table_count_r_reg_rep[6]_8 ;
+  wire \table_count_r_reg_rep[6]_9 ;
+  wire \table_count_r_reg_rep[7] ;
+  wire \table_val[0]_i_10_n_0 ;
+  wire \table_val[0]_i_5_n_0 ;
+  wire \table_val[0]_i_6_n_0 ;
+  wire \table_val[0]_i_7_n_0 ;
+  wire \table_val[0]_i_8_n_0 ;
+  wire \table_val[0]_i_9_n_0 ;
+  wire \table_val[1]_i_10_n_0 ;
+  wire \table_val[1]_i_5_n_0 ;
+  wire \table_val[1]_i_6_n_0 ;
+  wire \table_val[1]_i_7_n_0 ;
+  wire \table_val[1]_i_8_n_0 ;
+  wire \table_val[1]_i_9_n_0 ;
+  wire \table_val[2]_i_10_n_0 ;
+  wire \table_val[2]_i_5_n_0 ;
+  wire \table_val[2]_i_6_n_0 ;
+  wire \table_val[2]_i_7_n_0 ;
+  wire \table_val[2]_i_8_n_0 ;
+  wire \table_val[2]_i_9_n_0 ;
+  wire \table_val[3]_i_10_n_0 ;
+  wire \table_val[3]_i_5_n_0 ;
+  wire \table_val[3]_i_6_n_0 ;
+  wire \table_val[3]_i_7_n_0 ;
+  wire \table_val[3]_i_8_n_0 ;
+  wire \table_val[3]_i_9_n_0 ;
+  wire \table_val[4]_i_10_n_0 ;
+  wire \table_val[4]_i_5_n_0 ;
+  wire \table_val[4]_i_6_n_0 ;
+  wire \table_val[4]_i_7_n_0 ;
+  wire \table_val[4]_i_8_n_0 ;
+  wire \table_val[4]_i_9_n_0 ;
+  wire \table_val[5]_i_5_n_0 ;
+  wire \table_val[5]_i_6_n_0 ;
+  wire \table_val[5]_i_7_n_0 ;
+  wire \table_val[5]_i_8_n_0 ;
+  wire \table_val[6]_i_4_n_0 ;
+  wire \table_val[6]_i_5_n_0 ;
+  wire \table_val[6]_i_6_n_0 ;
+  wire \table_val_reg[0]_0 ;
+  wire [7:0]\table_val_reg[6]_0 ;
+  wire [0:0]\table_val_reg[7]_0 ;
+  wire [7:0]\table_val_reg[7]_1 ;
+  wire \table_val_reg_n_0_[0] ;
+  wire \table_val_reg_n_0_[1] ;
+  wire \table_val_reg_n_0_[2] ;
+  wire \table_val_reg_n_0_[3] ;
+  wire \table_val_reg_n_0_[4] ;
+  wire \table_val_reg_n_0_[5] ;
+  wire \table_val_reg_n_0_[6] ;
+  wire \table_val_reg_n_0_[7] ;
+  wire \wav_reg[0] ;
+  wire [7:0]\wav_reg[7] ;
+  wire [7:0]\wav_reg[7]_0 ;
+  wire [1:0]\wav_reg[7]_1 ;
+
+  LUT6 #(
+    .INIT(64'h0210210356356356)) 
+    \table_val[0]_i_10 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[0]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'hBC3D296B42D694BC)) 
+    \table_val[0]_i_5 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[0]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hD6BC694294296BD6)) 
+    \table_val[0]_i_6 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[0]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h6B42D694BD296963)) 
+    \table_val[0]_i_7 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[0]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h296B6BC2D6BD9429)) 
+    \table_val[0]_i_8 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[0]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h94BD296B43C2D694)) 
+    \table_val[0]_i_9 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[0]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'h3100233046731046)) 
+    \table_val[1]_i_10 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[1]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'h7318CE730CE7318C)) 
+    \table_val[1]_i_5 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[1]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hCE7318CE7318E731)) 
+    \table_val[1]_i_6 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[1]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h1873CE18CE1873EF)) 
+    \table_val[1]_i_7 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [2]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[1]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hE71818CECE737318)) 
+    \table_val[1]_i_8 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[1]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h8CE730CE7318CE73)) 
+    \table_val[1]_i_9 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[1]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'h1111322264555513)) 
+    \table_val[2]_i_10 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[2]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAA259BA6455AA26)) 
+    \table_val[2]_i_5 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[2]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h6455AAA25D9B4555)) 
+    \table_val[2]_i_6 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[2]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h5D649B55AA5DA2BA)) 
+    \table_val[2]_i_7 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[2]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hBAA264555D9BAAA2)) 
+    \table_val[2]_i_8 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[2]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h2645AAA2559B6455)) 
+    \table_val[2]_i_9 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[2]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F030F0333303034)) 
+    \table_val[3]_i_10 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [4]),
+        .I2(\table_val_reg[6]_0 [5]),
+        .I3(\table_val_reg[6]_0 [2]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[3]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'hA5A5D05AF5F05A4A)) 
+    \table_val[3]_i_5 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [0]),
+        .I2(\table_val_reg[6]_0 [5]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[3]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hDDCCC44666662333)) 
+    \table_val[3]_i_6 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[3]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hB03C343C0C4F0FC3)) 
+    \table_val[3]_i_7 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [4]),
+        .I2(\table_val_reg[6]_0 [5]),
+        .I3(\table_val_reg[6]_0 [2]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[3]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h3C3C0C0F4FCBC3C3)) 
+    \table_val[3]_i_8 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [4]),
+        .I2(\table_val_reg[6]_0 [5]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[3]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h6223999933B9DDCC)) 
+    \table_val[3]_i_9 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [2]),
+        .O(\table_val[3]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000FF0000FFFE00)) 
+    \table_val[4]_i_10 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [2]),
+        .I2(\table_val_reg[6]_0 [1]),
+        .I3(\table_val_reg[6]_0 [4]),
+        .I4(\table_val_reg[6]_0 [5]),
+        .I5(\table_val_reg[6]_0 [3]),
+        .O(\table_val[4]_i_10_n_0 ));
+  LUT5 #(
+    .INIT(32'h0333C8C0)) 
+    \table_val[4]_i_5 
+       (.I0(\table_val_reg[6]_0 [1]),
+        .I1(\table_val_reg[6]_0 [4]),
+        .I2(\table_val_reg[6]_0 [3]),
+        .I3(\table_val_reg[6]_0 [2]),
+        .I4(\table_val_reg[6]_0 [5]),
+        .O(\table_val[4]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAA5F5E5E7E)) 
+    \table_val[4]_i_6 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [2]),
+        .I2(\table_val_reg[6]_0 [3]),
+        .I3(\table_val_reg[6]_0 [0]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [5]),
+        .O(\table_val[4]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h3333373FC0830303)) 
+    \table_val[4]_i_7 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [4]),
+        .I2(\table_val_reg[6]_0 [3]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [5]),
+        .O(\table_val[4]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hCC80CC00FFCCFCCC)) 
+    \table_val[4]_i_8 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [4]),
+        .I2(\table_val_reg[6]_0 [2]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .I4(\table_val_reg[6]_0 [1]),
+        .I5(\table_val_reg[6]_0 [5]),
+        .O(\table_val[4]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h44DD559945DDDD99)) 
+    \table_val[4]_i_9 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [5]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [1]),
+        .O(\table_val[4]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'h333030308C8C8C8C)) 
+    \table_val[5]_i_2 
+       (.I0(\table_val[5]_i_5_n_0 ),
+        .I1(\table_val_reg[6]_0 [6]),
+        .I2(\table_val_reg[6]_0 [4]),
+        .I3(\table_val_reg[6]_0 [2]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [5]),
+        .O(\table_count_r_reg_rep[6] ));
+  LUT5 #(
+    .INIT(32'hEFEF4540)) 
+    \table_val[5]_i_3 
+       (.I0(\table_val_reg[6]_0 [6]),
+        .I1(\table_val[6]_i_4_n_0 ),
+        .I2(\table_val_reg[6]_0 [4]),
+        .I3(\table_val[5]_i_6_n_0 ),
+        .I4(\table_val_reg[6]_0 [5]),
+        .O(\table_count_r_reg_rep[6]_15 ));
+  LUT6 #(
+    .INIT(64'h30443044CCFFCCCC)) 
+    \table_val[5]_i_4 
+       (.I0(\table_val_reg[6]_0 [3]),
+        .I1(\table_val_reg[6]_0 [6]),
+        .I2(\table_val[5]_i_7_n_0 ),
+        .I3(\table_val_reg[6]_0 [4]),
+        .I4(\table_val[5]_i_8_n_0 ),
+        .I5(\table_val_reg[6]_0 [5]),
+        .O(\table_count_r_reg_rep[3] ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h01FF)) 
+    \table_val[5]_i_5 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [1]),
+        .I2(\table_val_reg[6]_0 [2]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .O(\table_val[5]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \table_val[5]_i_6 
+       (.I0(\table_val_reg[6]_0 [2]),
+        .I1(\table_val_reg[6]_0 [1]),
+        .I2(\table_val_reg[6]_0 [3]),
+        .O(\table_val[5]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hC8)) 
+    \table_val[5]_i_7 
+       (.I0(\table_val_reg[6]_0 [1]),
+        .I1(\table_val_reg[6]_0 [3]),
+        .I2(\table_val_reg[6]_0 [2]),
+        .O(\table_val[5]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h3F7F)) 
+    \table_val[5]_i_8 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [3]),
+        .I2(\table_val_reg[6]_0 [2]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .O(\table_val[5]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h3330303088CC88CC)) 
+    \table_val[6]_i_2 
+       (.I0(\table_val[6]_i_4_n_0 ),
+        .I1(\table_val_reg[6]_0 [7]),
+        .I2(\table_val_reg[6]_0 [5]),
+        .I3(\table_val_reg[6]_0 [4]),
+        .I4(\table_val[6]_i_5_n_0 ),
+        .I5(\table_val_reg[6]_0 [6]),
+        .O(\table_count_r_reg_rep[7] ));
+  LUT6 #(
+    .INIT(64'h000000000FFE5FFE)) 
+    \table_val[6]_i_3 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val[6]_i_6_n_0 ),
+        .I2(\table_val_reg[6]_0 [5]),
+        .I3(\table_val_reg[6]_0 [6]),
+        .I4(\table_val_reg[6]_0 [3]),
+        .I5(\table_val_reg[6]_0 [7]),
+        .O(\table_count_r_reg_rep[4] ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h0111FFFF)) 
+    \table_val[6]_i_4 
+       (.I0(\table_val_reg[6]_0 [3]),
+        .I1(\table_val_reg[6]_0 [2]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .I4(\table_val_reg[6]_0 [5]),
+        .O(\table_val[6]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'hF0E0)) 
+    \table_val[6]_i_5 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [1]),
+        .I2(\table_val_reg[6]_0 [3]),
+        .I3(\table_val_reg[6]_0 [2]),
+        .O(\table_val[6]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'hC080)) 
+    \table_val[6]_i_6 
+       (.I0(\table_val_reg[6]_0 [0]),
+        .I1(\table_val_reg[6]_0 [2]),
+        .I2(\table_val_reg[6]_0 [3]),
+        .I3(\table_val_reg[6]_0 [1]),
+        .O(\table_val[6]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \table_val[7]_i_1__2 
+       (.I0(\table_val_reg[7]_0 ),
+        .I1(Q),
+        .O(SR));
+  LUT6 #(
+    .INIT(64'hAAAAAA8000000000)) 
+    \table_val[7]_i_3 
+       (.I0(\table_val_reg[6]_0 [5]),
+        .I1(\table_val_reg[6]_0 [1]),
+        .I2(\table_val_reg[6]_0 [0]),
+        .I3(\table_val_reg[6]_0 [3]),
+        .I4(\table_val_reg[6]_0 [2]),
+        .I5(\table_val_reg[6]_0 [4]),
+        .O(\table_count_r_reg_rep[5] ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h1F)) 
+    \table_val[7]_i_4 
+       (.I0(\table_val_reg[6]_0 [4]),
+        .I1(\table_val_reg[6]_0 [3]),
+        .I2(\table_val_reg[6]_0 [5]),
+        .O(\table_count_r_reg_rep[4]_0 ));
+  FDRE \table_val_reg[0] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [0]),
+        .Q(\table_val_reg_n_0_[0] ),
+        .R(SR));
+  MUXF7 \table_val_reg[0]_i_2 
+       (.I0(\table_val[0]_i_5_n_0 ),
+        .I1(\table_val[0]_i_6_n_0 ),
+        .O(\table_count_r_reg_rep[6]_0 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[0]_i_3 
+       (.I0(\table_val[0]_i_7_n_0 ),
+        .I1(\table_val[0]_i_8_n_0 ),
+        .O(\table_count_r_reg_rep[6]_1 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[0]_i_4 
+       (.I0(\table_val[0]_i_9_n_0 ),
+        .I1(\table_val[0]_i_10_n_0 ),
+        .O(\table_count_r_reg_rep[6]_10 ),
+        .S(\table_val_reg[6]_0 [6]));
+  FDRE \table_val_reg[1] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [1]),
+        .Q(\table_val_reg_n_0_[1] ),
+        .R(SR));
+  MUXF7 \table_val_reg[1]_i_2 
+       (.I0(\table_val[1]_i_5_n_0 ),
+        .I1(\table_val[1]_i_6_n_0 ),
+        .O(\table_count_r_reg_rep[6]_2 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[1]_i_3 
+       (.I0(\table_val[1]_i_7_n_0 ),
+        .I1(\table_val[1]_i_8_n_0 ),
+        .O(\table_count_r_reg_rep[6]_3 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[1]_i_4 
+       (.I0(\table_val[1]_i_9_n_0 ),
+        .I1(\table_val[1]_i_10_n_0 ),
+        .O(\table_count_r_reg_rep[6]_4 ),
+        .S(\table_val_reg[6]_0 [6]));
+  FDRE \table_val_reg[2] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [2]),
+        .Q(\table_val_reg_n_0_[2] ),
+        .R(SR));
+  MUXF7 \table_val_reg[2]_i_2 
+       (.I0(\table_val[2]_i_5_n_0 ),
+        .I1(\table_val[2]_i_6_n_0 ),
+        .O(\table_count_r_reg_rep[6]_5 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[2]_i_3 
+       (.I0(\table_val[2]_i_7_n_0 ),
+        .I1(\table_val[2]_i_8_n_0 ),
+        .O(\table_count_r_reg_rep[6]_6 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[2]_i_4 
+       (.I0(\table_val[2]_i_9_n_0 ),
+        .I1(\table_val[2]_i_10_n_0 ),
+        .O(\table_count_r_reg_rep[6]_7 ),
+        .S(\table_val_reg[6]_0 [6]));
+  FDRE \table_val_reg[3] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [3]),
+        .Q(\table_val_reg_n_0_[3] ),
+        .R(SR));
+  MUXF7 \table_val_reg[3]_i_2 
+       (.I0(\table_val[3]_i_5_n_0 ),
+        .I1(\table_val[3]_i_6_n_0 ),
+        .O(\table_count_r_reg_rep[6]_8 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[3]_i_3 
+       (.I0(\table_val[3]_i_7_n_0 ),
+        .I1(\table_val[3]_i_8_n_0 ),
+        .O(\table_count_r_reg_rep[6]_11 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[3]_i_4 
+       (.I0(\table_val[3]_i_9_n_0 ),
+        .I1(\table_val[3]_i_10_n_0 ),
+        .O(\table_count_r_reg_rep[6]_9 ),
+        .S(\table_val_reg[6]_0 [6]));
+  FDRE \table_val_reg[4] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [4]),
+        .Q(\table_val_reg_n_0_[4] ),
+        .R(SR));
+  MUXF7 \table_val_reg[4]_i_2 
+       (.I0(\table_val[4]_i_5_n_0 ),
+        .I1(\table_val[4]_i_6_n_0 ),
+        .O(\table_count_r_reg_rep[6]_13 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[4]_i_3 
+       (.I0(\table_val[4]_i_7_n_0 ),
+        .I1(\table_val[4]_i_8_n_0 ),
+        .O(\table_count_r_reg_rep[6]_12 ),
+        .S(\table_val_reg[6]_0 [6]));
+  MUXF7 \table_val_reg[4]_i_4 
+       (.I0(\table_val[4]_i_9_n_0 ),
+        .I1(\table_val[4]_i_10_n_0 ),
+        .O(\table_count_r_reg_rep[6]_14 ),
+        .S(\table_val_reg[6]_0 [6]));
+  FDRE \table_val_reg[5] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [5]),
+        .Q(\table_val_reg_n_0_[5] ),
+        .R(SR));
+  FDRE \table_val_reg[6] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [6]),
+        .Q(\table_val_reg_n_0_[6] ),
+        .R(SR));
+  FDRE \table_val_reg[7] 
+       (.C(\table_val_reg[0]_0 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 [7]),
+        .Q(\table_val_reg_n_0_[7] ),
+        .R(SR));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[0]_i_1 
+       (.I0(\table_val_reg_n_0_[0] ),
+        .I1(\wav_reg[7] [0]),
+        .I2(\wav_reg[7]_0 [0]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[0]));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[1]_i_1 
+       (.I0(\table_val_reg_n_0_[1] ),
+        .I1(\wav_reg[7] [1]),
+        .I2(\wav_reg[7]_0 [1]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[2]_i_1 
+       (.I0(\table_val_reg_n_0_[2] ),
+        .I1(\wav_reg[7] [2]),
+        .I2(\wav_reg[7]_0 [2]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[2]));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[3]_i_1 
+       (.I0(\table_val_reg_n_0_[3] ),
+        .I1(\wav_reg[7] [3]),
+        .I2(\wav_reg[7]_0 [3]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[3]));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[4]_i_1 
+       (.I0(\table_val_reg_n_0_[4] ),
+        .I1(\wav_reg[7] [4]),
+        .I2(\wav_reg[7]_0 [4]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[4]));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[5]_i_1 
+       (.I0(\table_val_reg_n_0_[5] ),
+        .I1(\wav_reg[7] [5]),
+        .I2(\wav_reg[7]_0 [5]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[5]));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[6]_i_1 
+       (.I0(\table_val_reg_n_0_[6] ),
+        .I1(\wav_reg[7] [6]),
+        .I2(\wav_reg[7]_0 [6]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[6]));
+  LUT6 #(
+    .INIT(64'hAACCAACCFFF000F0)) 
+    \wav[7]_i_2 
+       (.I0(\table_val_reg_n_0_[7] ),
+        .I1(\wav_reg[7] [7]),
+        .I2(\wav_reg[7]_0 [7]),
+        .I3(\wav_reg[7]_1 [1]),
+        .I4(\wav_reg[0] ),
+        .I5(\wav_reg[7]_1 [0]),
+        .O(D[7]));
+endmodule
+
+module mantis_synth_mantis_synth_1_0_lutSin
+   (\table_count_r_reg_rep[6]__1 ,
     \table_count_r_reg_rep[6]__1_0 ,
     \table_count_r_reg_rep[6]__1_1 ,
     \table_count_r_reg_rep[4]__1 ,
@@ -36,13 +821,11 @@ module mantis_synth_mantis_synth_1_0_lutSin
     \table_count_r_reg_rep[4]__1_10 ,
     \table_count_r_reg_rep[5]__1 ,
     \table_val_reg[7]_0 ,
-    \table_val_reg[7]_1 ,
-    \table_val_reg[7]_2 ,
     Q,
     \table_val_reg[5]_0 ,
+    SR,
     D,
-    CLK);
-  output [0:0]SR;
+    \table_val_reg[7]_1 );
   output \table_count_r_reg_rep[6]__1 ;
   output \table_count_r_reg_rep[6]__1_0 ;
   output \table_count_r_reg_rep[6]__1_1 ;
@@ -65,14 +848,12 @@ module mantis_synth_mantis_synth_1_0_lutSin
   output \table_count_r_reg_rep[4]__1_10 ;
   output \table_count_r_reg_rep[5]__1 ;
   output [7:0]\table_val_reg[7]_0 ;
-  input [0:0]\table_val_reg[7]_1 ;
-  input [0:0]\table_val_reg[7]_2 ;
   input [7:0]Q;
   input \table_val_reg[5]_0 ;
+  input [0:0]SR;
   input [7:0]D;
-  input CLK;
+  input \table_val_reg[7]_1 ;
 
-  wire CLK;
   wire [7:0]D;
   wire [7:0]Q;
   wire [0:0]SR;
@@ -157,8 +938,7 @@ module mantis_synth_mantis_synth_1_0_lutSin
   wire \table_val_reg[5]_i_5_n_0 ;
   wire \table_val_reg[5]_i_6_n_0 ;
   wire [7:0]\table_val_reg[7]_0 ;
-  wire [0:0]\table_val_reg[7]_1 ;
-  wire [0:0]\table_val_reg[7]_2 ;
+  wire \table_val_reg[7]_1 ;
 
   LUT6 #(
     .INIT(64'h0000000005501050)) 
@@ -658,12 +1438,6 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .I4(Q[2]),
         .I5(Q[3]),
         .O(\table_val[6]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \table_val[7]_i_1 
-       (.I0(\table_val_reg[7]_1 ),
-        .I1(\table_val_reg[7]_2 ),
-        .O(SR));
   LUT6 #(
     .INIT(64'h5555777FFFFFFFFF)) 
     \table_val[7]_i_2 
@@ -675,7 +1449,7 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .I5(Q[5]),
         .O(\table_count_r_reg_rep[7]__1 ));
   FDRE \table_val_reg[0] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[0]),
         .Q(\table_val_reg[7]_0 [0]),
@@ -706,7 +1480,7 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .O(\table_val_reg[0]_i_6_n_0 ),
         .S(Q[4]));
   FDRE \table_val_reg[1] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[1]),
         .Q(\table_val_reg[7]_0 [1]),
@@ -737,7 +1511,7 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .O(\table_val_reg[1]_i_6_n_0 ),
         .S(Q[4]));
   FDRE \table_val_reg[2] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[2]),
         .Q(\table_val_reg[7]_0 [2]),
@@ -768,7 +1542,7 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .O(\table_val_reg[2]_i_6_n_0 ),
         .S(Q[4]));
   FDRE \table_val_reg[3] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[3]),
         .Q(\table_val_reg[7]_0 [3]),
@@ -799,7 +1573,7 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .O(\table_val_reg[3]_i_6_n_0 ),
         .S(Q[4]));
   FDRE \table_val_reg[4] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[4]),
         .Q(\table_val_reg[7]_0 [4]),
@@ -830,7 +1604,7 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .O(\table_val_reg[4]_i_6_n_0 ),
         .S(Q[4]));
   FDRE \table_val_reg[5] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[5]),
         .Q(\table_val_reg[7]_0 [5]),
@@ -851,17 +1625,37 @@ module mantis_synth_mantis_synth_1_0_lutSin
         .O(\table_val_reg[5]_i_6_n_0 ),
         .S(Q[4]));
   FDRE \table_val_reg[6] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[6]),
         .Q(\table_val_reg[7]_0 [6]),
         .R(SR));
   FDRE \table_val_reg[7] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[7]),
         .Q(\table_val_reg[7]_0 [7]),
         .R(SR));
+endmodule
+
+module mantis_synth_mantis_synth_1_0_lutSqr
+   (\table_val_reg[7]_0 ,
+    \table_val_reg[7]_1 ,
+    \table_val_reg[7]_2 );
+  output \table_val_reg[7]_0 ;
+  input \table_val_reg[7]_1 ;
+  input \table_val_reg[7]_2 ;
+
+  wire \table_val_reg[7]_0 ;
+  wire \table_val_reg[7]_1 ;
+  wire \table_val_reg[7]_2 ;
+
+  FDRE \table_val_reg[7] 
+       (.C(\table_val_reg[7]_2 ),
+        .CE(1'b1),
+        .D(\table_val_reg[7]_1 ),
+        .Q(\table_val_reg[7]_0 ),
+        .R(1'b0));
 endmodule
 
 module mantis_synth_mantis_synth_1_0_lutTri
@@ -891,7 +1685,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
     \table_val_reg[6]_0 ,
     SR,
     D,
-    CLK);
+    \table_val_reg[7]_1 );
   output \table_count_r_reg_rep[6]__0 ;
   output \table_count_r_reg_rep[6]__0_0 ;
   output \table_count_r_reg_rep[6]__0_1 ;
@@ -918,9 +1712,8 @@ module mantis_synth_mantis_synth_1_0_lutTri
   input \table_val_reg[6]_0 ;
   input [0:0]SR;
   input [7:0]D;
-  input CLK;
+  input \table_val_reg[7]_1 ;
 
-  wire CLK;
   wire [7:0]D;
   wire [7:0]Q;
   wire [0:0]SR;
@@ -984,6 +1777,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
   wire \table_val[6]_i_7_n_0 ;
   wire \table_val_reg[6]_0 ;
   wire [7:0]\table_val_reg[7]_0 ;
+  wire \table_val_reg[7]_1 ;
 
   LUT6 #(
     .INIT(64'h5312121604454153)) 
@@ -1372,7 +2166,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .I4(Q[6]),
         .I5(Q[7]),
         .O(\table_count_r_reg_rep[5]__0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hC8)) 
     \table_val[6]_i_5 
@@ -1380,7 +2174,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .I1(Q[2]),
         .I2(Q[1]),
         .O(\table_val[6]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \table_val[6]_i_7 
@@ -1390,7 +2184,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .O(\table_val[6]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h5555777FFFFFFFFF)) 
-    \table_val[7]_i_3 
+    \table_val[7]_i_2 
        (.I0(Q[4]),
         .I1(Q[2]),
         .I2(Q[1]),
@@ -1399,7 +2193,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .I5(Q[5]),
         .O(\table_count_r_reg_rep[4]__0 ));
   FDRE \table_val_reg[0] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[0]),
         .Q(\table_val_reg[7]_0 [0]),
@@ -1420,7 +2214,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .O(\table_count_r_reg_rep[6]__0_12 ),
         .S(Q[6]));
   FDRE \table_val_reg[1] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[1]),
         .Q(\table_val_reg[7]_0 [1]),
@@ -1441,7 +2235,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .O(\table_count_r_reg_rep[6]__0_1 ),
         .S(Q[6]));
   FDRE \table_val_reg[2] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[2]),
         .Q(\table_val_reg[7]_0 [2]),
@@ -1462,7 +2256,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .O(\table_count_r_reg_rep[6]__0_14 ),
         .S(Q[6]));
   FDRE \table_val_reg[3] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[3]),
         .Q(\table_val_reg[7]_0 [3]),
@@ -1483,7 +2277,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .O(\table_count_r_reg_rep[6]__0_4 ),
         .S(Q[6]));
   FDRE \table_val_reg[4] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[4]),
         .Q(\table_val_reg[7]_0 [4]),
@@ -1494,7 +2288,7 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .O(\table_count_r_reg_rep[6]__0_5 ),
         .S(Q[6]));
   FDRE \table_val_reg[5] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[5]),
         .Q(\table_val_reg[7]_0 [5]),
@@ -1515,13 +2309,13 @@ module mantis_synth_mantis_synth_1_0_lutTri
         .O(\table_count_r_reg_rep[6]__0_7 ),
         .S(Q[6]));
   FDRE \table_val_reg[6] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[6]),
         .Q(\table_val_reg[7]_0 [6]),
         .R(SR));
   FDRE \table_val_reg[7] 
-       (.C(CLK),
+       (.C(\table_val_reg[7]_1 ),
         .CE(1'b1),
         .D(D[7]),
         .Q(\table_val_reg[7]_0 [7]),
@@ -1766,7 +2560,6 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0;
   wire clk;
-  wire \freq_sel/divclk00 ;
   wire [1:0]p_0_in;
   wire [31:0]reg_data_out;
   wire s_axi_aclk;
@@ -1825,41 +2618,11 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
   wire \slv_reg1[31]_i_1_n_0 ;
   wire \slv_reg1[7]_i_1_n_0 ;
   wire [0:0]slv_reg1_0;
+  wire [31:0]slv_reg2;
   wire \slv_reg2[15]_i_1_n_0 ;
   wire \slv_reg2[23]_i_1_n_0 ;
   wire \slv_reg2[31]_i_1_n_0 ;
   wire \slv_reg2[7]_i_1_n_0 ;
-  wire \slv_reg2_reg_n_0_[10] ;
-  wire \slv_reg2_reg_n_0_[11] ;
-  wire \slv_reg2_reg_n_0_[12] ;
-  wire \slv_reg2_reg_n_0_[13] ;
-  wire \slv_reg2_reg_n_0_[14] ;
-  wire \slv_reg2_reg_n_0_[15] ;
-  wire \slv_reg2_reg_n_0_[16] ;
-  wire \slv_reg2_reg_n_0_[17] ;
-  wire \slv_reg2_reg_n_0_[18] ;
-  wire \slv_reg2_reg_n_0_[19] ;
-  wire \slv_reg2_reg_n_0_[1] ;
-  wire \slv_reg2_reg_n_0_[20] ;
-  wire \slv_reg2_reg_n_0_[21] ;
-  wire \slv_reg2_reg_n_0_[22] ;
-  wire \slv_reg2_reg_n_0_[23] ;
-  wire \slv_reg2_reg_n_0_[24] ;
-  wire \slv_reg2_reg_n_0_[25] ;
-  wire \slv_reg2_reg_n_0_[26] ;
-  wire \slv_reg2_reg_n_0_[27] ;
-  wire \slv_reg2_reg_n_0_[28] ;
-  wire \slv_reg2_reg_n_0_[29] ;
-  wire \slv_reg2_reg_n_0_[2] ;
-  wire \slv_reg2_reg_n_0_[30] ;
-  wire \slv_reg2_reg_n_0_[31] ;
-  wire \slv_reg2_reg_n_0_[3] ;
-  wire \slv_reg2_reg_n_0_[4] ;
-  wire \slv_reg2_reg_n_0_[5] ;
-  wire \slv_reg2_reg_n_0_[6] ;
-  wire \slv_reg2_reg_n_0_[7] ;
-  wire \slv_reg2_reg_n_0_[8] ;
-  wire \slv_reg2_reg_n_0_[9] ;
   wire [31:0]slv_reg3;
   wire \slv_reg3[15]_i_1_n_0 ;
   wire \slv_reg3[23]_i_1_n_0 ;
@@ -1893,7 +2656,7 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
         .I2(S_AXI_ARREADY),
         .I3(axi_araddr[2]),
         .O(\axi_araddr[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[3]_i_1 
@@ -1914,7 +2677,7 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -1995,324 +2758,324 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
         .Q(s_axi_bvalid),
         .R(axi_awready_i_1_n_0));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[0]_i_1 
-       (.I0(slv_reg1_0),
-        .I1(slv_reg0),
-        .I2(slv_reg3[0]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\freq_sel/divclk00 ),
+       (.I0(slv_reg3[0]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[0]),
+        .I4(slv_reg1_0),
+        .I5(slv_reg0),
         .O(reg_data_out[0]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[10]_i_1 
-       (.I0(slv_reg1[10]),
-        .I1(\slv_reg0_reg_n_0_[10] ),
-        .I2(slv_reg3[10]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[10] ),
+       (.I0(slv_reg3[10]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[10]),
+        .I4(slv_reg1[10]),
+        .I5(\slv_reg0_reg_n_0_[10] ),
         .O(reg_data_out[10]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[11]_i_1 
-       (.I0(slv_reg1[11]),
-        .I1(\slv_reg0_reg_n_0_[11] ),
-        .I2(slv_reg3[11]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[11] ),
+       (.I0(slv_reg3[11]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[11]),
+        .I4(slv_reg1[11]),
+        .I5(\slv_reg0_reg_n_0_[11] ),
         .O(reg_data_out[11]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[12]_i_1 
-       (.I0(slv_reg1[12]),
-        .I1(\slv_reg0_reg_n_0_[12] ),
-        .I2(slv_reg3[12]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[12] ),
+       (.I0(slv_reg3[12]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[12]),
+        .I4(slv_reg1[12]),
+        .I5(\slv_reg0_reg_n_0_[12] ),
         .O(reg_data_out[12]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[13]_i_1 
-       (.I0(slv_reg1[13]),
-        .I1(\slv_reg0_reg_n_0_[13] ),
-        .I2(slv_reg3[13]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[13] ),
+       (.I0(slv_reg3[13]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[13]),
+        .I4(slv_reg1[13]),
+        .I5(\slv_reg0_reg_n_0_[13] ),
         .O(reg_data_out[13]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[14]_i_1 
-       (.I0(slv_reg1[14]),
-        .I1(\slv_reg0_reg_n_0_[14] ),
-        .I2(slv_reg3[14]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[14] ),
+       (.I0(slv_reg3[14]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[14]),
+        .I4(slv_reg1[14]),
+        .I5(\slv_reg0_reg_n_0_[14] ),
         .O(reg_data_out[14]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[15]_i_1 
-       (.I0(slv_reg1[15]),
-        .I1(\slv_reg0_reg_n_0_[15] ),
-        .I2(slv_reg3[15]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[15] ),
+       (.I0(slv_reg3[15]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[15]),
+        .I4(slv_reg1[15]),
+        .I5(\slv_reg0_reg_n_0_[15] ),
         .O(reg_data_out[15]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[16]_i_1 
-       (.I0(slv_reg1[16]),
-        .I1(\slv_reg0_reg_n_0_[16] ),
-        .I2(slv_reg3[16]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[16] ),
+       (.I0(slv_reg3[16]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[16]),
+        .I4(slv_reg1[16]),
+        .I5(\slv_reg0_reg_n_0_[16] ),
         .O(reg_data_out[16]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[17]_i_1 
-       (.I0(slv_reg1[17]),
-        .I1(\slv_reg0_reg_n_0_[17] ),
-        .I2(slv_reg3[17]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[17] ),
+       (.I0(slv_reg3[17]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[17]),
+        .I4(slv_reg1[17]),
+        .I5(\slv_reg0_reg_n_0_[17] ),
         .O(reg_data_out[17]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[18]_i_1 
-       (.I0(slv_reg1[18]),
-        .I1(\slv_reg0_reg_n_0_[18] ),
-        .I2(slv_reg3[18]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[18] ),
+       (.I0(slv_reg3[18]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[18]),
+        .I4(slv_reg1[18]),
+        .I5(\slv_reg0_reg_n_0_[18] ),
         .O(reg_data_out[18]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[19]_i_1 
-       (.I0(slv_reg1[19]),
-        .I1(\slv_reg0_reg_n_0_[19] ),
-        .I2(slv_reg3[19]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[19] ),
+       (.I0(slv_reg3[19]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[19]),
+        .I4(slv_reg1[19]),
+        .I5(\slv_reg0_reg_n_0_[19] ),
         .O(reg_data_out[19]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[1]_i_1 
-       (.I0(slv_reg1[1]),
-        .I1(\slv_reg0_reg_n_0_[1] ),
-        .I2(slv_reg3[1]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[1] ),
+       (.I0(slv_reg3[1]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[1]),
+        .I4(slv_reg1[1]),
+        .I5(\slv_reg0_reg_n_0_[1] ),
         .O(reg_data_out[1]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[20]_i_1 
-       (.I0(slv_reg1[20]),
-        .I1(\slv_reg0_reg_n_0_[20] ),
-        .I2(slv_reg3[20]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[20] ),
+       (.I0(slv_reg3[20]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[20]),
+        .I4(slv_reg1[20]),
+        .I5(\slv_reg0_reg_n_0_[20] ),
         .O(reg_data_out[20]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[21]_i_1 
-       (.I0(slv_reg1[21]),
-        .I1(\slv_reg0_reg_n_0_[21] ),
-        .I2(slv_reg3[21]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[21] ),
+       (.I0(slv_reg3[21]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[21]),
+        .I4(slv_reg1[21]),
+        .I5(\slv_reg0_reg_n_0_[21] ),
         .O(reg_data_out[21]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[22]_i_1 
-       (.I0(slv_reg1[22]),
-        .I1(\slv_reg0_reg_n_0_[22] ),
-        .I2(slv_reg3[22]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[22] ),
+       (.I0(slv_reg3[22]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[22]),
+        .I4(slv_reg1[22]),
+        .I5(\slv_reg0_reg_n_0_[22] ),
         .O(reg_data_out[22]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[23]_i_1 
-       (.I0(slv_reg1[23]),
-        .I1(\slv_reg0_reg_n_0_[23] ),
-        .I2(slv_reg3[23]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[23] ),
+       (.I0(slv_reg3[23]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[23]),
+        .I4(slv_reg1[23]),
+        .I5(\slv_reg0_reg_n_0_[23] ),
         .O(reg_data_out[23]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[24]_i_1 
-       (.I0(slv_reg1[24]),
-        .I1(\slv_reg0_reg_n_0_[24] ),
-        .I2(slv_reg3[24]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[24] ),
+       (.I0(slv_reg3[24]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[24]),
+        .I4(slv_reg1[24]),
+        .I5(\slv_reg0_reg_n_0_[24] ),
         .O(reg_data_out[24]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[25]_i_1 
-       (.I0(slv_reg1[25]),
-        .I1(\slv_reg0_reg_n_0_[25] ),
-        .I2(slv_reg3[25]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[25] ),
+       (.I0(slv_reg3[25]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[25]),
+        .I4(slv_reg1[25]),
+        .I5(\slv_reg0_reg_n_0_[25] ),
         .O(reg_data_out[25]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[26]_i_1 
-       (.I0(slv_reg1[26]),
-        .I1(\slv_reg0_reg_n_0_[26] ),
-        .I2(slv_reg3[26]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[26] ),
+       (.I0(slv_reg3[26]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[26]),
+        .I4(slv_reg1[26]),
+        .I5(\slv_reg0_reg_n_0_[26] ),
         .O(reg_data_out[26]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[27]_i_1 
-       (.I0(slv_reg1[27]),
-        .I1(\slv_reg0_reg_n_0_[27] ),
-        .I2(slv_reg3[27]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[27] ),
+       (.I0(slv_reg3[27]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[27]),
+        .I4(slv_reg1[27]),
+        .I5(\slv_reg0_reg_n_0_[27] ),
         .O(reg_data_out[27]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[28]_i_1 
-       (.I0(slv_reg1[28]),
-        .I1(\slv_reg0_reg_n_0_[28] ),
-        .I2(slv_reg3[28]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[28] ),
+       (.I0(slv_reg3[28]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[28]),
+        .I4(slv_reg1[28]),
+        .I5(\slv_reg0_reg_n_0_[28] ),
         .O(reg_data_out[28]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[29]_i_1 
-       (.I0(slv_reg1[29]),
-        .I1(\slv_reg0_reg_n_0_[29] ),
-        .I2(slv_reg3[29]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[29] ),
+       (.I0(slv_reg3[29]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[29]),
+        .I4(slv_reg1[29]),
+        .I5(\slv_reg0_reg_n_0_[29] ),
         .O(reg_data_out[29]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[2]_i_1 
-       (.I0(slv_reg1[2]),
-        .I1(\slv_reg0_reg_n_0_[2] ),
-        .I2(slv_reg3[2]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[2] ),
+       (.I0(slv_reg3[2]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[2]),
+        .I4(slv_reg1[2]),
+        .I5(\slv_reg0_reg_n_0_[2] ),
         .O(reg_data_out[2]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[30]_i_1 
-       (.I0(slv_reg1[30]),
-        .I1(\slv_reg0_reg_n_0_[30] ),
-        .I2(slv_reg3[30]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[30] ),
+       (.I0(slv_reg3[30]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[30]),
+        .I4(slv_reg1[30]),
+        .I5(\slv_reg0_reg_n_0_[30] ),
         .O(reg_data_out[30]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[31]_i_1 
-       (.I0(slv_reg1[31]),
-        .I1(\slv_reg0_reg_n_0_[31] ),
-        .I2(slv_reg3[31]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[31] ),
+       (.I0(slv_reg3[31]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[31]),
+        .I4(slv_reg1[31]),
+        .I5(\slv_reg0_reg_n_0_[31] ),
         .O(reg_data_out[31]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[3]_i_1 
-       (.I0(slv_reg1[3]),
-        .I1(\slv_reg0_reg_n_0_[3] ),
-        .I2(slv_reg3[3]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[3] ),
+       (.I0(slv_reg3[3]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[3]),
+        .I4(slv_reg1[3]),
+        .I5(\slv_reg0_reg_n_0_[3] ),
         .O(reg_data_out[3]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[4]_i_1 
-       (.I0(slv_reg1[4]),
-        .I1(\slv_reg0_reg_n_0_[4] ),
-        .I2(slv_reg3[4]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[4] ),
+       (.I0(slv_reg3[4]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[4]),
+        .I4(slv_reg1[4]),
+        .I5(\slv_reg0_reg_n_0_[4] ),
         .O(reg_data_out[4]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[5]_i_1 
-       (.I0(slv_reg1[5]),
-        .I1(\slv_reg0_reg_n_0_[5] ),
-        .I2(slv_reg3[5]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[5] ),
+       (.I0(slv_reg3[5]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[5]),
+        .I4(slv_reg1[5]),
+        .I5(\slv_reg0_reg_n_0_[5] ),
         .O(reg_data_out[5]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[6]_i_1 
-       (.I0(slv_reg1[6]),
-        .I1(\slv_reg0_reg_n_0_[6] ),
-        .I2(slv_reg3[6]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[6] ),
+       (.I0(slv_reg3[6]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[6]),
+        .I4(slv_reg1[6]),
+        .I5(\slv_reg0_reg_n_0_[6] ),
         .O(reg_data_out[6]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[7]_i_1 
-       (.I0(slv_reg1[7]),
-        .I1(\slv_reg0_reg_n_0_[7] ),
-        .I2(slv_reg3[7]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[7] ),
+       (.I0(slv_reg3[7]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[7]),
+        .I4(slv_reg1[7]),
+        .I5(\slv_reg0_reg_n_0_[7] ),
         .O(reg_data_out[7]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[8]_i_1 
-       (.I0(slv_reg1[8]),
-        .I1(\slv_reg0_reg_n_0_[8] ),
-        .I2(slv_reg3[8]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[8] ),
+       (.I0(slv_reg3[8]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[8]),
+        .I4(slv_reg1[8]),
+        .I5(\slv_reg0_reg_n_0_[8] ),
         .O(reg_data_out[8]));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
+    .INIT(64'hBF8FB383BC8CB080)) 
     \axi_rdata[9]_i_1 
-       (.I0(slv_reg1[9]),
-        .I1(\slv_reg0_reg_n_0_[9] ),
-        .I2(slv_reg3[9]),
-        .I3(axi_araddr[3]),
-        .I4(axi_araddr[2]),
-        .I5(\slv_reg2_reg_n_0_[9] ),
+       (.I0(slv_reg3[9]),
+        .I1(axi_araddr[2]),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg2[9]),
+        .I4(slv_reg1[9]),
+        .I5(\slv_reg0_reg_n_0_[9] ),
         .O(reg_data_out[9]));
   FDRE \axi_rdata_reg[0] 
        (.C(s_axi_aclk),
@@ -2520,7 +3283,7 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s_axi_rvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     axi_wready_i_1
@@ -2783,7 +3546,7 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
         .I2(s_axi_wstrb[3]),
         .I3(p_0_in[0]),
         .O(\slv_reg1[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg1[31]_i_2 
@@ -3028,193 +3791,193 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[0]),
-        .Q(\freq_sel/divclk00 ),
+        .Q(slv_reg2[0]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[10] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[10]),
-        .Q(\slv_reg2_reg_n_0_[10] ),
+        .Q(slv_reg2[10]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[11] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[11]),
-        .Q(\slv_reg2_reg_n_0_[11] ),
+        .Q(slv_reg2[11]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[12] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[12]),
-        .Q(\slv_reg2_reg_n_0_[12] ),
+        .Q(slv_reg2[12]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[13] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[13]),
-        .Q(\slv_reg2_reg_n_0_[13] ),
+        .Q(slv_reg2[13]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[14] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[14]),
-        .Q(\slv_reg2_reg_n_0_[14] ),
+        .Q(slv_reg2[14]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[15] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[15]),
-        .Q(\slv_reg2_reg_n_0_[15] ),
+        .Q(slv_reg2[15]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[16] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[16]),
-        .Q(\slv_reg2_reg_n_0_[16] ),
+        .Q(slv_reg2[16]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[17] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[17]),
-        .Q(\slv_reg2_reg_n_0_[17] ),
+        .Q(slv_reg2[17]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[18] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[18]),
-        .Q(\slv_reg2_reg_n_0_[18] ),
+        .Q(slv_reg2[18]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[19] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[19]),
-        .Q(\slv_reg2_reg_n_0_[19] ),
+        .Q(slv_reg2[19]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[1] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[1]),
-        .Q(\slv_reg2_reg_n_0_[1] ),
+        .Q(slv_reg2[1]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[20] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[20]),
-        .Q(\slv_reg2_reg_n_0_[20] ),
+        .Q(slv_reg2[20]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[21] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[21]),
-        .Q(\slv_reg2_reg_n_0_[21] ),
+        .Q(slv_reg2[21]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[22] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[22]),
-        .Q(\slv_reg2_reg_n_0_[22] ),
+        .Q(slv_reg2[22]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[23] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s_axi_wdata[23]),
-        .Q(\slv_reg2_reg_n_0_[23] ),
+        .Q(slv_reg2[23]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[24] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[24]),
-        .Q(\slv_reg2_reg_n_0_[24] ),
+        .Q(slv_reg2[24]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[25] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[25]),
-        .Q(\slv_reg2_reg_n_0_[25] ),
+        .Q(slv_reg2[25]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[26] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[26]),
-        .Q(\slv_reg2_reg_n_0_[26] ),
+        .Q(slv_reg2[26]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[27] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[27]),
-        .Q(\slv_reg2_reg_n_0_[27] ),
+        .Q(slv_reg2[27]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[28] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[28]),
-        .Q(\slv_reg2_reg_n_0_[28] ),
+        .Q(slv_reg2[28]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[29] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[29]),
-        .Q(\slv_reg2_reg_n_0_[29] ),
+        .Q(slv_reg2[29]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[2] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[2]),
-        .Q(\slv_reg2_reg_n_0_[2] ),
+        .Q(slv_reg2[2]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[30] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[30]),
-        .Q(\slv_reg2_reg_n_0_[30] ),
+        .Q(slv_reg2[30]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[31] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s_axi_wdata[31]),
-        .Q(\slv_reg2_reg_n_0_[31] ),
+        .Q(slv_reg2[31]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[3] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[3]),
-        .Q(\slv_reg2_reg_n_0_[3] ),
+        .Q(slv_reg2[3]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[4] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[4]),
-        .Q(\slv_reg2_reg_n_0_[4] ),
+        .Q(slv_reg2[4]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[5] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[5]),
-        .Q(\slv_reg2_reg_n_0_[5] ),
+        .Q(slv_reg2[5]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[6] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[6]),
-        .Q(\slv_reg2_reg_n_0_[6] ),
+        .Q(slv_reg2[6]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[7] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s_axi_wdata[7]),
-        .Q(\slv_reg2_reg_n_0_[7] ),
+        .Q(slv_reg2[7]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[8] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[8]),
-        .Q(\slv_reg2_reg_n_0_[8] ),
+        .Q(slv_reg2[8]),
         .R(axi_awready_i_1_n_0));
   FDRE \slv_reg2_reg[9] 
        (.C(s_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s_axi_wdata[9]),
-        .Q(\slv_reg2_reg_n_0_[9] ),
+        .Q(slv_reg2[9]),
         .R(axi_awready_i_1_n_0));
   LUT4 #(
     .INIT(16'h8000)) 
@@ -3448,41 +4211,127 @@ module mantis_synth_mantis_synth_1_0_mantis_synth_v1_0_S_AXI
         .I2(S_AXI_ARREADY),
         .O(slv_reg_rden__0));
   mantis_synth_mantis_synth_1_0_prog_synth_wrapper synth_core
-       (.Q(\freq_sel/divclk00 ),
+       (.Q(slv_reg0),
         .clk(clk),
+        .counter0_carry__0(slv_reg2[23:0]),
         .\table_count_r_reg_rep[0]__1 (slv_reg1_0),
-        .\table_val_reg[7] (slv_reg0),
         .wav(wav),
-        .\wav[0] (slv_reg3[0]));
+        .\wav_reg[7] (slv_reg3[1:0]));
+endmodule
+
+module mantis_synth_mantis_synth_1_0_output_sel
+   (wav,
+    Q,
+    D,
+    clk);
+  output [7:0]wav;
+  input [0:0]Q;
+  input [7:0]D;
+  input clk;
+
+  wire [7:0]D;
+  wire [0:0]Q;
+  wire clk;
+  wire [7:0]wav;
+  wire \wav[7]_i_1_n_0 ;
+
+  LUT1 #(
+    .INIT(2'h1)) 
+    \wav[7]_i_1 
+       (.I0(Q),
+        .O(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[0]),
+        .Q(wav[0]),
+        .R(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[1]),
+        .Q(wav[1]),
+        .R(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[2]),
+        .Q(wav[2]),
+        .R(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[3] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[3]),
+        .Q(wav[3]),
+        .R(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[4] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[4]),
+        .Q(wav[4]),
+        .R(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[5] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[5]),
+        .Q(wav[5]),
+        .R(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[6] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[6]),
+        .Q(wav[6]),
+        .R(\wav[7]_i_1_n_0 ));
+  FDRE \wav_reg[7] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(D[7]),
+        .Q(wav[7]),
+        .R(\wav[7]_i_1_n_0 ));
 endmodule
 
 module mantis_synth_mantis_synth_1_0_prog_clk_div
-   (CLK,
+   (divclk_reg_0,
     clk,
     Q,
-    \counter_reg[23]_0 ,
-    \table_val_reg[0] );
-  output CLK;
+    divclk_reg_1,
+    counter0_carry__0_0);
+  output divclk_reg_0;
   input clk;
   input [0:0]Q;
-  input [0:0]\counter_reg[23]_0 ;
-  input [0:0]\table_val_reg[0] ;
+  input [0:0]divclk_reg_1;
+  input [23:0]counter0_carry__0_0;
 
-  wire CLK;
   wire [0:0]Q;
   wire clk;
+  wire [23:0]counter0_carry__0_0;
+  wire counter0_carry__0_i_1_n_0;
+  wire counter0_carry__0_i_2_n_0;
+  wire counter0_carry__0_i_3_n_0;
+  wire counter0_carry__0_i_4_n_0;
+  wire counter0_carry__0_n_0;
+  wire counter0_carry__0_n_1;
+  wire counter0_carry__0_n_2;
+  wire counter0_carry__0_n_3;
+  wire counter0_carry_i_1_n_0;
+  wire counter0_carry_i_2_n_0;
+  wire counter0_carry_i_3_n_0;
+  wire counter0_carry_i_4_n_0;
+  wire counter0_carry_n_0;
+  wire counter0_carry_n_1;
+  wire counter0_carry_n_2;
+  wire counter0_carry_n_3;
   wire \counter[0]_i_1_n_0 ;
-  wire \counter[0]_i_2_n_0 ;
-  wire \counter[0]_i_4_n_0 ;
+  wire \counter[0]_i_3_n_0 ;
   wire [23:0]counter_reg;
-  wire \counter_reg[0]_i_3_n_0 ;
-  wire \counter_reg[0]_i_3_n_1 ;
-  wire \counter_reg[0]_i_3_n_2 ;
-  wire \counter_reg[0]_i_3_n_3 ;
-  wire \counter_reg[0]_i_3_n_4 ;
-  wire \counter_reg[0]_i_3_n_5 ;
-  wire \counter_reg[0]_i_3_n_6 ;
-  wire \counter_reg[0]_i_3_n_7 ;
+  wire \counter_reg[0]_i_2_n_0 ;
+  wire \counter_reg[0]_i_2_n_1 ;
+  wire \counter_reg[0]_i_2_n_2 ;
+  wire \counter_reg[0]_i_2_n_3 ;
+  wire \counter_reg[0]_i_2_n_4 ;
+  wire \counter_reg[0]_i_2_n_5 ;
+  wire \counter_reg[0]_i_2_n_6 ;
+  wire \counter_reg[0]_i_2_n_7 ;
   wire \counter_reg[12]_i_1_n_0 ;
   wire \counter_reg[12]_i_1_n_1 ;
   wire \counter_reg[12]_i_1_n_2 ;
@@ -3506,7 +4355,6 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
   wire \counter_reg[20]_i_1_n_5 ;
   wire \counter_reg[20]_i_1_n_6 ;
   wire \counter_reg[20]_i_1_n_7 ;
-  wire [0:0]\counter_reg[23]_0 ;
   wire \counter_reg[4]_i_1_n_0 ;
   wire \counter_reg[4]_i_1_n_1 ;
   wire \counter_reg[4]_i_1_n_2 ;
@@ -3523,87 +4371,140 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
   wire \counter_reg[8]_i_1_n_5 ;
   wire \counter_reg[8]_i_1_n_6 ;
   wire \counter_reg[8]_i_1_n_7 ;
-  wire divclk;
-  wire divclk0_carry__0_i_1_n_0;
-  wire divclk0_carry__0_i_2_n_0;
-  wire divclk0_carry__0_i_3_n_0;
-  wire divclk0_carry__0_i_4_n_0;
-  wire divclk0_carry__0_i_5_n_0;
-  wire divclk0_carry__0_i_6_n_0;
-  wire divclk0_carry__0_i_7_n_0;
-  wire divclk0_carry__0_i_8_n_0;
-  wire divclk0_carry__0_n_0;
-  wire divclk0_carry__0_n_1;
-  wire divclk0_carry__0_n_2;
-  wire divclk0_carry__0_n_3;
-  wire divclk0_carry__1_i_1_n_0;
-  wire divclk0_carry__1_i_2_n_0;
-  wire divclk0_carry__1_i_3_n_0;
-  wire divclk0_carry__1_i_4_n_0;
-  wire divclk0_carry__1_i_5_n_0;
-  wire divclk0_carry__1_i_6_n_0;
-  wire divclk0_carry__1_i_7_n_0;
-  wire divclk0_carry__1_i_8_n_0;
-  wire divclk0_carry__1_n_0;
-  wire divclk0_carry__1_n_1;
-  wire divclk0_carry__1_n_2;
-  wire divclk0_carry__1_n_3;
-  wire divclk0_carry_i_1_n_0;
-  wire divclk0_carry_i_2_n_0;
-  wire divclk0_carry_i_3_n_0;
-  wire divclk0_carry_i_4_n_0;
-  wire divclk0_carry_i_5_n_0;
-  wire divclk0_carry_i_6_n_0;
-  wire divclk0_carry_i_7_n_0;
-  wire divclk0_carry_i_8_n_0;
-  wire divclk0_carry_n_0;
-  wire divclk0_carry_n_1;
-  wire divclk0_carry_n_2;
-  wire divclk0_carry_n_3;
   wire divclk_i_1_n_0;
-  wire [0:0]\table_val_reg[0] ;
+  wire divclk_reg_0;
+  wire [0:0]divclk_reg_1;
+  wire [3:0]NLW_counter0_carry_O_UNCONNECTED;
+  wire [3:0]NLW_counter0_carry__0_O_UNCONNECTED;
   wire [3:3]\NLW_counter_reg[20]_i_1_CO_UNCONNECTED ;
-  wire [3:0]NLW_divclk0_carry_O_UNCONNECTED;
-  wire [3:0]NLW_divclk0_carry__0_O_UNCONNECTED;
-  wire [3:0]NLW_divclk0_carry__1_O_UNCONNECTED;
 
-  LUT2 #(
-    .INIT(4'h2)) 
+  CARRY4 counter0_carry
+       (.CI(1'b0),
+        .CO({counter0_carry_n_0,counter0_carry_n_1,counter0_carry_n_2,counter0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_counter0_carry_O_UNCONNECTED[3:0]),
+        .S({counter0_carry_i_1_n_0,counter0_carry_i_2_n_0,counter0_carry_i_3_n_0,counter0_carry_i_4_n_0}));
+  CARRY4 counter0_carry__0
+       (.CI(counter0_carry_n_0),
+        .CO({counter0_carry__0_n_0,counter0_carry__0_n_1,counter0_carry__0_n_2,counter0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_counter0_carry__0_O_UNCONNECTED[3:0]),
+        .S({counter0_carry__0_i_1_n_0,counter0_carry__0_i_2_n_0,counter0_carry__0_i_3_n_0,counter0_carry__0_i_4_n_0}));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry__0_i_1
+       (.I0(counter0_carry__0_0[23]),
+        .I1(counter_reg[23]),
+        .I2(counter0_carry__0_0[22]),
+        .I3(counter_reg[22]),
+        .I4(counter_reg[21]),
+        .I5(counter0_carry__0_0[21]),
+        .O(counter0_carry__0_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry__0_i_2
+       (.I0(counter0_carry__0_0[20]),
+        .I1(counter_reg[20]),
+        .I2(counter0_carry__0_0[19]),
+        .I3(counter_reg[19]),
+        .I4(counter_reg[18]),
+        .I5(counter0_carry__0_0[18]),
+        .O(counter0_carry__0_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry__0_i_3
+       (.I0(counter0_carry__0_0[17]),
+        .I1(counter_reg[17]),
+        .I2(counter0_carry__0_0[16]),
+        .I3(counter_reg[16]),
+        .I4(counter_reg[15]),
+        .I5(counter0_carry__0_0[15]),
+        .O(counter0_carry__0_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry__0_i_4
+       (.I0(counter0_carry__0_0[14]),
+        .I1(counter_reg[14]),
+        .I2(counter0_carry__0_0[13]),
+        .I3(counter_reg[13]),
+        .I4(counter_reg[12]),
+        .I5(counter0_carry__0_0[12]),
+        .O(counter0_carry__0_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry_i_1
+       (.I0(counter0_carry__0_0[11]),
+        .I1(counter_reg[11]),
+        .I2(counter0_carry__0_0[10]),
+        .I3(counter_reg[10]),
+        .I4(counter_reg[9]),
+        .I5(counter0_carry__0_0[9]),
+        .O(counter0_carry_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry_i_2
+       (.I0(counter0_carry__0_0[8]),
+        .I1(counter_reg[8]),
+        .I2(counter0_carry__0_0[7]),
+        .I3(counter_reg[7]),
+        .I4(counter_reg[6]),
+        .I5(counter0_carry__0_0[6]),
+        .O(counter0_carry_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry_i_3
+       (.I0(counter0_carry__0_0[5]),
+        .I1(counter_reg[5]),
+        .I2(counter0_carry__0_0[4]),
+        .I3(counter_reg[4]),
+        .I4(counter_reg[3]),
+        .I5(counter0_carry__0_0[3]),
+        .O(counter0_carry_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    counter0_carry_i_4
+       (.I0(counter0_carry__0_0[2]),
+        .I1(counter_reg[2]),
+        .I2(counter0_carry__0_0[1]),
+        .I3(counter_reg[1]),
+        .I4(counter_reg[0]),
+        .I5(counter0_carry__0_0[0]),
+        .O(counter0_carry_i_4_n_0));
+  LUT3 #(
+    .INIT(8'hFD)) 
     \counter[0]_i_1 
-       (.I0(divclk0_carry__1_n_0),
-        .I1(\counter_reg[23]_0 ),
+       (.I0(Q),
+        .I1(divclk_reg_1),
+        .I2(counter0_carry__0_n_0),
         .O(\counter[0]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \counter[0]_i_2 
-       (.I0(\counter_reg[23]_0 ),
-        .O(\counter[0]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \counter[0]_i_4 
+    \counter[0]_i_3 
        (.I0(counter_reg[0]),
-        .O(\counter[0]_i_4_n_0 ));
+        .O(\counter[0]_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[0] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
-        .D(\counter_reg[0]_i_3_n_7 ),
+        .CE(1'b1),
+        .D(\counter_reg[0]_i_2_n_7 ),
         .Q(counter_reg[0]),
         .R(\counter[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
-  CARRY4 \counter_reg[0]_i_3 
+  CARRY4 \counter_reg[0]_i_2 
        (.CI(1'b0),
-        .CO({\counter_reg[0]_i_3_n_0 ,\counter_reg[0]_i_3_n_1 ,\counter_reg[0]_i_3_n_2 ,\counter_reg[0]_i_3_n_3 }),
+        .CO({\counter_reg[0]_i_2_n_0 ,\counter_reg[0]_i_2_n_1 ,\counter_reg[0]_i_2_n_2 ,\counter_reg[0]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
-        .O({\counter_reg[0]_i_3_n_4 ,\counter_reg[0]_i_3_n_5 ,\counter_reg[0]_i_3_n_6 ,\counter_reg[0]_i_3_n_7 }),
-        .S({counter_reg[3:1],\counter[0]_i_4_n_0 }));
+        .O({\counter_reg[0]_i_2_n_4 ,\counter_reg[0]_i_2_n_5 ,\counter_reg[0]_i_2_n_6 ,\counter_reg[0]_i_2_n_7 }),
+        .S({counter_reg[3:1],\counter[0]_i_3_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[10] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[8]_i_1_n_5 ),
         .Q(counter_reg[10]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3611,7 +4512,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[11] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[8]_i_1_n_4 ),
         .Q(counter_reg[11]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3619,7 +4520,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[12] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[12]_i_1_n_7 ),
         .Q(counter_reg[12]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3635,7 +4536,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[13] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[12]_i_1_n_6 ),
         .Q(counter_reg[13]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3643,7 +4544,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[14] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[12]_i_1_n_5 ),
         .Q(counter_reg[14]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3651,7 +4552,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[15] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[12]_i_1_n_4 ),
         .Q(counter_reg[15]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3659,7 +4560,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[16] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[16]_i_1_n_7 ),
         .Q(counter_reg[16]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3675,7 +4576,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[17] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[16]_i_1_n_6 ),
         .Q(counter_reg[17]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3683,7 +4584,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[18] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[16]_i_1_n_5 ),
         .Q(counter_reg[18]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3691,7 +4592,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[19] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[16]_i_1_n_4 ),
         .Q(counter_reg[19]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3699,15 +4600,15 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[1] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
-        .D(\counter_reg[0]_i_3_n_6 ),
+        .CE(1'b1),
+        .D(\counter_reg[0]_i_2_n_6 ),
         .Q(counter_reg[1]),
         .R(\counter[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[20] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[20]_i_1_n_7 ),
         .Q(counter_reg[20]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3723,7 +4624,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[21] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[20]_i_1_n_6 ),
         .Q(counter_reg[21]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3731,7 +4632,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[22] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[20]_i_1_n_5 ),
         .Q(counter_reg[22]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3739,7 +4640,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[23] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[20]_i_1_n_4 ),
         .Q(counter_reg[23]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3747,29 +4648,29 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[2] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
-        .D(\counter_reg[0]_i_3_n_5 ),
+        .CE(1'b1),
+        .D(\counter_reg[0]_i_2_n_5 ),
         .Q(counter_reg[2]),
         .R(\counter[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[3] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
-        .D(\counter_reg[0]_i_3_n_4 ),
+        .CE(1'b1),
+        .D(\counter_reg[0]_i_2_n_4 ),
         .Q(counter_reg[3]),
         .R(\counter[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[4] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[4]_i_1_n_7 ),
         .Q(counter_reg[4]),
         .R(\counter[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \counter_reg[4]_i_1 
-       (.CI(\counter_reg[0]_i_3_n_0 ),
+       (.CI(\counter_reg[0]_i_2_n_0 ),
         .CO({\counter_reg[4]_i_1_n_0 ,\counter_reg[4]_i_1_n_1 ,\counter_reg[4]_i_1_n_2 ,\counter_reg[4]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
@@ -3779,7 +4680,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[5] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[4]_i_1_n_6 ),
         .Q(counter_reg[5]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3787,7 +4688,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[6] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[4]_i_1_n_5 ),
         .Q(counter_reg[6]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3795,7 +4696,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[7] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[4]_i_1_n_4 ),
         .Q(counter_reg[7]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3803,7 +4704,7 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[8] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[8]_i_1_n_7 ),
         .Q(counter_reg[8]),
         .R(\counter[0]_i_1_n_0 ));
@@ -3819,186 +4720,17 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
     .INIT(1'b0)) 
     \counter_reg[9] 
        (.C(clk),
-        .CE(\counter[0]_i_2_n_0 ),
+        .CE(1'b1),
         .D(\counter_reg[8]_i_1_n_6 ),
         .Q(counter_reg[9]),
         .R(\counter[0]_i_1_n_0 ));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 divclk0_carry
-       (.CI(1'b0),
-        .CO({divclk0_carry_n_0,divclk0_carry_n_1,divclk0_carry_n_2,divclk0_carry_n_3}),
-        .CYINIT(1'b1),
-        .DI({divclk0_carry_i_1_n_0,divclk0_carry_i_2_n_0,divclk0_carry_i_3_n_0,divclk0_carry_i_4_n_0}),
-        .O(NLW_divclk0_carry_O_UNCONNECTED[3:0]),
-        .S({divclk0_carry_i_5_n_0,divclk0_carry_i_6_n_0,divclk0_carry_i_7_n_0,divclk0_carry_i_8_n_0}));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 divclk0_carry__0
-       (.CI(divclk0_carry_n_0),
-        .CO({divclk0_carry__0_n_0,divclk0_carry__0_n_1,divclk0_carry__0_n_2,divclk0_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({divclk0_carry__0_i_1_n_0,divclk0_carry__0_i_2_n_0,divclk0_carry__0_i_3_n_0,divclk0_carry__0_i_4_n_0}),
-        .O(NLW_divclk0_carry__0_O_UNCONNECTED[3:0]),
-        .S({divclk0_carry__0_i_5_n_0,divclk0_carry__0_i_6_n_0,divclk0_carry__0_i_7_n_0,divclk0_carry__0_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__0_i_1
-       (.I0(counter_reg[14]),
-        .I1(counter_reg[15]),
-        .O(divclk0_carry__0_i_1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__0_i_2
-       (.I0(counter_reg[12]),
-        .I1(counter_reg[13]),
-        .O(divclk0_carry__0_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__0_i_3
-       (.I0(counter_reg[10]),
-        .I1(counter_reg[11]),
-        .O(divclk0_carry__0_i_3_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__0_i_4
-       (.I0(counter_reg[8]),
-        .I1(counter_reg[9]),
-        .O(divclk0_carry__0_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__0_i_5
-       (.I0(counter_reg[14]),
-        .I1(counter_reg[15]),
-        .O(divclk0_carry__0_i_5_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__0_i_6
-       (.I0(counter_reg[12]),
-        .I1(counter_reg[13]),
-        .O(divclk0_carry__0_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__0_i_7
-       (.I0(counter_reg[10]),
-        .I1(counter_reg[11]),
-        .O(divclk0_carry__0_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__0_i_8
-       (.I0(counter_reg[8]),
-        .I1(counter_reg[9]),
-        .O(divclk0_carry__0_i_8_n_0));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 divclk0_carry__1
-       (.CI(divclk0_carry__0_n_0),
-        .CO({divclk0_carry__1_n_0,divclk0_carry__1_n_1,divclk0_carry__1_n_2,divclk0_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({divclk0_carry__1_i_1_n_0,divclk0_carry__1_i_2_n_0,divclk0_carry__1_i_3_n_0,divclk0_carry__1_i_4_n_0}),
-        .O(NLW_divclk0_carry__1_O_UNCONNECTED[3:0]),
-        .S({divclk0_carry__1_i_5_n_0,divclk0_carry__1_i_6_n_0,divclk0_carry__1_i_7_n_0,divclk0_carry__1_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__1_i_1
-       (.I0(counter_reg[22]),
-        .I1(counter_reg[23]),
-        .O(divclk0_carry__1_i_1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__1_i_2
-       (.I0(counter_reg[20]),
-        .I1(counter_reg[21]),
-        .O(divclk0_carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__1_i_3
-       (.I0(counter_reg[18]),
-        .I1(counter_reg[19]),
-        .O(divclk0_carry__1_i_3_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry__1_i_4
-       (.I0(counter_reg[16]),
-        .I1(counter_reg[17]),
-        .O(divclk0_carry__1_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__1_i_5
-       (.I0(counter_reg[22]),
-        .I1(counter_reg[23]),
-        .O(divclk0_carry__1_i_5_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__1_i_6
-       (.I0(counter_reg[20]),
-        .I1(counter_reg[21]),
-        .O(divclk0_carry__1_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__1_i_7
-       (.I0(counter_reg[18]),
-        .I1(counter_reg[19]),
-        .O(divclk0_carry__1_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry__1_i_8
-       (.I0(counter_reg[16]),
-        .I1(counter_reg[17]),
-        .O(divclk0_carry__1_i_8_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry_i_1
-       (.I0(counter_reg[6]),
-        .I1(counter_reg[7]),
-        .O(divclk0_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry_i_2
-       (.I0(counter_reg[4]),
-        .I1(counter_reg[5]),
-        .O(divclk0_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    divclk0_carry_i_3
-       (.I0(counter_reg[2]),
-        .I1(counter_reg[3]),
-        .O(divclk0_carry_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hF2)) 
-    divclk0_carry_i_4
-       (.I0(counter_reg[0]),
-        .I1(Q),
-        .I2(counter_reg[1]),
-        .O(divclk0_carry_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry_i_5
-       (.I0(counter_reg[6]),
-        .I1(counter_reg[7]),
-        .O(divclk0_carry_i_5_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry_i_6
-       (.I0(counter_reg[4]),
-        .I1(counter_reg[5]),
-        .O(divclk0_carry_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    divclk0_carry_i_7
-       (.I0(counter_reg[2]),
-        .I1(counter_reg[3]),
-        .O(divclk0_carry_i_7_n_0));
-  LUT3 #(
-    .INIT(8'h09)) 
-    divclk0_carry_i_8
-       (.I0(counter_reg[0]),
-        .I1(Q),
-        .I2(counter_reg[1]),
-        .O(divclk0_carry_i_8_n_0));
-  LUT3 #(
-    .INIT(8'h06)) 
+  LUT4 #(
+    .INIT(16'h0060)) 
     divclk_i_1
-       (.I0(divclk),
-        .I1(divclk0_carry__1_n_0),
-        .I2(\counter_reg[23]_0 ),
+       (.I0(divclk_reg_0),
+        .I1(counter0_carry__0_n_0),
+        .I2(Q),
+        .I3(divclk_reg_1),
         .O(divclk_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -4006,14 +4738,8 @@ module mantis_synth_mantis_synth_1_0_prog_clk_div
        (.C(clk),
         .CE(1'b1),
         .D(divclk_i_1_n_0),
-        .Q(divclk),
+        .Q(divclk_reg_0),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \table_count_r[15]_i_2 
-       (.I0(divclk),
-        .I1(\table_val_reg[0] ),
-        .O(CLK));
 endmodule
 
 module mantis_synth_mantis_synth_1_0_prog_synth_wrapper
@@ -4021,19 +4747,51 @@ module mantis_synth_mantis_synth_1_0_prog_synth_wrapper
     clk,
     Q,
     \table_count_r_reg_rep[0]__1 ,
-    \table_val_reg[7] ,
-    \wav[0] );
+    counter0_carry__0,
+    \wav_reg[7] );
   output [7:0]wav;
   input clk;
   input [0:0]Q;
   input [0:0]\table_count_r_reg_rep[0]__1 ;
-  input [0:0]\table_val_reg[7] ;
-  input [0:0]\wav[0] ;
+  input [23:0]counter0_carry__0;
+  input [1:0]\wav_reg[7] ;
 
   wire [0:0]Q;
   wire clk;
-  wire div_clk;
+  wire [23:0]counter0_carry__0;
+  wire freq_sel_n_0;
   wire [7:0]p_1_in;
+  wire saw_gen_n_0;
+  wire saw_gen_n_1;
+  wire saw_gen_n_10;
+  wire saw_gen_n_11;
+  wire saw_gen_n_12;
+  wire saw_gen_n_13;
+  wire saw_gen_n_14;
+  wire saw_gen_n_15;
+  wire saw_gen_n_16;
+  wire saw_gen_n_17;
+  wire saw_gen_n_18;
+  wire saw_gen_n_19;
+  wire saw_gen_n_2;
+  wire saw_gen_n_20;
+  wire saw_gen_n_21;
+  wire saw_gen_n_22;
+  wire saw_gen_n_23;
+  wire saw_gen_n_24;
+  wire saw_gen_n_25;
+  wire saw_gen_n_26;
+  wire saw_gen_n_27;
+  wire saw_gen_n_28;
+  wire saw_gen_n_29;
+  wire saw_gen_n_3;
+  wire saw_gen_n_30;
+  wire saw_gen_n_4;
+  wire saw_gen_n_5;
+  wire saw_gen_n_6;
+  wire saw_gen_n_7;
+  wire saw_gen_n_8;
+  wire saw_gen_n_9;
   wire sin_gen_n_0;
   wire sin_gen_n_1;
   wire sin_gen_n_10;
@@ -4048,7 +4806,6 @@ module mantis_synth_mantis_synth_1_0_prog_synth_wrapper
   wire sin_gen_n_19;
   wire sin_gen_n_2;
   wire sin_gen_n_20;
-  wire sin_gen_n_21;
   wire sin_gen_n_3;
   wire sin_gen_n_4;
   wire sin_gen_n_5;
@@ -4056,9 +4813,9 @@ module mantis_synth_mantis_synth_1_0_prog_synth_wrapper
   wire sin_gen_n_7;
   wire sin_gen_n_8;
   wire sin_gen_n_9;
+  wire sqr_gen_n_0;
   wire [0:0]\table_count_r_reg_rep[0]__1 ;
   wire [7:0]table_val;
-  wire [0:0]\table_val_reg[7] ;
   wire tbl_cntr_n_0;
   wire tbl_cntr_n_1;
   wire tbl_cntr_n_10;
@@ -4078,9 +4835,26 @@ module mantis_synth_mantis_synth_1_0_prog_synth_wrapper
   wire tbl_cntr_n_23;
   wire tbl_cntr_n_24;
   wire tbl_cntr_n_25;
+  wire tbl_cntr_n_26;
+  wire tbl_cntr_n_27;
+  wire tbl_cntr_n_28;
+  wire tbl_cntr_n_29;
   wire tbl_cntr_n_3;
+  wire tbl_cntr_n_30;
+  wire tbl_cntr_n_31;
+  wire tbl_cntr_n_32;
+  wire tbl_cntr_n_33;
+  wire tbl_cntr_n_34;
+  wire tbl_cntr_n_35;
+  wire tbl_cntr_n_36;
+  wire tbl_cntr_n_37;
+  wire tbl_cntr_n_38;
+  wire tbl_cntr_n_39;
   wire tbl_cntr_n_4;
+  wire tbl_cntr_n_40;
+  wire tbl_cntr_n_41;
   wire tbl_cntr_n_5;
+  wire tbl_cntr_n_50;
   wire tbl_cntr_n_6;
   wire tbl_cntr_n_7;
   wire tbl_cntr_n_8;
@@ -4115,100 +4889,167 @@ module mantis_synth_mantis_synth_1_0_prog_synth_wrapper
   wire tri_gen_n_8;
   wire tri_gen_n_9;
   wire [7:0]wav;
-  wire [0:0]\wav[0] ;
+  wire [1:0]\wav_reg[7] ;
 
   mantis_synth_mantis_synth_1_0_prog_clk_div freq_sel
-       (.CLK(div_clk),
+       (.Q(Q),
+        .clk(clk),
+        .counter0_carry__0_0(counter0_carry__0),
+        .divclk_reg_0(freq_sel_n_0),
+        .divclk_reg_1(\table_count_r_reg_rep[0]__1 ));
+  mantis_synth_mantis_synth_1_0_output_sel output_sel
+       (.D({saw_gen_n_1,saw_gen_n_2,saw_gen_n_3,saw_gen_n_4,saw_gen_n_5,saw_gen_n_6,saw_gen_n_7,saw_gen_n_8}),
         .Q(Q),
         .clk(clk),
-        .\counter_reg[23]_0 (\table_count_r_reg_rep[0]__1 ),
-        .\table_val_reg[0] (\table_val_reg[7] ));
+        .wav(wav));
+  mantis_synth_mantis_synth_1_0_lutSaw saw_gen
+       (.D({saw_gen_n_1,saw_gen_n_2,saw_gen_n_3,saw_gen_n_4,saw_gen_n_5,saw_gen_n_6,saw_gen_n_7,saw_gen_n_8}),
+        .Q(Q),
+        .SR(saw_gen_n_0),
+        .\table_count_r_reg_rep[3] (saw_gen_n_10),
+        .\table_count_r_reg_rep[4] (saw_gen_n_11),
+        .\table_count_r_reg_rep[4]_0 (saw_gen_n_12),
+        .\table_count_r_reg_rep[5] (saw_gen_n_30),
+        .\table_count_r_reg_rep[6] (saw_gen_n_9),
+        .\table_count_r_reg_rep[6]_0 (saw_gen_n_13),
+        .\table_count_r_reg_rep[6]_1 (saw_gen_n_14),
+        .\table_count_r_reg_rep[6]_10 (saw_gen_n_23),
+        .\table_count_r_reg_rep[6]_11 (saw_gen_n_24),
+        .\table_count_r_reg_rep[6]_12 (saw_gen_n_25),
+        .\table_count_r_reg_rep[6]_13 (saw_gen_n_26),
+        .\table_count_r_reg_rep[6]_14 (saw_gen_n_27),
+        .\table_count_r_reg_rep[6]_15 (saw_gen_n_28),
+        .\table_count_r_reg_rep[6]_2 (saw_gen_n_15),
+        .\table_count_r_reg_rep[6]_3 (saw_gen_n_16),
+        .\table_count_r_reg_rep[6]_4 (saw_gen_n_17),
+        .\table_count_r_reg_rep[6]_5 (saw_gen_n_18),
+        .\table_count_r_reg_rep[6]_6 (saw_gen_n_19),
+        .\table_count_r_reg_rep[6]_7 (saw_gen_n_20),
+        .\table_count_r_reg_rep[6]_8 (saw_gen_n_21),
+        .\table_count_r_reg_rep[6]_9 (saw_gen_n_22),
+        .\table_count_r_reg_rep[7] (saw_gen_n_29),
+        .\table_val_reg[0]_0 (freq_sel_n_0),
+        .\table_val_reg[6]_0 ({tbl_cntr_n_26,tbl_cntr_n_27,tbl_cntr_n_28,tbl_cntr_n_29,tbl_cntr_n_30,tbl_cntr_n_31,tbl_cntr_n_32,tbl_cntr_n_33}),
+        .\table_val_reg[7]_0 (\table_count_r_reg_rep[0]__1 ),
+        .\table_val_reg[7]_1 ({tbl_cntr_n_18,tbl_cntr_n_19,tbl_cntr_n_20,tbl_cntr_n_21,tbl_cntr_n_22,tbl_cntr_n_23,tbl_cntr_n_24,tbl_cntr_n_25}),
+        .\wav_reg[0] (sqr_gen_n_0),
+        .\wav_reg[7] ({tri_gen_n_21,tri_gen_n_22,tri_gen_n_23,tri_gen_n_24,tri_gen_n_25,tri_gen_n_26,tri_gen_n_27,tri_gen_n_28}),
+        .\wav_reg[7]_0 (table_val),
+        .\wav_reg[7]_1 (\wav_reg[7] ));
   mantis_synth_mantis_synth_1_0_lutSin sin_gen
-       (.CLK(div_clk),
-        .D(p_1_in),
+       (.D(p_1_in),
         .Q({tbl_cntr_n_10,tbl_cntr_n_11,tbl_cntr_n_12,tbl_cntr_n_13,tbl_cntr_n_14,tbl_cntr_n_15,tbl_cntr_n_16,tbl_cntr_n_17}),
-        .SR(sin_gen_n_0),
-        .\table_count_r_reg_rep[4]__1 (sin_gen_n_4),
-        .\table_count_r_reg_rep[4]__1_0 (sin_gen_n_6),
-        .\table_count_r_reg_rep[4]__1_1 (sin_gen_n_9),
-        .\table_count_r_reg_rep[4]__1_10 (sin_gen_n_20),
-        .\table_count_r_reg_rep[4]__1_2 (sin_gen_n_11),
-        .\table_count_r_reg_rep[4]__1_3 (sin_gen_n_12),
-        .\table_count_r_reg_rep[4]__1_4 (sin_gen_n_14),
-        .\table_count_r_reg_rep[4]__1_5 (sin_gen_n_15),
-        .\table_count_r_reg_rep[4]__1_6 (sin_gen_n_16),
-        .\table_count_r_reg_rep[4]__1_7 (sin_gen_n_17),
-        .\table_count_r_reg_rep[4]__1_8 (sin_gen_n_18),
-        .\table_count_r_reg_rep[4]__1_9 (sin_gen_n_19),
-        .\table_count_r_reg_rep[5]__1 (sin_gen_n_21),
-        .\table_count_r_reg_rep[6]__1 (sin_gen_n_1),
-        .\table_count_r_reg_rep[6]__1_0 (sin_gen_n_2),
-        .\table_count_r_reg_rep[6]__1_1 (sin_gen_n_3),
-        .\table_count_r_reg_rep[6]__1_2 (sin_gen_n_5),
-        .\table_count_r_reg_rep[6]__1_3 (sin_gen_n_7),
-        .\table_count_r_reg_rep[6]__1_4 (sin_gen_n_8),
-        .\table_count_r_reg_rep[6]__1_5 (sin_gen_n_10),
-        .\table_count_r_reg_rep[7]__1 (sin_gen_n_13),
+        .SR(saw_gen_n_0),
+        .\table_count_r_reg_rep[4]__1 (sin_gen_n_3),
+        .\table_count_r_reg_rep[4]__1_0 (sin_gen_n_5),
+        .\table_count_r_reg_rep[4]__1_1 (sin_gen_n_8),
+        .\table_count_r_reg_rep[4]__1_10 (sin_gen_n_19),
+        .\table_count_r_reg_rep[4]__1_2 (sin_gen_n_10),
+        .\table_count_r_reg_rep[4]__1_3 (sin_gen_n_11),
+        .\table_count_r_reg_rep[4]__1_4 (sin_gen_n_13),
+        .\table_count_r_reg_rep[4]__1_5 (sin_gen_n_14),
+        .\table_count_r_reg_rep[4]__1_6 (sin_gen_n_15),
+        .\table_count_r_reg_rep[4]__1_7 (sin_gen_n_16),
+        .\table_count_r_reg_rep[4]__1_8 (sin_gen_n_17),
+        .\table_count_r_reg_rep[4]__1_9 (sin_gen_n_18),
+        .\table_count_r_reg_rep[5]__1 (sin_gen_n_20),
+        .\table_count_r_reg_rep[6]__1 (sin_gen_n_0),
+        .\table_count_r_reg_rep[6]__1_0 (sin_gen_n_1),
+        .\table_count_r_reg_rep[6]__1_1 (sin_gen_n_2),
+        .\table_count_r_reg_rep[6]__1_2 (sin_gen_n_4),
+        .\table_count_r_reg_rep[6]__1_3 (sin_gen_n_6),
+        .\table_count_r_reg_rep[6]__1_4 (sin_gen_n_7),
+        .\table_count_r_reg_rep[6]__1_5 (sin_gen_n_9),
+        .\table_count_r_reg_rep[7]__1 (sin_gen_n_12),
         .\table_val_reg[5]_0 (tbl_cntr_n_9),
         .\table_val_reg[7]_0 (table_val),
-        .\table_val_reg[7]_1 (\table_count_r_reg_rep[0]__1 ),
-        .\table_val_reg[7]_2 (\table_val_reg[7] ));
+        .\table_val_reg[7]_1 (freq_sel_n_0));
+  mantis_synth_mantis_synth_1_0_lutSqr sqr_gen
+       (.\table_val_reg[7]_0 (sqr_gen_n_0),
+        .\table_val_reg[7]_1 (tbl_cntr_n_50),
+        .\table_val_reg[7]_2 (freq_sel_n_0));
   mantis_synth_mantis_synth_1_0_table_count tbl_cntr
-       (.CLK(div_clk),
-        .D({tbl_cntr_n_18,tbl_cntr_n_19,tbl_cntr_n_20,tbl_cntr_n_21,tbl_cntr_n_22,tbl_cntr_n_23,tbl_cntr_n_24,tbl_cntr_n_25}),
+       (.D({tbl_cntr_n_34,tbl_cntr_n_35,tbl_cntr_n_36,tbl_cntr_n_37,tbl_cntr_n_38,tbl_cntr_n_39,tbl_cntr_n_40,tbl_cntr_n_41}),
         .Q({tbl_cntr_n_1,tbl_cntr_n_2,tbl_cntr_n_3,tbl_cntr_n_4,tbl_cntr_n_5,tbl_cntr_n_6,tbl_cntr_n_7,tbl_cntr_n_8}),
         .\table_count_r_reg_rep[0]__1_0 (tbl_cntr_n_9),
         .\table_count_r_reg_rep[0]__1_1 (\table_count_r_reg_rep[0]__1 ),
         .\table_count_r_reg_rep[1]__0_0 (tbl_cntr_n_0),
+        .\table_count_r_reg_rep[7]_0 ({tbl_cntr_n_18,tbl_cntr_n_19,tbl_cntr_n_20,tbl_cntr_n_21,tbl_cntr_n_22,tbl_cntr_n_23,tbl_cntr_n_24,tbl_cntr_n_25}),
+        .\table_count_r_reg_rep[7]_1 ({tbl_cntr_n_26,tbl_cntr_n_27,tbl_cntr_n_28,tbl_cntr_n_29,tbl_cntr_n_30,tbl_cntr_n_31,tbl_cntr_n_32,tbl_cntr_n_33}),
         .\table_count_r_reg_rep[7]__1_0 ({tbl_cntr_n_10,tbl_cntr_n_11,tbl_cntr_n_12,tbl_cntr_n_13,tbl_cntr_n_14,tbl_cntr_n_15,tbl_cntr_n_16,tbl_cntr_n_17}),
+        .\table_count_r_reg_rep[8]_0 (freq_sel_n_0),
         .\table_count_r_reg_rep[8]__1_0 (p_1_in),
-        .\table_val_reg[0] (tri_gen_n_14),
-        .\table_val_reg[0]_0 (tri_gen_n_13),
-        .\table_val_reg[0]_1 (tri_gen_n_15),
-        .\table_val_reg[0]_2 (sin_gen_n_3),
-        .\table_val_reg[0]_3 (sin_gen_n_14),
-        .\table_val_reg[0]_4 (sin_gen_n_12),
-        .\table_val_reg[1] (tri_gen_n_0),
-        .\table_val_reg[1]_0 (tri_gen_n_1),
-        .\table_val_reg[1]_1 (tri_gen_n_2),
-        .\table_val_reg[1]_2 (sin_gen_n_7),
-        .\table_val_reg[1]_3 (sin_gen_n_9),
-        .\table_val_reg[1]_4 (sin_gen_n_15),
-        .\table_val_reg[2] (tri_gen_n_10),
-        .\table_val_reg[2]_0 (tri_gen_n_16),
-        .\table_val_reg[2]_1 (tri_gen_n_17),
-        .\table_val_reg[2]_2 (sin_gen_n_8),
-        .\table_val_reg[2]_3 (sin_gen_n_4),
-        .\table_val_reg[2]_4 (sin_gen_n_16),
-        .\table_val_reg[3] (tri_gen_n_3),
-        .\table_val_reg[3]_0 (tri_gen_n_4),
-        .\table_val_reg[3]_1 (tri_gen_n_5),
-        .\table_val_reg[3]_2 (sin_gen_n_5),
-        .\table_val_reg[3]_3 (sin_gen_n_11),
-        .\table_val_reg[3]_4 (sin_gen_n_6),
-        .\table_val_reg[4] (tri_gen_n_6),
-        .\table_val_reg[4]_0 (tri_gen_n_7),
-        .\table_val_reg[4]_1 (sin_gen_n_10),
-        .\table_val_reg[4]_2 (sin_gen_n_20),
-        .\table_val_reg[4]_3 (sin_gen_n_17),
-        .\table_val_reg[5] (tri_gen_n_11),
-        .\table_val_reg[5]_0 (tri_gen_n_8),
-        .\table_val_reg[5]_1 (tri_gen_n_9),
-        .\table_val_reg[5]_2 (sin_gen_n_1),
-        .\table_val_reg[5]_3 (sin_gen_n_21),
-        .\table_val_reg[5]_4 (sin_gen_n_18),
-        .\table_val_reg[6] (tri_gen_n_20),
-        .\table_val_reg[6]_0 (tri_gen_n_19),
-        .\table_val_reg[6]_1 (tri_gen_n_18),
-        .\table_val_reg[6]_2 (sin_gen_n_2),
-        .\table_val_reg[6]_3 (sin_gen_n_19),
-        .\table_val_reg[7] (tri_gen_n_12),
-        .\table_val_reg[7]_0 (sin_gen_n_13));
+        .\table_val_reg[0] (saw_gen_n_13),
+        .\table_val_reg[0]_0 (saw_gen_n_14),
+        .\table_val_reg[0]_1 (saw_gen_n_23),
+        .\table_val_reg[0]_2 (tri_gen_n_14),
+        .\table_val_reg[0]_3 (tri_gen_n_13),
+        .\table_val_reg[0]_4 (tri_gen_n_15),
+        .\table_val_reg[0]_5 (sin_gen_n_2),
+        .\table_val_reg[0]_6 (sin_gen_n_13),
+        .\table_val_reg[0]_7 (sin_gen_n_11),
+        .\table_val_reg[1] (saw_gen_n_15),
+        .\table_val_reg[1]_0 (saw_gen_n_16),
+        .\table_val_reg[1]_1 (saw_gen_n_17),
+        .\table_val_reg[1]_2 (tri_gen_n_0),
+        .\table_val_reg[1]_3 (tri_gen_n_1),
+        .\table_val_reg[1]_4 (tri_gen_n_2),
+        .\table_val_reg[1]_5 (sin_gen_n_6),
+        .\table_val_reg[1]_6 (sin_gen_n_8),
+        .\table_val_reg[1]_7 (sin_gen_n_14),
+        .\table_val_reg[2] (saw_gen_n_18),
+        .\table_val_reg[2]_0 (saw_gen_n_19),
+        .\table_val_reg[2]_1 (saw_gen_n_20),
+        .\table_val_reg[2]_2 (tri_gen_n_10),
+        .\table_val_reg[2]_3 (tri_gen_n_16),
+        .\table_val_reg[2]_4 (tri_gen_n_17),
+        .\table_val_reg[2]_5 (sin_gen_n_7),
+        .\table_val_reg[2]_6 (sin_gen_n_3),
+        .\table_val_reg[2]_7 (sin_gen_n_15),
+        .\table_val_reg[3] (saw_gen_n_21),
+        .\table_val_reg[3]_0 (saw_gen_n_24),
+        .\table_val_reg[3]_1 (saw_gen_n_22),
+        .\table_val_reg[3]_2 (tri_gen_n_3),
+        .\table_val_reg[3]_3 (tri_gen_n_4),
+        .\table_val_reg[3]_4 (tri_gen_n_5),
+        .\table_val_reg[3]_5 (sin_gen_n_4),
+        .\table_val_reg[3]_6 (sin_gen_n_10),
+        .\table_val_reg[3]_7 (sin_gen_n_5),
+        .\table_val_reg[4] (saw_gen_n_26),
+        .\table_val_reg[4]_0 (saw_gen_n_25),
+        .\table_val_reg[4]_1 (saw_gen_n_27),
+        .\table_val_reg[4]_2 (tri_gen_n_6),
+        .\table_val_reg[4]_3 (tri_gen_n_7),
+        .\table_val_reg[4]_4 (sin_gen_n_9),
+        .\table_val_reg[4]_5 (sin_gen_n_19),
+        .\table_val_reg[4]_6 (sin_gen_n_16),
+        .\table_val_reg[5] (saw_gen_n_9),
+        .\table_val_reg[5]_0 (saw_gen_n_28),
+        .\table_val_reg[5]_1 (saw_gen_n_10),
+        .\table_val_reg[5]_2 (tri_gen_n_11),
+        .\table_val_reg[5]_3 (tri_gen_n_8),
+        .\table_val_reg[5]_4 (tri_gen_n_9),
+        .\table_val_reg[5]_5 (sin_gen_n_0),
+        .\table_val_reg[5]_6 (sin_gen_n_20),
+        .\table_val_reg[5]_7 (sin_gen_n_17),
+        .\table_val_reg[6] (saw_gen_n_29),
+        .\table_val_reg[6]_0 (saw_gen_n_11),
+        .\table_val_reg[6]_1 (tri_gen_n_20),
+        .\table_val_reg[6]_2 (tri_gen_n_19),
+        .\table_val_reg[6]_3 (tri_gen_n_18),
+        .\table_val_reg[6]_4 (sin_gen_n_1),
+        .\table_val_reg[6]_5 (sin_gen_n_18),
+        .\table_val_reg[7] (tbl_cntr_n_50),
+        .\table_val_reg[7]_0 (saw_gen_n_30),
+        .\table_val_reg[7]_1 (saw_gen_n_12),
+        .\table_val_reg[7]_2 (tri_gen_n_12),
+        .\table_val_reg[7]_3 (sin_gen_n_12),
+        .\table_val_reg[7]_4 (sqr_gen_n_0),
+        .\table_val_reg[7]_5 (Q));
   mantis_synth_mantis_synth_1_0_lutTri tri_gen
-       (.CLK(div_clk),
-        .D({tbl_cntr_n_18,tbl_cntr_n_19,tbl_cntr_n_20,tbl_cntr_n_21,tbl_cntr_n_22,tbl_cntr_n_23,tbl_cntr_n_24,tbl_cntr_n_25}),
+       (.D({tbl_cntr_n_34,tbl_cntr_n_35,tbl_cntr_n_36,tbl_cntr_n_37,tbl_cntr_n_38,tbl_cntr_n_39,tbl_cntr_n_40,tbl_cntr_n_41}),
         .Q({tbl_cntr_n_1,tbl_cntr_n_2,tbl_cntr_n_3,tbl_cntr_n_4,tbl_cntr_n_5,tbl_cntr_n_6,tbl_cntr_n_7,tbl_cntr_n_8}),
-        .SR(sin_gen_n_0),
+        .SR(saw_gen_n_0),
         .\table_count_r_reg_rep[4]__0 (tri_gen_n_12),
         .\table_count_r_reg_rep[5]__0 (tri_gen_n_18),
         .\table_count_r_reg_rep[5]__0_0 (tri_gen_n_20),
@@ -4231,71 +5072,8 @@ module mantis_synth_mantis_synth_1_0_prog_synth_wrapper
         .\table_count_r_reg_rep[6]__0_9 (tri_gen_n_11),
         .\table_count_r_reg_rep[7]__0 (tri_gen_n_6),
         .\table_val_reg[6]_0 (tbl_cntr_n_0),
-        .\table_val_reg[7]_0 ({tri_gen_n_21,tri_gen_n_22,tri_gen_n_23,tri_gen_n_24,tri_gen_n_25,tri_gen_n_26,tri_gen_n_27,tri_gen_n_28}));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[0]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[0]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_28),
-        .O(wav[0]));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[1]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[1]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_27),
-        .O(wav[1]));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[2]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[2]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_26),
-        .O(wav[2]));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[3]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[3]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_25),
-        .O(wav[3]));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[4]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[4]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_24),
-        .O(wav[4]));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[5]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[5]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_23),
-        .O(wav[5]));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[6]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[6]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_22),
-        .O(wav[6]));
-  LUT4 #(
-    .INIT(16'hA808)) 
-    \wav[7]_INST_0 
-       (.I0(\table_val_reg[7] ),
-        .I1(table_val[7]),
-        .I2(\wav[0] ),
-        .I3(tri_gen_n_21),
-        .O(wav[7]));
+        .\table_val_reg[7]_0 ({tri_gen_n_21,tri_gen_n_22,tri_gen_n_23,tri_gen_n_24,tri_gen_n_25,tri_gen_n_26,tri_gen_n_27,tri_gen_n_28}),
+        .\table_val_reg[7]_1 (freq_sel_n_0));
 endmodule
 
 module mantis_synth_mantis_synth_1_0_table_count
@@ -4303,119 +5081,172 @@ module mantis_synth_mantis_synth_1_0_table_count
     Q,
     \table_count_r_reg_rep[0]__1_0 ,
     \table_count_r_reg_rep[7]__1_0 ,
+    \table_count_r_reg_rep[7]_0 ,
+    \table_count_r_reg_rep[7]_1 ,
     D,
     \table_count_r_reg_rep[8]__1_0 ,
-    \table_count_r_reg_rep[0]__1_1 ,
-    CLK,
+    \table_val_reg[7] ,
+    \table_val_reg[5] ,
+    \table_val_reg[5]_0 ,
+    \table_val_reg[5]_1 ,
+    \table_val_reg[6] ,
+    \table_val_reg[6]_0 ,
+    \table_val_reg[7]_0 ,
+    \table_val_reg[7]_1 ,
+    \table_val_reg[0] ,
+    \table_val_reg[0]_0 ,
+    \table_val_reg[0]_1 ,
     \table_val_reg[1] ,
     \table_val_reg[1]_0 ,
     \table_val_reg[1]_1 ,
+    \table_val_reg[2] ,
+    \table_val_reg[2]_0 ,
+    \table_val_reg[2]_1 ,
     \table_val_reg[3] ,
     \table_val_reg[3]_0 ,
     \table_val_reg[3]_1 ,
     \table_val_reg[4] ,
     \table_val_reg[4]_0 ,
-    \table_val_reg[5] ,
-    \table_val_reg[5]_0 ,
-    \table_val_reg[5]_1 ,
-    \table_val_reg[2] ,
-    \table_val_reg[2]_0 ,
-    \table_val_reg[2]_1 ,
-    \table_val_reg[7] ,
-    \table_val_reg[0] ,
-    \table_val_reg[0]_0 ,
-    \table_val_reg[0]_1 ,
-    \table_val_reg[6] ,
-    \table_val_reg[6]_0 ,
-    \table_val_reg[6]_1 ,
-    \table_val_reg[5]_2 ,
-    \table_val_reg[5]_3 ,
-    \table_val_reg[5]_4 ,
-    \table_val_reg[6]_2 ,
-    \table_val_reg[6]_3 ,
-    \table_val_reg[7]_0 ,
-    \table_val_reg[0]_2 ,
-    \table_val_reg[0]_3 ,
-    \table_val_reg[0]_4 ,
-    \table_val_reg[2]_2 ,
-    \table_val_reg[2]_3 ,
-    \table_val_reg[2]_4 ,
-    \table_val_reg[3]_2 ,
-    \table_val_reg[3]_3 ,
-    \table_val_reg[3]_4 ,
+    \table_val_reg[4]_1 ,
     \table_val_reg[1]_2 ,
     \table_val_reg[1]_3 ,
     \table_val_reg[1]_4 ,
-    \table_val_reg[4]_1 ,
+    \table_val_reg[3]_2 ,
+    \table_val_reg[3]_3 ,
+    \table_val_reg[3]_4 ,
     \table_val_reg[4]_2 ,
-    \table_val_reg[4]_3 );
+    \table_val_reg[4]_3 ,
+    \table_val_reg[5]_2 ,
+    \table_val_reg[5]_3 ,
+    \table_val_reg[5]_4 ,
+    \table_val_reg[2]_2 ,
+    \table_val_reg[2]_3 ,
+    \table_val_reg[2]_4 ,
+    \table_val_reg[7]_2 ,
+    \table_val_reg[0]_2 ,
+    \table_val_reg[0]_3 ,
+    \table_val_reg[0]_4 ,
+    \table_val_reg[6]_1 ,
+    \table_val_reg[6]_2 ,
+    \table_val_reg[6]_3 ,
+    \table_val_reg[5]_5 ,
+    \table_val_reg[5]_6 ,
+    \table_val_reg[5]_7 ,
+    \table_val_reg[6]_4 ,
+    \table_val_reg[6]_5 ,
+    \table_val_reg[7]_3 ,
+    \table_val_reg[0]_5 ,
+    \table_val_reg[0]_6 ,
+    \table_val_reg[0]_7 ,
+    \table_val_reg[2]_5 ,
+    \table_val_reg[2]_6 ,
+    \table_val_reg[2]_7 ,
+    \table_val_reg[3]_5 ,
+    \table_val_reg[3]_6 ,
+    \table_val_reg[3]_7 ,
+    \table_val_reg[1]_5 ,
+    \table_val_reg[1]_6 ,
+    \table_val_reg[1]_7 ,
+    \table_val_reg[4]_4 ,
+    \table_val_reg[4]_5 ,
+    \table_val_reg[4]_6 ,
+    \table_val_reg[7]_4 ,
+    \table_val_reg[7]_5 ,
+    \table_count_r_reg_rep[0]__1_1 ,
+    \table_count_r_reg_rep[8]_0 );
   output \table_count_r_reg_rep[1]__0_0 ;
   output [7:0]Q;
   output \table_count_r_reg_rep[0]__1_0 ;
   output [7:0]\table_count_r_reg_rep[7]__1_0 ;
+  output [7:0]\table_count_r_reg_rep[7]_0 ;
+  output [7:0]\table_count_r_reg_rep[7]_1 ;
   output [7:0]D;
   output [7:0]\table_count_r_reg_rep[8]__1_0 ;
-  input [0:0]\table_count_r_reg_rep[0]__1_1 ;
-  input CLK;
+  output \table_val_reg[7] ;
+  input \table_val_reg[5] ;
+  input \table_val_reg[5]_0 ;
+  input \table_val_reg[5]_1 ;
+  input \table_val_reg[6] ;
+  input \table_val_reg[6]_0 ;
+  input \table_val_reg[7]_0 ;
+  input \table_val_reg[7]_1 ;
+  input \table_val_reg[0] ;
+  input \table_val_reg[0]_0 ;
+  input \table_val_reg[0]_1 ;
   input \table_val_reg[1] ;
   input \table_val_reg[1]_0 ;
   input \table_val_reg[1]_1 ;
+  input \table_val_reg[2] ;
+  input \table_val_reg[2]_0 ;
+  input \table_val_reg[2]_1 ;
   input \table_val_reg[3] ;
   input \table_val_reg[3]_0 ;
   input \table_val_reg[3]_1 ;
   input \table_val_reg[4] ;
   input \table_val_reg[4]_0 ;
-  input \table_val_reg[5] ;
-  input \table_val_reg[5]_0 ;
-  input \table_val_reg[5]_1 ;
-  input \table_val_reg[2] ;
-  input \table_val_reg[2]_0 ;
-  input \table_val_reg[2]_1 ;
-  input \table_val_reg[7] ;
-  input \table_val_reg[0] ;
-  input \table_val_reg[0]_0 ;
-  input \table_val_reg[0]_1 ;
-  input \table_val_reg[6] ;
-  input \table_val_reg[6]_0 ;
-  input \table_val_reg[6]_1 ;
-  input \table_val_reg[5]_2 ;
-  input \table_val_reg[5]_3 ;
-  input \table_val_reg[5]_4 ;
-  input \table_val_reg[6]_2 ;
-  input \table_val_reg[6]_3 ;
-  input \table_val_reg[7]_0 ;
-  input \table_val_reg[0]_2 ;
-  input \table_val_reg[0]_3 ;
-  input \table_val_reg[0]_4 ;
-  input \table_val_reg[2]_2 ;
-  input \table_val_reg[2]_3 ;
-  input \table_val_reg[2]_4 ;
-  input \table_val_reg[3]_2 ;
-  input \table_val_reg[3]_3 ;
-  input \table_val_reg[3]_4 ;
+  input \table_val_reg[4]_1 ;
   input \table_val_reg[1]_2 ;
   input \table_val_reg[1]_3 ;
   input \table_val_reg[1]_4 ;
-  input \table_val_reg[4]_1 ;
+  input \table_val_reg[3]_2 ;
+  input \table_val_reg[3]_3 ;
+  input \table_val_reg[3]_4 ;
   input \table_val_reg[4]_2 ;
   input \table_val_reg[4]_3 ;
+  input \table_val_reg[5]_2 ;
+  input \table_val_reg[5]_3 ;
+  input \table_val_reg[5]_4 ;
+  input \table_val_reg[2]_2 ;
+  input \table_val_reg[2]_3 ;
+  input \table_val_reg[2]_4 ;
+  input \table_val_reg[7]_2 ;
+  input \table_val_reg[0]_2 ;
+  input \table_val_reg[0]_3 ;
+  input \table_val_reg[0]_4 ;
+  input \table_val_reg[6]_1 ;
+  input \table_val_reg[6]_2 ;
+  input \table_val_reg[6]_3 ;
+  input \table_val_reg[5]_5 ;
+  input \table_val_reg[5]_6 ;
+  input \table_val_reg[5]_7 ;
+  input \table_val_reg[6]_4 ;
+  input \table_val_reg[6]_5 ;
+  input \table_val_reg[7]_3 ;
+  input \table_val_reg[0]_5 ;
+  input \table_val_reg[0]_6 ;
+  input \table_val_reg[0]_7 ;
+  input \table_val_reg[2]_5 ;
+  input \table_val_reg[2]_6 ;
+  input \table_val_reg[2]_7 ;
+  input \table_val_reg[3]_5 ;
+  input \table_val_reg[3]_6 ;
+  input \table_val_reg[3]_7 ;
+  input \table_val_reg[1]_5 ;
+  input \table_val_reg[1]_6 ;
+  input \table_val_reg[1]_7 ;
+  input \table_val_reg[4]_4 ;
+  input \table_val_reg[4]_5 ;
+  input \table_val_reg[4]_6 ;
+  input \table_val_reg[7]_4 ;
+  input [0:0]\table_val_reg[7]_5 ;
+  input [0:0]\table_count_r_reg_rep[0]__1_1 ;
+  input \table_count_r_reg_rep[8]_0 ;
 
-  wire CLK;
   wire [7:0]D;
   wire [7:0]Q;
   wire [15:1]data0;
   wire p_0_in0;
   wire [15:0]table_count_r;
+  wire \table_count_r[15]_i_2_n_0 ;
   wire \table_count_r[15]_i_3_n_0 ;
+  wire \table_count_r[15]_i_4_n_0 ;
   wire \table_count_r[15]_i_5_n_0 ;
-  wire \table_count_r[15]_i_6_n_0 ;
-  wire \table_count_r[15]_i_7_n_0 ;
   wire \table_count_r_reg[12]_i_2_n_0 ;
   wire \table_count_r_reg[12]_i_2_n_1 ;
   wire \table_count_r_reg[12]_i_2_n_2 ;
   wire \table_count_r_reg[12]_i_2_n_3 ;
-  wire \table_count_r_reg[15]_i_4_n_2 ;
-  wire \table_count_r_reg[15]_i_4_n_3 ;
+  wire \table_count_r_reg[15]_i_6_n_2 ;
+  wire \table_count_r_reg[15]_i_6_n_3 ;
   wire \table_count_r_reg[4]_i_2_n_0 ;
   wire \table_count_r_reg[4]_i_2_n_1 ;
   wire \table_count_r_reg[4]_i_2_n_2 ;
@@ -4442,206 +5273,281 @@ module mantis_synth_mantis_synth_1_0_table_count
   wire \table_count_r_reg_rep[0]__1_0 ;
   wire [0:0]\table_count_r_reg_rep[0]__1_1 ;
   wire \table_count_r_reg_rep[1]__0_0 ;
+  wire [7:0]\table_count_r_reg_rep[7]_0 ;
+  wire [7:0]\table_count_r_reg_rep[7]_1 ;
   wire [7:0]\table_count_r_reg_rep[7]__1_0 ;
+  wire \table_count_r_reg_rep[8]_0 ;
   wire \table_count_r_reg_rep[8]__0_n_0 ;
   wire [7:0]\table_count_r_reg_rep[8]__1_0 ;
   wire \table_count_r_reg_rep[8]__1_n_0 ;
+  wire \table_count_r_reg_rep_n_0_[8] ;
+  wire \table_val[7]_i_2__0_n_0 ;
+  wire \table_val[7]_i_3_n_0 ;
   wire \table_val[7]_i_4_n_0 ;
+  wire \table_val[7]_i_5_n_0 ;
   wire \table_val_reg[0] ;
   wire \table_val_reg[0]_0 ;
   wire \table_val_reg[0]_1 ;
   wire \table_val_reg[0]_2 ;
   wire \table_val_reg[0]_3 ;
   wire \table_val_reg[0]_4 ;
+  wire \table_val_reg[0]_5 ;
+  wire \table_val_reg[0]_6 ;
+  wire \table_val_reg[0]_7 ;
   wire \table_val_reg[1] ;
   wire \table_val_reg[1]_0 ;
   wire \table_val_reg[1]_1 ;
   wire \table_val_reg[1]_2 ;
   wire \table_val_reg[1]_3 ;
   wire \table_val_reg[1]_4 ;
+  wire \table_val_reg[1]_5 ;
+  wire \table_val_reg[1]_6 ;
+  wire \table_val_reg[1]_7 ;
   wire \table_val_reg[2] ;
   wire \table_val_reg[2]_0 ;
   wire \table_val_reg[2]_1 ;
   wire \table_val_reg[2]_2 ;
   wire \table_val_reg[2]_3 ;
   wire \table_val_reg[2]_4 ;
+  wire \table_val_reg[2]_5 ;
+  wire \table_val_reg[2]_6 ;
+  wire \table_val_reg[2]_7 ;
   wire \table_val_reg[3] ;
   wire \table_val_reg[3]_0 ;
   wire \table_val_reg[3]_1 ;
   wire \table_val_reg[3]_2 ;
   wire \table_val_reg[3]_3 ;
   wire \table_val_reg[3]_4 ;
+  wire \table_val_reg[3]_5 ;
+  wire \table_val_reg[3]_6 ;
+  wire \table_val_reg[3]_7 ;
   wire \table_val_reg[4] ;
   wire \table_val_reg[4]_0 ;
   wire \table_val_reg[4]_1 ;
   wire \table_val_reg[4]_2 ;
   wire \table_val_reg[4]_3 ;
+  wire \table_val_reg[4]_4 ;
+  wire \table_val_reg[4]_5 ;
+  wire \table_val_reg[4]_6 ;
   wire \table_val_reg[5] ;
   wire \table_val_reg[5]_0 ;
   wire \table_val_reg[5]_1 ;
   wire \table_val_reg[5]_2 ;
   wire \table_val_reg[5]_3 ;
   wire \table_val_reg[5]_4 ;
+  wire \table_val_reg[5]_5 ;
+  wire \table_val_reg[5]_6 ;
+  wire \table_val_reg[5]_7 ;
   wire \table_val_reg[6] ;
   wire \table_val_reg[6]_0 ;
   wire \table_val_reg[6]_1 ;
   wire \table_val_reg[6]_2 ;
   wire \table_val_reg[6]_3 ;
+  wire \table_val_reg[6]_4 ;
+  wire \table_val_reg[6]_5 ;
   wire \table_val_reg[7] ;
   wire \table_val_reg[7]_0 ;
-  wire [3:2]\NLW_table_count_r_reg[15]_i_4_CO_UNCONNECTED ;
-  wire [3:3]\NLW_table_count_r_reg[15]_i_4_O_UNCONNECTED ;
+  wire \table_val_reg[7]_1 ;
+  wire \table_val_reg[7]_2 ;
+  wire \table_val_reg[7]_3 ;
+  wire \table_val_reg[7]_4 ;
+  wire [0:0]\table_val_reg[7]_5 ;
+  wire [3:2]\NLW_table_count_r_reg[15]_i_6_CO_UNCONNECTED ;
+  wire [3:3]\NLW_table_count_r_reg[15]_i_6_O_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \table_count_r[0]_i_1 
        (.I0(\table_count_r_reg_n_0_[0] ),
         .O(table_count_r[0]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \table_count_r[10]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[10]),
-        .O(table_count_r[10]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \table_count_r[11]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[11]),
-        .O(table_count_r[11]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \table_count_r[12]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[12]),
-        .O(table_count_r[12]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \table_count_r[13]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[13]),
-        .O(table_count_r[13]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \table_count_r[14]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[14]),
-        .O(table_count_r[14]));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \table_count_r[15]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[15]),
-        .O(table_count_r[15]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hFFFFFFFE00000000)) 
+    \table_count_r[10]_i_1 
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[10]),
+        .O(table_count_r[10]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \table_count_r[11]_i_1 
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[11]),
+        .O(table_count_r[11]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \table_count_r[12]_i_1 
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[12]),
+        .O(table_count_r[12]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \table_count_r[13]_i_1 
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[13]),
+        .O(table_count_r[13]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \table_count_r[14]_i_1 
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[14]),
+        .O(table_count_r[14]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \table_count_r[15]_i_1 
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[15]),
+        .O(table_count_r[15]));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    \table_count_r[15]_i_2 
+       (.I0(\table_count_r_reg_n_0_[8] ),
+        .I1(\table_count_r_reg_n_0_[6] ),
+        .I2(\table_count_r_reg_n_0_[5] ),
+        .I3(\table_count_r_reg_n_0_[2] ),
+        .O(\table_count_r[15]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT4 #(
+    .INIT(16'hFFF7)) 
     \table_count_r[15]_i_3 
-       (.I0(\table_count_r[15]_i_5_n_0 ),
-        .I1(p_0_in0),
-        .I2(\table_count_r_reg_n_0_[14] ),
-        .I3(\table_count_r_reg_n_0_[15] ),
-        .I4(\table_count_r[15]_i_6_n_0 ),
-        .I5(\table_count_r[15]_i_7_n_0 ),
+       (.I0(\table_count_r_reg_n_0_[1] ),
+        .I1(\table_count_r_reg_n_0_[0] ),
+        .I2(\table_count_r_reg_n_0_[4] ),
+        .I3(\table_count_r_reg_n_0_[3] ),
         .O(\table_count_r[15]_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \table_count_r[15]_i_5 
+    \table_count_r[15]_i_4 
        (.I0(\table_count_r_reg_n_0_[11] ),
         .I1(\table_count_r_reg_n_0_[10] ),
         .I2(\table_count_r_reg_n_0_[13] ),
         .I3(\table_count_r_reg_n_0_[12] ),
+        .O(\table_count_r[15]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \table_count_r[15]_i_5 
+       (.I0(\table_count_r_reg_n_0_[15] ),
+        .I1(\table_count_r_reg_n_0_[14] ),
+        .I2(p_0_in0),
         .O(\table_count_r[15]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hEFFF)) 
-    \table_count_r[15]_i_6 
-       (.I0(\table_count_r_reg_n_0_[4] ),
-        .I1(\table_count_r_reg_n_0_[3] ),
-        .I2(\table_count_r_reg_n_0_[6] ),
-        .I3(\table_count_r_reg_n_0_[5] ),
-        .O(\table_count_r[15]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hDFFFFFFF)) 
-    \table_count_r[15]_i_7 
-       (.I0(\table_count_r_reg_n_0_[0] ),
-        .I1(\table_count_r_reg_n_0_[7] ),
-        .I2(\table_count_r_reg_n_0_[8] ),
-        .I3(\table_count_r_reg_n_0_[2] ),
-        .I4(\table_count_r_reg_n_0_[1] ),
-        .O(\table_count_r[15]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[1]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[1]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[1]),
         .O(table_count_r[1]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[2]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[2]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[2]),
         .O(table_count_r[2]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[3]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[3]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[3]),
         .O(table_count_r[3]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[4]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[4]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[4]),
         .O(table_count_r[4]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[5]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[5]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[5]),
         .O(table_count_r[5]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[6]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[6]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[6]),
         .O(table_count_r[6]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[7]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[7]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[7]),
         .O(table_count_r[7]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[8]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[8]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[8]),
         .O(table_count_r[8]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \table_count_r[9]_i_1 
-       (.I0(\table_count_r[15]_i_3_n_0 ),
-        .I1(data0[9]),
+       (.I0(\table_count_r[15]_i_2_n_0 ),
+        .I1(\table_count_r[15]_i_3_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_count_r[15]_i_4_n_0 ),
+        .I4(\table_count_r[15]_i_5_n_0 ),
+        .I5(data0[9]),
         .O(table_count_r[9]));
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[0] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[0]),
         .Q(\table_count_r_reg_n_0_[0] ),
@@ -4649,7 +5555,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[10] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[10]),
         .Q(\table_count_r_reg_n_0_[10] ),
@@ -4657,7 +5563,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[11] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[11]),
         .Q(\table_count_r_reg_n_0_[11] ),
@@ -4665,7 +5571,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[12] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[12]),
         .Q(\table_count_r_reg_n_0_[12] ),
@@ -4681,7 +5587,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[13] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[13]),
         .Q(\table_count_r_reg_n_0_[13] ),
@@ -4689,7 +5595,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[14] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[14]),
         .Q(\table_count_r_reg_n_0_[14] ),
@@ -4697,23 +5603,23 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[15] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[15]),
         .Q(\table_count_r_reg_n_0_[15] ),
         .R(\table_count_r_reg_rep[0]__1_1 ));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \table_count_r_reg[15]_i_4 
+  CARRY4 \table_count_r_reg[15]_i_6 
        (.CI(\table_count_r_reg[12]_i_2_n_0 ),
-        .CO({\NLW_table_count_r_reg[15]_i_4_CO_UNCONNECTED [3:2],\table_count_r_reg[15]_i_4_n_2 ,\table_count_r_reg[15]_i_4_n_3 }),
+        .CO({\NLW_table_count_r_reg[15]_i_6_CO_UNCONNECTED [3:2],\table_count_r_reg[15]_i_6_n_2 ,\table_count_r_reg[15]_i_6_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_table_count_r_reg[15]_i_4_O_UNCONNECTED [3],data0[15:13]}),
+        .O({\NLW_table_count_r_reg[15]_i_6_O_UNCONNECTED [3],data0[15:13]}),
         .S({1'b0,\table_count_r_reg_n_0_[15] ,\table_count_r_reg_n_0_[14] ,\table_count_r_reg_n_0_[13] }));
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[1] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[1]),
         .Q(\table_count_r_reg_n_0_[1] ),
@@ -4721,7 +5627,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[2] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[2]),
         .Q(\table_count_r_reg_n_0_[2] ),
@@ -4729,7 +5635,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[3] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[3]),
         .Q(\table_count_r_reg_n_0_[3] ),
@@ -4737,7 +5643,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[4] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[4]),
         .Q(\table_count_r_reg_n_0_[4] ),
@@ -4753,7 +5659,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[5] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[5]),
         .Q(\table_count_r_reg_n_0_[5] ),
@@ -4761,7 +5667,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[6] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[6]),
         .Q(\table_count_r_reg_n_0_[6] ),
@@ -4769,7 +5675,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[7] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[7]),
         .Q(\table_count_r_reg_n_0_[7] ),
@@ -4777,7 +5683,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[8] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[8]),
         .Q(\table_count_r_reg_n_0_[8] ),
@@ -4793,7 +5699,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg[9] 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[9]),
         .Q(p_0_in0),
@@ -4801,8 +5707,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[0] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[0]),
+        .Q(\table_count_r_reg_rep[7]_1 [0]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[0]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[0]),
         .Q(Q[0]),
@@ -4811,7 +5726,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[0]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[0]),
         .Q(\table_count_r_reg_rep[7]__1_0 [0]),
@@ -4819,8 +5734,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[1] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[1]),
+        .Q(\table_count_r_reg_rep[7]_1 [1]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[1]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[1]),
         .Q(Q[1]),
@@ -4829,7 +5753,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[1]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[1]),
         .Q(\table_count_r_reg_rep[7]__1_0 [1]),
@@ -4837,8 +5761,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[2] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[2]),
+        .Q(\table_count_r_reg_rep[7]_1 [2]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[2]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[2]),
         .Q(Q[2]),
@@ -4847,7 +5780,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[2]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[2]),
         .Q(\table_count_r_reg_rep[7]__1_0 [2]),
@@ -4855,8 +5788,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[3] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[3]),
+        .Q(\table_count_r_reg_rep[7]_1 [3]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[3]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[3]),
         .Q(Q[3]),
@@ -4865,7 +5807,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[3]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[3]),
         .Q(\table_count_r_reg_rep[7]__1_0 [3]),
@@ -4873,8 +5815,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[4] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[4]),
+        .Q(\table_count_r_reg_rep[7]_1 [4]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[4]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[4]),
         .Q(Q[4]),
@@ -4883,7 +5834,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[4]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[4]),
         .Q(\table_count_r_reg_rep[7]__1_0 [4]),
@@ -4891,8 +5842,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[5] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[5]),
+        .Q(\table_count_r_reg_rep[7]_1 [5]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[5]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[5]),
         .Q(Q[5]),
@@ -4901,7 +5861,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[5]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[5]),
         .Q(\table_count_r_reg_rep[7]__1_0 [5]),
@@ -4909,8 +5869,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[6] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[6]),
+        .Q(\table_count_r_reg_rep[7]_1 [6]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[6]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[6]),
         .Q(Q[6]),
@@ -4919,7 +5888,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[6]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[6]),
         .Q(\table_count_r_reg_rep[7]__1_0 [6]),
@@ -4927,8 +5896,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[7] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[7]),
+        .Q(\table_count_r_reg_rep[7]_1 [7]),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[7]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[7]),
         .Q(Q[7]),
@@ -4937,7 +5915,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[7]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[7]),
         .Q(\table_count_r_reg_rep[7]__1_0 [7]),
@@ -4945,8 +5923,17 @@ module mantis_synth_mantis_synth_1_0_table_count
   (* equivalent_register_removal = "no" *) 
   FDRE #(
     .INIT(1'b0)) 
+    \table_count_r_reg_rep[8] 
+       (.C(\table_count_r_reg_rep[8]_0 ),
+        .CE(1'b1),
+        .D(table_count_r[8]),
+        .Q(\table_count_r_reg_rep_n_0_[8] ),
+        .R(\table_count_r_reg_rep[0]__1_1 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \table_count_r_reg_rep[8]__0 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[8]),
         .Q(\table_count_r_reg_rep[8]__0_n_0 ),
@@ -4955,7 +5942,7 @@ module mantis_synth_mantis_synth_1_0_table_count
   FDRE #(
     .INIT(1'b0)) 
     \table_count_r_reg_rep[8]__1 
-       (.C(CLK),
+       (.C(\table_count_r_reg_rep[8]_0 ),
         .CE(1'b1),
         .D(table_count_r[8]),
         .Q(\table_count_r_reg_rep[8]__1_n_0 ),
@@ -4964,120 +5951,180 @@ module mantis_synth_mantis_synth_1_0_table_count
     .INIT(64'h0000000033E200E2)) 
     \table_val[0]_i_1 
        (.I0(\table_val_reg[0] ),
-        .I1(Q[7]),
+        .I1(\table_count_r_reg_rep[7]_1 [7]),
         .I2(\table_val_reg[0]_0 ),
-        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I3(\table_count_r_reg_rep_n_0_[8] ),
         .I4(\table_val_reg[0]_1 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I5(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [0]));
+  LUT6 #(
+    .INIT(64'h0000000033E200E2)) 
+    \table_val[0]_i_1__0 
+       (.I0(\table_val_reg[0]_2 ),
+        .I1(Q[7]),
+        .I2(\table_val_reg[0]_3 ),
+        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I4(\table_val_reg[0]_4 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(D[0]));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
-    \table_val[0]_i_1__0 
-       (.I0(\table_val_reg[0]_2 ),
+    \table_val[0]_i_1__1 
+       (.I0(\table_val_reg[0]_5 ),
         .I1(\table_count_r_reg_rep[8]__1_n_0 ),
-        .I2(\table_val_reg[0]_3 ),
+        .I2(\table_val_reg[0]_6 ),
         .I3(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I4(\table_val_reg[0]_4 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I4(\table_val_reg[0]_7 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [0]));
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \table_val[1]_i_1 
        (.I0(\table_val_reg[1] ),
-        .I1(Q[7]),
+        .I1(\table_count_r_reg_rep[7]_1 [7]),
         .I2(\table_val_reg[1]_0 ),
-        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I3(\table_count_r_reg_rep_n_0_[8] ),
         .I4(\table_val_reg[1]_1 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I5(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [1]));
+  LUT6 #(
+    .INIT(64'h0000000033E200E2)) 
+    \table_val[1]_i_1__0 
+       (.I0(\table_val_reg[1]_2 ),
+        .I1(Q[7]),
+        .I2(\table_val_reg[1]_3 ),
+        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I4(\table_val_reg[1]_4 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(D[1]));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
-    \table_val[1]_i_1__0 
-       (.I0(\table_val_reg[1]_2 ),
+    \table_val[1]_i_1__1 
+       (.I0(\table_val_reg[1]_5 ),
         .I1(\table_count_r_reg_rep[8]__1_n_0 ),
-        .I2(\table_val_reg[1]_3 ),
+        .I2(\table_val_reg[1]_6 ),
         .I3(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I4(\table_val_reg[1]_4 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I4(\table_val_reg[1]_7 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [1]));
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \table_val[2]_i_1 
        (.I0(\table_val_reg[2] ),
-        .I1(Q[7]),
+        .I1(\table_count_r_reg_rep[7]_1 [7]),
         .I2(\table_val_reg[2]_0 ),
-        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I3(\table_count_r_reg_rep_n_0_[8] ),
         .I4(\table_val_reg[2]_1 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I5(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [2]));
+  LUT6 #(
+    .INIT(64'h0000000033E200E2)) 
+    \table_val[2]_i_1__0 
+       (.I0(\table_val_reg[2]_2 ),
+        .I1(Q[7]),
+        .I2(\table_val_reg[2]_3 ),
+        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I4(\table_val_reg[2]_4 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(D[2]));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
-    \table_val[2]_i_1__0 
-       (.I0(\table_val_reg[2]_2 ),
+    \table_val[2]_i_1__1 
+       (.I0(\table_val_reg[2]_5 ),
         .I1(\table_count_r_reg_rep[8]__1_n_0 ),
-        .I2(\table_val_reg[2]_3 ),
+        .I2(\table_val_reg[2]_6 ),
         .I3(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I4(\table_val_reg[2]_4 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I4(\table_val_reg[2]_7 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [2]));
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \table_val[3]_i_1 
        (.I0(\table_val_reg[3] ),
-        .I1(Q[7]),
+        .I1(\table_count_r_reg_rep[7]_1 [7]),
         .I2(\table_val_reg[3]_0 ),
-        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I3(\table_count_r_reg_rep_n_0_[8] ),
         .I4(\table_val_reg[3]_1 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I5(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [3]));
+  LUT6 #(
+    .INIT(64'h0000000033E200E2)) 
+    \table_val[3]_i_1__0 
+       (.I0(\table_val_reg[3]_2 ),
+        .I1(Q[7]),
+        .I2(\table_val_reg[3]_3 ),
+        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I4(\table_val_reg[3]_4 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(D[3]));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
-    \table_val[3]_i_1__0 
-       (.I0(\table_val_reg[3]_2 ),
+    \table_val[3]_i_1__1 
+       (.I0(\table_val_reg[3]_5 ),
         .I1(\table_count_r_reg_rep[8]__1_n_0 ),
-        .I2(\table_val_reg[3]_3 ),
+        .I2(\table_val_reg[3]_6 ),
         .I3(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I4(\table_val_reg[3]_4 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I4(\table_val_reg[3]_7 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [3]));
-  LUT5 #(
-    .INIT(32'h00002E22)) 
+  LUT6 #(
+    .INIT(64'h0000000033E200E2)) 
     \table_val[4]_i_1 
        (.I0(\table_val_reg[4] ),
+        .I1(\table_count_r_reg_rep[7]_1 [7]),
+        .I2(\table_val_reg[4]_0 ),
+        .I3(\table_count_r_reg_rep_n_0_[8] ),
+        .I4(\table_val_reg[4]_1 ),
+        .I5(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [4]));
+  LUT5 #(
+    .INIT(32'h00002E22)) 
+    \table_val[4]_i_1__0 
+       (.I0(\table_val_reg[4]_2 ),
         .I1(\table_count_r_reg_rep[8]__0_n_0 ),
         .I2(Q[7]),
-        .I3(\table_val_reg[4]_0 ),
-        .I4(\table_val[7]_i_4_n_0 ),
+        .I3(\table_val_reg[4]_3 ),
+        .I4(\table_val[7]_i_5_n_0 ),
         .O(D[4]));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
-    \table_val[4]_i_1__0 
-       (.I0(\table_val_reg[4]_1 ),
+    \table_val[4]_i_1__1 
+       (.I0(\table_val_reg[4]_4 ),
         .I1(\table_count_r_reg_rep[8]__1_n_0 ),
-        .I2(\table_val_reg[4]_2 ),
+        .I2(\table_val_reg[4]_5 ),
         .I3(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I4(\table_val_reg[4]_3 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I4(\table_val_reg[4]_6 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [4]));
   LUT6 #(
     .INIT(64'h0000000033E200E2)) 
     \table_val[5]_i_1 
        (.I0(\table_val_reg[5] ),
-        .I1(Q[7]),
+        .I1(\table_count_r_reg_rep[7]_1 [7]),
         .I2(\table_val_reg[5]_0 ),
-        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I3(\table_count_r_reg_rep_n_0_[8] ),
         .I4(\table_val_reg[5]_1 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I5(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [5]));
+  LUT6 #(
+    .INIT(64'h0000000033E200E2)) 
+    \table_val[5]_i_1__0 
+       (.I0(\table_val_reg[5]_2 ),
+        .I1(Q[7]),
+        .I2(\table_val_reg[5]_3 ),
+        .I3(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I4(\table_val_reg[5]_4 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(D[5]));
   LUT6 #(
     .INIT(64'h00000000EEE222E2)) 
-    \table_val[5]_i_1__0 
-       (.I0(\table_val_reg[5]_2 ),
+    \table_val[5]_i_1__1 
+       (.I0(\table_val_reg[5]_5 ),
         .I1(\table_count_r_reg_rep[8]__1_n_0 ),
-        .I2(\table_val_reg[5]_3 ),
+        .I2(\table_val_reg[5]_6 ),
         .I3(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I4(\table_val_reg[5]_4 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I4(\table_val_reg[5]_7 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [5]));
   LUT2 #(
     .INIT(4'h7)) 
@@ -5085,24 +6132,32 @@ module mantis_synth_mantis_synth_1_0_table_count
        (.I0(\table_count_r_reg_rep[7]__1_0 [0]),
         .I1(\table_count_r_reg_rep[7]__1_0 [2]),
         .O(\table_count_r_reg_rep[0]__1_0 ));
-  LUT6 #(
-    .INIT(64'h00000000FFE200E2)) 
+  LUT4 #(
+    .INIT(16'h00E2)) 
     \table_val[6]_i_1 
        (.I0(\table_val_reg[6] ),
-        .I1(Q[7]),
+        .I1(\table_count_r_reg_rep_n_0_[8] ),
         .I2(\table_val_reg[6]_0 ),
+        .I3(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [6]));
+  LUT6 #(
+    .INIT(64'h00000000FFE200E2)) 
+    \table_val[6]_i_1__0 
+       (.I0(\table_val_reg[6]_1 ),
+        .I1(Q[7]),
+        .I2(\table_val_reg[6]_2 ),
         .I3(\table_count_r_reg_rep[8]__0_n_0 ),
-        .I4(\table_val_reg[6]_1 ),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I4(\table_val_reg[6]_3 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(D[6]));
   LUT5 #(
     .INIT(32'h0000E222)) 
-    \table_val[6]_i_1__0 
-       (.I0(\table_val_reg[6]_2 ),
+    \table_val[6]_i_1__1 
+       (.I0(\table_val_reg[6]_4 ),
         .I1(\table_count_r_reg_rep[8]__1_n_0 ),
         .I2(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I3(\table_val_reg[6]_3 ),
-        .I4(\table_val[7]_i_4_n_0 ),
+        .I3(\table_val_reg[6]_5 ),
+        .I4(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [6]));
   LUT2 #(
     .INIT(4'h1)) 
@@ -5110,33 +6165,80 @@ module mantis_synth_mantis_synth_1_0_table_count
        (.I0(Q[1]),
         .I1(Q[2]),
         .O(\table_count_r_reg_rep[1]__0_0 ));
+  LUT5 #(
+    .INIT(32'h00001055)) 
+    \table_val[7]_i_1 
+       (.I0(\table_count_r_reg_rep[8]__0_n_0 ),
+        .I1(Q[6]),
+        .I2(\table_val_reg[7]_2 ),
+        .I3(Q[7]),
+        .I4(\table_val[7]_i_5_n_0 ),
+        .O(D[7]));
   LUT6 #(
     .INIT(64'h0000000015101515)) 
     \table_val[7]_i_1__0 
        (.I0(\table_count_r_reg_rep[8]__1_n_0 ),
         .I1(\table_count_r_reg_rep[7]__1_0 [7]),
         .I2(\table_count_r_reg_rep[7]__1_0 [6]),
-        .I3(\table_val_reg[7]_0 ),
+        .I3(\table_val_reg[7]_3 ),
         .I4(\table_count_r_reg_rep[7]__1_0 [4]),
-        .I5(\table_val[7]_i_4_n_0 ),
+        .I5(\table_val[7]_i_5_n_0 ),
         .O(\table_count_r_reg_rep[8]__1_0 [7]));
-  LUT5 #(
-    .INIT(32'h00001055)) 
+  LUT6 #(
+    .INIT(64'h0000000000FF002F)) 
+    \table_val[7]_i_1__1 
+       (.I0(\table_val_reg[7]_4 ),
+        .I1(\table_val[7]_i_2__0_n_0 ),
+        .I2(\table_count_r_reg_n_0_[7] ),
+        .I3(\table_val[7]_i_5_n_0 ),
+        .I4(\table_val[7]_i_3_n_0 ),
+        .I5(\table_val[7]_i_4_n_0 ),
+        .O(\table_val_reg[7] ));
+  LUT6 #(
+    .INIT(64'h0000000055A805A8)) 
     \table_val[7]_i_2 
-       (.I0(\table_count_r_reg_rep[8]__0_n_0 ),
-        .I1(Q[6]),
-        .I2(\table_val_reg[7] ),
-        .I3(Q[7]),
-        .I4(\table_val[7]_i_4_n_0 ),
-        .O(D[7]));
+       (.I0(\table_count_r_reg_rep[7]_1 [7]),
+        .I1(\table_val_reg[7]_0 ),
+        .I2(\table_count_r_reg_rep[7]_1 [6]),
+        .I3(\table_count_r_reg_rep_n_0_[8] ),
+        .I4(\table_val_reg[7]_1 ),
+        .I5(\table_val[7]_i_5_n_0 ),
+        .O(\table_count_r_reg_rep[7]_0 [7]));
+  LUT6 #(
+    .INIT(64'hFFFF0000C0800000)) 
+    \table_val[7]_i_2__0 
+       (.I0(\table_count_r_reg_n_0_[3] ),
+        .I1(\table_count_r_reg_n_0_[5] ),
+        .I2(\table_count_r_reg_n_0_[4] ),
+        .I3(\table_count_r_reg_n_0_[2] ),
+        .I4(\table_count_r_reg_n_0_[7] ),
+        .I5(\table_count_r_reg_n_0_[6] ),
+        .O(\table_val[7]_i_2__0_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000777F)) 
+    \table_val[7]_i_3 
+       (.I0(\table_count_r_reg_n_0_[4] ),
+        .I1(\table_count_r_reg_n_0_[5] ),
+        .I2(\table_count_r_reg_n_0_[2] ),
+        .I3(\table_count_r_reg_n_0_[3] ),
+        .I4(\table_count_r_reg_n_0_[6] ),
+        .O(\table_val[7]_i_3_n_0 ));
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \table_val[7]_i_4 
+       (.I0(\table_val_reg[7]_5 ),
+        .I1(\table_count_r_reg_rep[0]__1_1 ),
+        .I2(\table_count_r_reg_n_0_[8] ),
+        .O(\table_val[7]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \table_val[7]_i_4 
-       (.I0(\table_count_r[15]_i_5_n_0 ),
+    \table_val[7]_i_5 
+       (.I0(\table_count_r[15]_i_4_n_0 ),
         .I1(p_0_in0),
         .I2(\table_count_r_reg_n_0_[14] ),
         .I3(\table_count_r_reg_n_0_[15] ),
-        .O(\table_val[7]_i_4_n_0 ));
+        .O(\table_val[7]_i_5_n_0 ));
 endmodule
 `ifndef GLBL
 `define GLBL

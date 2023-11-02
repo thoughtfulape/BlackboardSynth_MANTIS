@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Oct 26 12:25:29 2023
+-- Date        : Wed Nov  1 20:10:13 2023
 -- Host        : FishelHPLaptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.gen/sources_1/bd/mantis_synth/ip/mantis_synth_mantis_synth_0_0/mantis_synth_mantis_synth_0_0_stub.vhdl

@@ -68,7 +68,7 @@ module prog_synth_wrapper(
 		.table_count(tbl_count)
 	);
 	
-	/*output_sel output_sel(
+	output_sel output_sel(
 	   .en(en),
 	   .sel(wave_sel),
 	   .sin_in(sine),
@@ -76,7 +76,7 @@ module prog_synth_wrapper(
 	   .sqr_in(square),
 	   .saw_in(saw),
 	   .wav(wav)
-	);*/
+	);
 	
 	prog_clk_div freq_sel(
 	   .offset(freq_offset),
@@ -92,7 +92,7 @@ module prog_synth_wrapper(
 	   .table_count(tbl_count)
 	);
 	
-	always @(*) begin
+	/*always @(*) begin
         if(!en) wav <= 8'd0;
         else 
         case(wave_sel) 
@@ -101,7 +101,7 @@ module prog_synth_wrapper(
             2'b10: wav <= saw;
             2'b11: wav <= square;
         endcase
-    end
+    end*/
 
 endmodule
 

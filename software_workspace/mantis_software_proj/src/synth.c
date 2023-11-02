@@ -27,7 +27,7 @@ void set_freq(uint32_t offset, uint32_t core){
 
 void wave_sel(uint32_t sel, uint32_t core){
 	sel = sel & 0x03;
-	if(core == 1) SYNTH_CORE2_WAVEFORM = sel;
+	if(core == 1) SYNTH_CORE1_WAVEFORM = sel;
 	else if(core == 2) SYNTH_CORE2_WAVEFORM = sel;
 }
 

@@ -32,7 +32,7 @@ module prog_clk_div(
     begin
         if(rst) divclk <= 24'd0;
         else
-        if (counter >= offset) begin
+        if (counter == offset) begin
             divclk <= ~divclk;
             counter <= 24'd0;
         end

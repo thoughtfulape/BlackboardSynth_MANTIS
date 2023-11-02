@@ -1,0 +1,37 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Wed Nov  1 20:07:57 2023
+| Host         : FishelHPLaptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mantis_synth_mantis_synth_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mantis_synth_mantis_synth_1_0 (xilinx.com:user:mantis_synth:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Wed Nov  1 20:07:57 2023
+| Host         : FishelHPLaptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mantis_synth_mantis_synth_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of mantis_synth_mantis_synth_0_0 (xilinx.com:user:mantis_synth:1.0) from (Rev. 2) to (Rev. 3)
+

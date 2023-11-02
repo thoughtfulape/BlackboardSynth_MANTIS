@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "mantis_synth_mantis_synth_1_0_synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
@@ -89,7 +92,7 @@ set_property ip_output_repo d:/MANTY/BlackboardSynth_MANTIS/synth_modules/progra
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.srcs/sources_1/bd/mantis_synth/ip/mantis_synth_mantis_synth_1_0/mantis_synth_mantis_synth_1_0.xci
+read_ip -quiet D:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.srcs/sources_1/bd/mantis_synth/ip/mantis_synth_mantis_synth_1_0/mantis_synth_mantis_synth_1_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

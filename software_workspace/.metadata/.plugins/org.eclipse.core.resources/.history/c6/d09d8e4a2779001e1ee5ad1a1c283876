@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include "frequencies.h"
+#include "synth.h"
+
+int main(void){
+
+	uint32_t tempo;
+	tempo = 60;
+
+	uint32_t delay = get_delay(tempo);
+	enable_core1(); //enable core 1
+	wave_sel(2, 1); //enable sine output of core 1
+
+	//set_freq(0x00000277, 1);
+	SYNTH_CORE1_WAVEFORM = 631;
+
+	while(1){
+		/*//play_note args: PITCH, NOTE_TYPE, DELAY, CORE
+		play_note(C4, WHOLE, delay, 1);
+		play_note(A2, HALF, delay, 1);*/
+	}
+
+}

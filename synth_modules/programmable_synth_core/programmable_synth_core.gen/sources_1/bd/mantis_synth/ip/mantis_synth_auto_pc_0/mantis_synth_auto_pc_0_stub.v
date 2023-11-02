@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Thu Oct 26 12:31:13 2023
+// Date        : Thu Oct 26 12:31:12 2023
 // Host        : FishelHPLaptop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/MANTY/BlackboardSynth_MANTIS/synth_modules/programmable_synth_core/programmable_synth_core.gen/sources_1/bd/mantis_synth/ip/mantis_synth_auto_pc_0/mantis_synth_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top mantis_synth_auto_pc_0 -prefix
+//               mantis_synth_auto_pc_0_ mantis_synth_auto_pc_0_stub.v
 // Design      : mantis_synth_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z007sclg400-1

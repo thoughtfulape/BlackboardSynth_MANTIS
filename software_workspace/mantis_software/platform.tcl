@@ -16,3 +16,4 @@ platform write
 platform generate -domains 
 platform active {mantis_software}
 platform generate
+platform generate -domains standalone_domain,zynq_fsbl 

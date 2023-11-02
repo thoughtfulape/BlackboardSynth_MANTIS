@@ -11,8 +11,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "mantis_synth_0": "",
-      "mantis_synth_1": "",
       "processing_system7_0": "",
       "ps7_0_axi_periph": {
         "xbar": "",
@@ -22,7 +20,9 @@
         "m00_couplers": {},
         "m01_couplers": {}
       },
-      "rst_ps7_0_50M": ""
+      "rst_ps7_0_50M": "",
+      "mantis_synth_0": "",
+      "mantis_synth_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -131,18 +131,6 @@
       }
     },
     "components": {
-      "mantis_synth_0": {
-        "vlnv": "xilinx.com:user:mantis_synth:1.0",
-        "xci_name": "mantis_synth_mantis_synth_0_0",
-        "xci_path": "ip\\mantis_synth_mantis_synth_0_0\\mantis_synth_mantis_synth_0_0.xci",
-        "inst_hier_path": "mantis_synth_0"
-      },
-      "mantis_synth_1": {
-        "vlnv": "xilinx.com:user:mantis_synth:1.0",
-        "xci_name": "mantis_synth_mantis_synth_1_0",
-        "xci_path": "ip\\mantis_synth_mantis_synth_1_0\\mantis_synth_mantis_synth_1_0.xci",
-        "inst_hier_path": "mantis_synth_1"
-      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "mantis_synth_processing_system7_0_0",
@@ -1445,6 +1433,18 @@
         "xci_name": "mantis_synth_rst_ps7_0_50M_0",
         "xci_path": "ip\\mantis_synth_rst_ps7_0_50M_0\\mantis_synth_rst_ps7_0_50M_0.xci",
         "inst_hier_path": "rst_ps7_0_50M"
+      },
+      "mantis_synth_0": {
+        "vlnv": "xilinx.com:user:mantis_synth:1.0",
+        "xci_name": "mantis_synth_mantis_synth_0_0",
+        "xci_path": "ip\\mantis_synth_mantis_synth_0_0\\mantis_synth_mantis_synth_0_0.xci",
+        "inst_hier_path": "mantis_synth_0"
+      },
+      "mantis_synth_1": {
+        "vlnv": "xilinx.com:user:mantis_synth:1.0",
+        "xci_name": "mantis_synth_mantis_synth_1_0",
+        "xci_path": "ip\\mantis_synth_mantis_synth_1_0\\mantis_synth_mantis_synth_1_0.xci",
+        "inst_hier_path": "mantis_synth_1"
       }
     },
     "interface_nets": {
@@ -1502,14 +1502,14 @@
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "mantis_synth_0/s_axi_aclk",
-          "mantis_synth_1/s_axi_aclk",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ps7_0_axi_periph/ACLK",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/M01_ACLK",
           "ps7_0_axi_periph/S00_ACLK",
-          "rst_ps7_0_50M/slowest_sync_clk"
+          "rst_ps7_0_50M/slowest_sync_clk",
+          "mantis_synth_0/s_axi_aclk",
+          "mantis_synth_1/s_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1521,12 +1521,12 @@
       "rst_ps7_0_50M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_50M/peripheral_aresetn",
-          "mantis_synth_0/s_axi_aresetn",
-          "mantis_synth_1/s_axi_aresetn",
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
-          "ps7_0_axi_periph/S00_ARESETN"
+          "ps7_0_axi_periph/S00_ARESETN",
+          "mantis_synth_0/s_axi_aresetn",
+          "mantis_synth_1/s_axi_aresetn"
         ]
       }
     },

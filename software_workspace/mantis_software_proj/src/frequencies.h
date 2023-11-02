@@ -1,4 +1,5 @@
 //usable frequency offsets for the MANTIS Synthesizer
+#include <stdio.h>
 #define C0 0x0000212F
 #define Db0 0x00001F53
 #define D0 0x00001D91

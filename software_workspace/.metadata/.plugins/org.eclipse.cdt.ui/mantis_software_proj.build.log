@@ -1,4 +1,4 @@
-18:18:45 **** Incremental Build of configuration Debug for project mantis_software_proj ****
+19:35:41 **** Incremental Build of configuration Debug for project mantis_software_proj ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -25,5 +25,5 @@ arm-none-eabi-size mantis_software_proj.elf  |tee "mantis_software_proj.elf.size
 'Finished building: mantis_software_proj.elf.size'
 ' '
 
-18:18:47 Build Finished (took 2s.313ms)
+19:35:42 Build Finished (took 1s.235ms)
 
