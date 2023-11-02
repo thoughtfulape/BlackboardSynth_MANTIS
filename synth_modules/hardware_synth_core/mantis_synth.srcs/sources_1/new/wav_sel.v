@@ -61,8 +61,8 @@ module wav_sel(
     push_detect pd(
         .clk(clk),
         .rst(rst),
-        .x(inc_in),
-        .rise(inc)
+        .i(inc_in),
+        .o(inc)
     );
 
 endmodule

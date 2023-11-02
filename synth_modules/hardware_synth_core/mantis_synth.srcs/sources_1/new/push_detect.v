@@ -1,6 +1,6 @@
 module push_detect(
-    input clk, x, rst,
-    output rise
+    input clk, i, rst,
+    output o
     );
 
     localparam S0 = 3'b00;
@@ -11,10 +11,10 @@ module push_detect(
 
     always @(posedge clk) begin
         case(PS)
-        S0: if(x)   NS = S1;
+        S0: if(i)   NS = S1;
             else    NS = S0;
         S1:         NS = S2;
-        S2: if(x)   NS = S2;
+        S2: if(i)   NS = S2;
             else    NS = S0;
         endcase
     end
@@ -24,6 +24,6 @@ module push_detect(
         else    PS <= NS;
     end
 
-    assign rise = PS[0];
+    assign o = PS[0];
 
 endmodule

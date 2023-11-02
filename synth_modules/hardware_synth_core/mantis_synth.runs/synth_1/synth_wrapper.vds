@@ -2,14 +2,15 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Oct 17 19:53:16 2023
-# Process ID: 24284
-# Current directory: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/proj_files/mantis_synth.runs/synth_1
+# Start of session at: Thu Nov  2 13:19:20 2023
+# Process ID: 3132
+# Current directory: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1
 # Command line: vivado.exe -log synth_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source synth_wrapper.tcl
-# Log file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/proj_files/mantis_synth.runs/synth_1/synth_wrapper.vds
-# Journal file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/proj_files/mantis_synth.runs/synth_1\vivado.jou
+# Log file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.vds
+# Journal file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source synth_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1143.539 ; gain = 24.023
 Command: synth_design -top synth_wrapper -part xc7z007sclg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
@@ -17,78 +18,107 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2860
+INFO: [Synth 8-7075] Helper process launched with PID 15972
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'synth_wrapper' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/synth_wrapper.v:20]
-INFO: [Synth 8-6157] synthesizing module 'lutSin' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Sine_LUT.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'lutSin' (1#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Sine_LUT.v:20]
-INFO: [Synth 8-6157] synthesizing module 'lutTri' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Tri_LUT.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'lutTri' (2#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Tri_LUT.v:20]
-INFO: [Synth 8-6157] synthesizing module 'lutSqr' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Square_LUT.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'lutSqr' (3#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Square_LUT.v:20]
-INFO: [Synth 8-6157] synthesizing module 'lutSaw' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Saw_LUT.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'lutSaw' (4#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Saw_LUT.v:20]
-INFO: [Synth 8-6157] synthesizing module 'wav_sel' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/wav_sel.v:20]
-INFO: [Synth 8-6157] synthesizing module 'push_detect' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/push_detect.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/push_detect.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'push_detect' (5#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/push_detect.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'wav_sel' (6#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/wav_sel.v:20]
-INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/clk_div.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'clk_div' (7#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/clk_div.v:20]
-INFO: [Synth 8-6157] synthesizing module 'table_count' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/synth_wrapper.v:113]
-INFO: [Synth 8-6155] done synthesizing module 'table_count' (8#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/synth_wrapper.v:113]
-INFO: [Synth 8-6157] synthesizing module 'db_1' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/db_1.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'db_1' (9#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/db_1.v:3]
-INFO: [Synth 8-6157] synthesizing module 'conf_div' [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/synth_wrapper.v:134]
-INFO: [Synth 8-6155] done synthesizing module 'conf_div' (10#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/synth_wrapper.v:134]
-INFO: [Synth 8-6155] done synthesizing module 'synth_wrapper' (11#1) [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/synth_wrapper.v:20]
+INFO: [Synth 8-6157] synthesizing module 'synth_wrapper' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v:20]
+INFO: [Synth 8-6157] synthesizing module 'lutSin' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Sine_LUT.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'lutSin' (1#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Sine_LUT.v:20]
+INFO: [Synth 8-6157] synthesizing module 'lutTri' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Tri_LUT.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'lutTri' (2#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Tri_LUT.v:20]
+INFO: [Synth 8-6157] synthesizing module 'lutSqr' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Square_LUT.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'lutSqr' (3#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Square_LUT.v:20]
+INFO: [Synth 8-6157] synthesizing module 'lutSaw' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Saw_LUT.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'lutSaw' (4#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Saw_LUT.v:20]
+INFO: [Synth 8-6157] synthesizing module 'wav_sel' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/wav_sel.v:20]
+INFO: [Synth 8-6157] synthesizing module 'push_detect' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/push_detect.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/push_detect.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'push_detect' (5#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/push_detect.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'wav_sel' (6#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/wav_sel.v:20]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v:20]
+INFO: [Synth 8-6157] synthesizing module 'mod_sel' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v:101]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v:123]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v:163]
+INFO: [Synth 8-6155] done synthesizing module 'mod_sel' (7#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (8#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v:20]
+INFO: [Synth 8-6157] synthesizing module 'table_count' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v:113]
+INFO: [Synth 8-6155] done synthesizing module 'table_count' (9#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v:113]
+INFO: [Synth 8-6157] synthesizing module 'db_1' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/db_1.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'db_1' (10#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/db_1.v:3]
+INFO: [Synth 8-6157] synthesizing module 'conf_div' [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v:134]
+INFO: [Synth 8-6155] done synthesizing module 'conf_div' (11#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v:134]
+INFO: [Synth 8-6155] done synthesizing module 'synth_wrapper' (12#1) [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v:20]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1143.539 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]
-Finished Parsing XDC File [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/synth_wrapper_propImpl.xdc].
+Parsing XDC File [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]
+WARNING: [Vivado 12-584] No ports matched 'wav_B[0]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'wav_B[1]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'wav_B[2]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'wav_B[3]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'wav_B[4]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'wav_B[5]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'wav_B[6]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'wav_B[7]'. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/synth_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/synth_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1143.539 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'push_detect'
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'mod_sel'
 INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'db_1'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -101,6 +131,21 @@ INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'on
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+                      S4 |                       0000000001 |                             0110
+                      S5 |                       0000000010 |                             0100
+                      S6 |                       0000000100 |                             1100
+                      S7 |                       0000001000 |                             1000
+                      S8 |                       0000010000 |                             1001
+                      S9 |                       0000100000 |                             1101
+                      S3 |                       0001000000 |                             0010
+                      S2 |                       0010000000 |                             0011
+                      S1 |                       0100000000 |                             0001
+                      S0 |                       1000000000 |                             0000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'one-hot' in module 'mod_sel'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
                       S0 |                               00 |                               00
                       S1 |                               01 |                               10
                       S2 |                               10 |                               11
@@ -108,7 +153,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'on
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'db_1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -123,19 +168,21 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input   24 Bit        Muxes := 1     
 	  13 Input   24 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 1     
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 19    
 	 361 Input    8 Bit        Muxes := 3     
 	   2 Input    8 Bit        Muxes := 3     
 	   4 Input    8 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 9     
 	   6 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 4     
 	   2 Input    1 Bit        Muxes := 1     
 	   3 Input    1 Bit        Muxes := 6     
-	   4 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 3     
 	  13 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -156,7 +203,7 @@ WARNING: [Synth 8-6040] Register tbl_cntr/table_count_r_reg_rep driving address 
 WARNING: [Synth 8-6040] Register tbl_cntr/table_count_r_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register tbl_cntr/table_count_r_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -178,19 +225,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:50 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -208,37 +255,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -255,42 +302,43 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |   183|
-|3     |LUT1   |    52|
-|4     |LUT2   |    57|
-|5     |LUT3   |   576|
-|6     |LUT4   |    41|
-|7     |LUT5   |    23|
-|8     |LUT6   |   180|
+|2     |CARRY4 |   155|
+|3     |LUT1   |    24|
+|4     |LUT2   |   267|
+|5     |LUT3   |   233|
+|6     |LUT4   |    38|
+|7     |LUT5   |    35|
+|8     |LUT6   |   179|
 |9     |MUXF7  |    53|
 |10    |MUXF8  |     6|
-|11    |FDCE   |    10|
-|12    |FDPE   |     3|
-|13    |FDRE   |   159|
+|11    |FDCE   |    28|
+|12    |FDPE   |     5|
+|13    |FDRE   |   147|
 |14    |IBUF   |    17|
 |15    |OBUF   |     8|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 1143.539 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1136.586 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1136.586 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:50 . Memory (MB): peak = 1143.539 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 1143.539 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1136.586 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 242 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1143.539 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 214 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1138.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1143.539 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 330eed41
+Synth Design complete, checksum: 8e6db72b
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 11 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1138.738 ; gain = 2.152
-INFO: [Common 17-1381] The checkpoint 'D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/proj_files/mantis_synth.runs/synth_1/synth_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:04 . Memory (MB): peak = 1143.539 ; gain = 0.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file synth_wrapper_utilization_synth.rpt -pb synth_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 17 19:53:55 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  2 13:20:38 2023...

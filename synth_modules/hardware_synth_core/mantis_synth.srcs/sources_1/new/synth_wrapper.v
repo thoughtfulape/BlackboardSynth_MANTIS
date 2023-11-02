@@ -21,7 +21,7 @@ module synth_wrapper(
 	input clk, en, rst, sel,
 	input [11:1] sw,
 	input [1:0] btn,
-	output [7:0] wav
+	output [7:0] wav_A
 	
 	
 	/*,
@@ -78,7 +78,7 @@ module synth_wrapper(
 	   .square_in(square),
 	   .saw_in(saw),
 	   .inc_in(w_sel),
-	   .wav(wav)
+	   .wav(wav_A)
 	);
 
 	clk_div freq_sel(
