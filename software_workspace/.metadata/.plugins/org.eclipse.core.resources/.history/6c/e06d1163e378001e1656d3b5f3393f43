@@ -1,0 +1,31 @@
+#include "synth.h"
+#include "frequencies.h"
+
+void enable_core1(void){
+	SYNTH_CORE1_EN = 1;
+}
+
+void enable_core2(void){
+	SYNTH_CORE2_EN = 1;
+}
+
+void reset_core1(void){
+	SYNTH_CORE1_RST = 1;
+}
+
+void reset_core2(void){
+	SYNTH_CORE2_RST = 1;
+}
+
+void set_freq(uint32_t offset, uint32_t core){
+	offset = offset & 0xFFFFFF;
+	if(core == 1) SYNTH_CORE1_OFFSET = offset;
+	else if(core == 2) SYNTH_CORE2_OFFSET = offset;
+}
+
+void wave_sel(uint32_t sel, uint32_t core){
+	sel = sel & 0x03;
+	if(core == 1) SYNTH_CORE2_WAVEFORM = sel;
+	else if(core == 2) SYNTH_CORE2_WAVEFORM = sel;
+}
+

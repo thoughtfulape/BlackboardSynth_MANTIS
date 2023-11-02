@@ -1,4 +1,4 @@
-activeuserprofiles=GaryPC;Team
+activeuserprofiles=FishelHPLaptop;Team
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=gfish
-useridperkey=GaryPC.Local\=gfish;
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=user1
+useridperkey=FishelHPLaptop.Local\=user1;

@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include "frequencies.h"
+#include "synth.h"
+
+int main(void){
+
+	uint32_t tempo;
+	tempo = 60;
+
+	uint32_t delay = get_delay(tempo);
+
+	while(1){
+	}
+
+}

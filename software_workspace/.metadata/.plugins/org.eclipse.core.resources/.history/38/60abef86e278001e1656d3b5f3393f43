@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "frequencies.h"
+#include "synth.h"
+
+#define tempo 60
+
+int main(void){
+
+
+
+	while(1){
+	}
+
+}
