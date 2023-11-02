@@ -5,19 +5,20 @@
 int main(void){
 
 	uint32_t tempo;
-	tempo = 60;
+	tempo = 60;	//song tempo in BPM
 
 	uint32_t delay = get_delay(tempo);
 	enable_core1(); //enable core 1
-	enable_core2(); //enable core 2
-	wave_sel(1, 2); //enable sine output of core 1
+	//enable_core2(); //enable core 2
+	wave_sel(3, 1); //enable sine output of core 1
 
-	set_freq(A3, 2);
+	//set_freq(A3, 1);
 
 	while(1){
-		/*//play_note args: PITCH, NOTE_TYPE, DELAY, CORE
+		//play_note args: PITCH, NOTE_TYPE, DELAY, CORE
 		play_note(C4, WHOLE, delay, 1);
-		play_note(A2, HALF, delay, 1);*/
+		rest(HALF, delay, 1);
+		play_note(A2, HALF, delay, 1);
 	}
 
 }

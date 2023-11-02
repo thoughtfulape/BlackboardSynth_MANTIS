@@ -9,11 +9,12 @@
 # -out option specifies the output directory of the platform project.
 
 platform create -name {mantis_software}\
--hw {D:\MANTY\BlackboardSynth_MANTIS\synth_modules\mantis_synth.xsa}\
+-hw {D:\MANTY\BlackboardSynth_MANTIS\synth_modules\mantis_synth_rev2.xsa}\
 -proc {ps7_cortexa9_0} -os {standalone} -out {D:/MANTY/BlackboardSynth_MANTIS/software_workspace}
 
 platform write
 platform generate -domains 
 platform active {mantis_software}
 platform generate
-platform generate -domains standalone_domain,zynq_fsbl 
+platform clean
+platform generate

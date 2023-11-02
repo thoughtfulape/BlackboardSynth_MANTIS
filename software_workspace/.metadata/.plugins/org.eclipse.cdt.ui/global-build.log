@@ -1,28 +1,24 @@
 Nothing to build in platform 'mantis_software'
 
-19:35:41 **** Incremental Build of configuration Debug for project mantis_software_proj ****
+15:50:44 **** Incremental Build of configuration Debug for project mantis_software_app ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main.c'
+'Building file: D:/MANTY/BlackboardSynth_MANTIS/software_src/main.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_software/export/mantis_software/sw/mantis_software/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:10:11: warning: unused variable 'delay' [-Wunused-variable]
-   10 |  uint32_t delay = get_delay(tempo);
-      |           ^~~~~
-'Finished building: ../src/main.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_software/export/mantis_software/sw/mantis_software/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "D:/MANTY/BlackboardSynth_MANTIS/software_src/main.c"
+'Finished building: D:/MANTY/BlackboardSynth_MANTIS/software_src/main.c'
 ' '
-'Building target: mantis_software_proj.elf'
+'Building target: mantis_software_app.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_software/export/mantis_software/sw/mantis_software/standalone_domain/bsplib/lib -o "mantis_software_proj.elf"  ./src/main.o ./src/synth.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: mantis_software_proj.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/MANTY/BlackboardSynth_MANTIS/software_workspace/mantis_software/export/mantis_software/sw/mantis_software/standalone_domain/bsplib/lib -o "mantis_software_app.elf"  ./src/main.o ./src/synth.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mantis_software_app.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size mantis_software_proj.elf  |tee "mantis_software_proj.elf.size"
+arm-none-eabi-size mantis_software_app.elf  |tee "mantis_software_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  20000	   1144	  22568	  43712	   aac0	mantis_software_proj.elf
-'Finished building: mantis_software_proj.elf.size'
+  20200	   1144	  22568	  43912	   ab88	mantis_software_app.elf
+'Finished building: mantis_software_app.elf.size'
 ' '

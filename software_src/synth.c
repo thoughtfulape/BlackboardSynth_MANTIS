@@ -33,7 +33,7 @@ void wave_sel(uint32_t sel, uint32_t core){
 
 uint32_t get_delay(uint32_t tempo){
 	uint32_t delay = CLOCK/tempo;
-	return delay * 0xF;
+	return delay * 15;
 }
 
 void play_note(uint32_t pitch, uint32_t note, uint32_t delay, uint32_t core){
@@ -42,10 +42,19 @@ void play_note(uint32_t pitch, uint32_t note, uint32_t delay, uint32_t core){
 
 	set_freq(pitch, core);
 
-	int i;
-	for(i = 0; i < delay*note; i++);
+	for(int i = 0; i < delay*note; i++);
 
 	if(core == 1) reset_core1();
 	else if(core == 2) reset_core2();
+}
+
+void rest(uint32_t note, uint32_t delay, uint32_t core){
+	if(core == 1) reset_core1();
+	else if(core == 2) reset_core2();
+
+	for(int i = 0; i < delay*note; i++);
+
+	if(core == 1) enable_core1();
+	else if(core == 2) enable_core2();
 }
 

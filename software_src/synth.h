@@ -33,4 +33,6 @@ void wave_sel(uint32_t sel, uint32_t core);
 
 void play_note(uint32_t pitch, uint32_t note, uint32_t delay, uint32_t core);
 
+void rest(uint32_t note, uint32_t delay, uint32_t core);
+
 uint32_t get_delay(uint32_t tempo);
