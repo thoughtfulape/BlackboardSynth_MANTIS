@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc rfile:../../../../MANTIS_synth_constraint.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc rfile:../../../../MANTIS_synth_constraint.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }];
 set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]
@@ -65,3 +65,19 @@ set_property src_info {type:XDC file:1 line:115 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN B19   IOSTANDARD LVCMOS33 } [get_ports { wav_B[6] }]; #IO_L2P_T0_AD8P_35 Sch=JB4_P
 set_property src_info {type:XDC file:1 line:116 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN A20   IOSTANDARD LVCMOS33 } [get_ports { wav_B[7] }]; #IO_L2N_T0_AD8N_35 Sch=JB4_N
+set_property src_info {type:XDC file:1 line:119 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { wav_C[0] }];
+set_property src_info {type:XDC file:1 line:120 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33 } [get_ports { wav_C[1] }];
+set_property src_info {type:XDC file:1 line:121 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { wav_C[2] }];
+set_property src_info {type:XDC file:1 line:122 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { wav_C[3] }];
+set_property src_info {type:XDC file:1 line:123 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M19   IOSTANDARD LVCMOS33 } [get_ports { wav_C[4] }];
+set_property src_info {type:XDC file:1 line:124 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { wav_C[5] }];
+set_property src_info {type:XDC file:1 line:125 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { wav_C[6] }];
+set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports { wav_C[7] }];

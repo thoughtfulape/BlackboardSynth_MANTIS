@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/Programs/Utility/Vivado/Vivado/2021.1/ids_lite/ISE/bin/nt64;D:/Programs/Utility/Vivado/Vivado/2021.1/ids_lite/ISE/lib/nt64:D:/Programs/Utility/Vivado/Vivado/2021.1/bin
+  PATH=D:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.1/bin
 else
-  PATH=D:/Programs/Utility/Vivado/Vivado/2021.1/ids_lite/ISE/bin/nt64;D:/Programs/Utility/Vivado/Vivado/2021.1/ids_lite/ISE/lib/nt64:D:/Programs/Utility/Vivado/Vivado/2021.1/bin:$PATH
+  PATH=D:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.1/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1'
+HD_PWD='D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Thu Nov  2 13:22:08 2023
-| Host             : FishelHPLaptop running 64-bit major release  (build 9200)
+| Date             : Sun Feb 25 12:57:32 2024
+| Host             : GaryPC running 64-bit major release  (build 9200)
 | Command          : report_power -file synth_wrapper_power_routed.rpt -pb synth_wrapper_power_summary_routed.pb -rpx synth_wrapper_power_routed.rpx
 | Design           : synth_wrapper
 | Device           : xc7z007sclg400-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 16.360 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 16.774 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 15.611                           |
+| Dynamic (W)              | 16.025                           |
 | Device Static (W)        | 0.749                            |
 | Effective TJA (C/W)      | 11.5                             |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     8.622 |     1195 |       --- |             --- |
-|   LUT as Logic |     7.377 |      729 |     14400 |            5.06 |
+| Slice Logic    |     8.793 |     1195 |       --- |             --- |
+|   LUT as Logic |     7.542 |      728 |     14400 |            5.06 |
 |   CARRY4       |     1.042 |      155 |      4400 |            3.52 |
-|   F7/F8 Muxes  |     0.112 |       59 |     17600 |            0.34 |
+|   F7/F8 Muxes  |     0.119 |       59 |     17600 |            0.34 |
 |   Register     |     0.067 |      180 |     28800 |            0.63 |
 |   BUFG         |     0.023 |        2 |        32 |            6.25 |
 |   Others       |     0.000 |       23 |       --- |             --- |
-| Signals        |     6.800 |      928 |       --- |             --- |
+| Signals        |     7.043 |      928 |       --- |             --- |
 | I/O            |     0.189 |       25 |       100 |           25.00 |
 | Static Power   |     0.749 |          |           |                 |
-| Total          |    16.360 |          |           |                 |
+| Total          |    16.774 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    15.615 |      15.486 |      0.129 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    16.030 |      15.901 |      0.129 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.045 |       0.005 |      0.040 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.036 |       0.035 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -146,19 +146,19 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| synth_wrapper |    15.611 |
-|   db_clk_gen  |     0.040 |
-|   freq_sel    |    11.148 |
-|     mod_sel   |     0.390 |
+| synth_wrapper |    16.025 |
+|   db_clk_gen  |     0.031 |
+|   freq_sel    |    11.494 |
+|     mod_sel   |     0.417 |
 |     pd_down   |     0.020 |
-|     pd_up     |     0.018 |
-|   saw_gen     |     0.763 |
+|     pd_up     |     0.021 |
+|   saw_gen     |     0.761 |
 |   sel_db      |     0.020 |
-|   sin_gen     |     0.746 |
-|   tbl_cntr    |     1.720 |
-|   tri_gen     |     0.766 |
-|   wav_sel     |     0.063 |
-|     pd        |     0.029 |
+|   sin_gen     |     0.782 |
+|   tbl_cntr    |     1.764 |
+|   tri_gen     |     0.773 |
+|   wav_sel     |     0.060 |
+|     pd        |     0.027 |
 +---------------+-----------+
 
 

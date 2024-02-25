@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Nov  2 13:19:20 2023
-# Process ID: 3132
-# Current directory: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1
+# Start of session at: Sun Feb 25 12:56:08 2024
+# Process ID: 12268
+# Current directory: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1
 # Command line: vivado.exe -log synth_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source synth_wrapper.tcl
-# Log file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.vds
-# Journal file: D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1\vivado.jou
+# Log file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.vds
+# Journal file: D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source synth_wrapper.tcl -notrace

@@ -114,6 +114,16 @@ set_property -dict { PACKAGE_PIN C20   IOSTANDARD LVCMOS33 } [get_ports { wav_B[
 set_property -dict { PACKAGE_PIN B20   IOSTANDARD LVCMOS33 } [get_ports { wav_B[5] }]; #IO_L1N_T0_AD0N_35 Sch=JB3_N
 set_property -dict { PACKAGE_PIN B19   IOSTANDARD LVCMOS33 } [get_ports { wav_B[6] }]; #IO_L2P_T0_AD8P_35 Sch=JB4_P
 set_property -dict { PACKAGE_PIN A20   IOSTANDARD LVCMOS33 } [get_ports { wav_B[7] }]; #IO_L2N_T0_AD8N_35 Sch=JB4_N
+
+##PmodC                                                                                                       
+set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { wav_C[0] }];   
+set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33 } [get_ports { wav_C[1] }];   
+set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { wav_C[2] }]; 
+set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { wav_C[3] }]; 
+set_property -dict { PACKAGE_PIN M19   IOSTANDARD LVCMOS33 } [get_ports { wav_C[4] }]; 
+set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { wav_C[5] }]; 
+set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { wav_C[6] }]; 
+set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports { wav_C[7] }]; 
                                                                                                                
 #Servos                                                                                                        
 #set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports servo[0]]; #IO_L16P_T2_35 Sch=SERVO1     

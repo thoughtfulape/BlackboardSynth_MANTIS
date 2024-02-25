@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/impl_1/synth_wrapper.tcl"
+  variable script "D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/impl_1/synth_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -125,22 +125,22 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param chipscope.maxJobs 1
+  set_param chipscope.maxJobs 4
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z007sclg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.cache/wt [current_project]
-  set_property parent.project_path D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.xpr [current_project]
+  set_property webtalk.parent_dir D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.cache/wt [current_project]
+  set_property parent.project_path D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.xpr [current_project]
   set_property ip_output_repo {{D:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.dcp
+  add_files -quiet D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc
+  read_xdc D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

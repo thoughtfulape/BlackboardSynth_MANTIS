@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.tcl"
+  variable script "D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.runs/synth_1/synth_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -80,8 +79,8 @@ create_project -in_memory -part xc7z007sclg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.cache/wt [current_project]
-set_property parent.project_path D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.xpr [current_project]
+set_property webtalk.parent_dir D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.cache/wt [current_project]
+set_property parent.project_path D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {d:/Libraries/Documents/School/MANTY/local_code/Lookup Table and R2R Example/mantis_synth/mantis_synth.cache/ip} [current_project]
@@ -89,15 +88,15 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Saw_LUT.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Sine_LUT.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Square_LUT.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/Tri_LUT.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/db_1.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/push_detect.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/wav_sel.v
-  D:/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Saw_LUT.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Sine_LUT.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Square_LUT.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/Tri_LUT.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/clk_div.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/db_1.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/push_detect.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/wav_sel.v
+  D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/hardware_synth_core/mantis_synth.srcs/sources_1/new/synth_wrapper.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -108,8 +107,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc
-set_property used_in_implementation false [get_files D:/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]
+read_xdc D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc
+set_property used_in_implementation false [get_files D:/Libraries/Documents/School/MANTY/BlackboardSynth_MANTIS/synth_modules/MANTIS_synth_constraint.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

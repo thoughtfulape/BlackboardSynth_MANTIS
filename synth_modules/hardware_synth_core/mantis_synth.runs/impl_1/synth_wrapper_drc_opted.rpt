@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Nov  2 13:21:34 2023
-| Host         : FishelHPLaptop running 64-bit major release  (build 9200)
+| Date         : Sun Feb 25 12:57:15 2024
+| Host         : GaryPC running 64-bit major release  (build 9200)
 | Command      : report_drc -file synth_wrapper_drc_opted.rpt -pb synth_wrapper_drc_opted.pb -rpx synth_wrapper_drc_opted.rpx
 | Design       : synth_wrapper
 | Device       : xc7z007sclg400-1

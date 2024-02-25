@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Nov  2 13:21:44 2023
-| Host         : FishelHPLaptop running 64-bit major release  (build 9200)
+| Date         : Sun Feb 25 12:57:19 2024
+| Host         : GaryPC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file synth_wrapper_control_sets_placed.rpt
 | Design       : synth_wrapper
 | Device       : xc7z007s
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              23 |           10 |
-| No           | No                    | Yes                    |              23 |           11 |
-| No           | Yes                   | No                     |              76 |           36 |
-| Yes          | No                    | No                     |              24 |            7 |
+| No           | No                    | No                     |              23 |           12 |
+| No           | No                    | Yes                    |              23 |           10 |
+| No           | Yes                   | No                     |              76 |           37 |
+| Yes          | No                    | No                     |              24 |           10 |
 | Yes          | No                    | Yes                    |              10 |            4 |
 | Yes          | Yes                   | No                     |              24 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -75,15 +75,15 @@ Table of Contents
 +--------------------------------+-----------------------------+-----------------------------+------------------+----------------+--------------+
 |  table_count_r_reg[15]_i_2_n_0 |                             |                             |                1 |              1 |         1.00 |
 |  db_clk_gen/CLK                |                             |                             |                1 |              2 |         2.00 |
-|  db_clk_gen/CLK                |                             | rst_IBUF                    |                2 |              2 |         1.00 |
-|  clk_IBUF_BUFG                 | freq_sel/mod_sel/NS         |                             |                2 |             10 |         5.00 |
+|  db_clk_gen/CLK                |                             | rst_IBUF                    |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                 | freq_sel/mod_sel/NS         |                             |                4 |             10 |         2.50 |
 |  clk_IBUF_BUFG                 | freq_sel/mod_sel/NS         | rst_IBUF                    |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG                 | freq_sel/divis_0            |                             |                5 |             14 |         2.80 |
-|  clk_IBUF_BUFG                 |                             |                             |                8 |             20 |         2.50 |
+|  clk_IBUF_BUFG                 | freq_sel/divis_0            |                             |                6 |             14 |         2.33 |
+|  clk_IBUF_BUFG                 |                             |                             |               10 |             20 |         2.00 |
 |  clk_IBUF_BUFG                 | freq_sel/counter[0]_i_2_n_0 | freq_sel/counter[0]_i_1_n_0 |                6 |             24 |         4.00 |
 |  table_count_r_reg[15]_i_2_n_0 |                             | saw_gen/SR[0]               |               17 |             24 |         1.41 |
 |  clk_IBUF_BUFG                 |                             | rst_IBUF                    |               12 |             30 |         2.50 |
-|  table_count_r_reg[15]_i_2_n_0 |                             | rst_IBUF                    |               16 |             43 |         2.69 |
+|  table_count_r_reg[15]_i_2_n_0 |                             | rst_IBUF                    |               17 |             43 |         2.53 |
 +--------------------------------+-----------------------------+-----------------------------+------------------+----------------+--------------+
 
 
